@@ -1,0 +1,22 @@
+" Website shortcuts
+bind ge tabopen edu.epito.bme.hu
+
+" Custom binds
+bind gd tabdetach
+bind gD composite tabduplicate; tabdetach
+
+" " Custom hints for websites
+" Search engines
+bindurl www.startpage.com f hint -Jc .w-gl__result-title,button,input
+bindurl www.google.com f hint -Jc #search div:not(.action-menu) > a
+
+" Youtube
+bindurl www.youtube.com f hint -Jc yt-formatted-string,yt-icon
+
+" Twitch
+bindurl www.twitch.tv f hint -Jc a
+" Show only videos for opening in streamlink
+bindurl www.twitch.tv ;q hint -Jc div[class^='Layout'] > article > div[class^='Layout'] a[data-focusable='true'],nav[id='side-nav'] a -W js -p tri.excmds.shellescape(JS_ARG).then(url => tri.excmds.exclaim_quiet('streamlink ' + url))
+
+" Inoreader
+bindurl www.inoreader.com f hint -Jc a[id^='article_title_link']
