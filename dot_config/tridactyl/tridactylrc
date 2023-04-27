@@ -1,5 +1,6 @@
 " Website shortcuts
 bind ge tabopen edu.epito.bme.hu
+bind gn tabopen neptun.bme.hu/oktatoi/login.aspx
 
 " Custom binds
 bind gd tabdetach
