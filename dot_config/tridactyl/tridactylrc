@@ -6,6 +6,11 @@ bind gn tabopen neptun.bme.hu/oktatoi/login.aspx
 bind gd tabdetach
 bind gD composite tabduplicate; tabdetach
 
+" Hint setup
+set hintchars asdfjgkléá
+set hintfiltermode simple
+set hintnames short
+
 " " Custom hints for websites
 " Search engines
 bindurl www.startpage.com f hint -Jc .w-gl__result-title,button,input
