@@ -17,7 +17,7 @@ bindurl www.startpage.com f hint -Jc .w-gl__result-title,button,input
 bindurl www.google.com f hint -Jc #search div:not(.action-menu) > a
 
 " Youtube
-bindurl www.youtube.com f hint -Jc yt-formatted-string,yt-icon,[id='video-title']
+bindurl www.youtube.com f hint -Jc yt-formatted-string,yt-icon,[id='video-title'],[id='search']
 
 " Twitch
 bindurl www.twitch.tv f hint -Jc a
