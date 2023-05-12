@@ -29,4 +29,5 @@ bindurl www.twitch.tv f hint -Jc a,input
 bindurl www.twitch.tv ;q hint -Jc div[class^='Layout'] > article > div[class^='Layout'] a[data-focusable='true'],nav[id='side-nav'] a -W js -p tri.excmds.shellescape(JS_ARG).then(url => tri.excmds.exclaim_quiet('streamlink ' + url))
 
 " Inoreader
-bindurl www.inoreader.com f hint -Jc a[id^='article_title_link']
+bindurl www.inoreader.com hint -J [class*="title_link"],[title*="Read later"],[id*="linkdiv"]
+
