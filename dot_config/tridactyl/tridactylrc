@@ -1,3 +1,7 @@
+" Browser shortcuts
+bind J tabnext
+bind K tabprev
+
 " Website shortcuts
 bind ge tabopen edu.epito.bme.hu
 bind gn tabopen neptun.bme.hu/oktatoi/login.aspx
