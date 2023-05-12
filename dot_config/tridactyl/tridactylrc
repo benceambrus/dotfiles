@@ -24,7 +24,7 @@ bindurl www.google.com f hint -Jc #search div:not(.action-menu) > a
 bindurl www.youtube.com f hint -Jc yt-formatted-string,yt-icon,[id='video-title'],[id='search']
 
 " Twitch
-bindurl www.twitch.tv f hint -Jc a
+bindurl www.twitch.tv f hint -Jc a,input
 " Show only videos for opening in streamlink
 bindurl www.twitch.tv ;q hint -Jc div[class^='Layout'] > article > div[class^='Layout'] a[data-focusable='true'],nav[id='side-nav'] a -W js -p tri.excmds.shellescape(JS_ARG).then(url => tri.excmds.exclaim_quiet('streamlink ' + url))
 
