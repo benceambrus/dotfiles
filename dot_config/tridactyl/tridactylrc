@@ -18,6 +18,7 @@ set hintnames short
 " " Custom hints for websites
 " Search engines
 bindurl www.startpage.com f hint -Jc .w-gl__result-title,button,input
+bindurl www.startpage.com F hint -bJc .w-gl__result-title,button,input
 bindurl www.google.com f hint -Jc #search div:not(.action-menu) > a
 
 " Youtube
