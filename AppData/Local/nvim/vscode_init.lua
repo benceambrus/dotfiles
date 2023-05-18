@@ -1,26 +1,32 @@
 -- Plugins
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
-    -- Treesitter
-	Plug 'nvim-treesitter/nvim-treesitter'
-    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-	Plug 'mfussenegger/nvim-ts-hint-textobject'
-	
-	-- Comments
-	Plug 'terrortylor/nvim-comment'
+-- Treesitter
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+Plug 'mfussenegger/nvim-ts-hint-textobject'
 
-	-- Lightspeed
-	-- Plug 'ggandor/lightspeed.nvim'	
+-- Comments
+Plug 'terrortylor/nvim-comment'
 
-	-- Leap
-	Plug 'ggandor/leap.nvim'
+-- Lightspeed
+-- Plug 'ggandor/lightspeed.nvim'	
 
-    -- Vim surround
-    Plug 'tpope/vim-surround'
+-- Leap
+Plug 'ggandor/leap.nvim'
+
+-- Vim surround
+Plug 'tpope/vim-surround'
 vim.call('plug#end')
 
 -- Plugin config
-require('nvim_comment').setup()
+require('nvim_comment').setup({
+	hook = function()
+		if vim.api.nvim_buf_get_option(0, "filetype") == "autohotkey" then
+			vim.api.nvim_buf_set_option(0, "commentstring", "; %s")
+		end
+	end
+})
 require('leap').add_default_mappings()
 
 -- Vim-surround
