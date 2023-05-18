@@ -9,9 +9,6 @@ Plug 'mfussenegger/nvim-ts-hint-textobject'
 -- Comments
 Plug 'terrortylor/nvim-comment'
 
--- Lightspeed
--- Plug 'ggandor/lightspeed.nvim'	
-
 -- Leap
 Plug 'ggandor/leap.nvim'
 
