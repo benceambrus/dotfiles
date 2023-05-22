@@ -14,10 +14,10 @@ $all[](#905AFF)$character"""
 
 # Change the default prompt characters
 [character]
-success_symbol = "[](#905AFF)"
-error_symbol = "[](#905AFF)"
-# success_symbol = "[](#905AFF)"
-# error_symbol = "[](#905AFF)"
+# success_symbol = "[](#905AFF)"
+# error_symbol = "[](#905AFF)"
+success_symbol = "[](#905AFF)"
+error_symbol = "[](#905AFF)"
 
 # Shows an icon that should be included by zshrc script based on the distribution or os
 [env_var.STARSHIP_DISTRO]
