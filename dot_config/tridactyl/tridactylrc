@@ -23,6 +23,7 @@ bindurl www.google.com f hint -Jc #search div:not(.action-menu) > a
 
 " Youtube
 bindurl www.youtube.com f hint -Jc yt-formatted-string,yt-icon,[id='video-title'],[id='search'],tp-yt-paper-button
+bindurl www.youtube.com ;q hint -Jc yt-formatted-string -W js -p tri.excmds.shellescape(JS_ARG).then(url => tri.excmds.exclaim_quiet('streamlink ' + url))
 
 " Twitch
 bindurl www.twitch.tv f hint -Jc a,input
