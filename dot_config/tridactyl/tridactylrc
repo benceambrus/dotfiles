@@ -5,6 +5,7 @@ bind K tabprev
 " Website shortcuts
 bind ge tabopen edu.epito.bme.hu
 bind gn tabopen neptun.bme.hu/oktatoi/login.aspx
+bind gm tabopen -c personal www.youtube.com
 bind gy winopen youtube.com/playlist?list=WL
 
 " Custom binds
