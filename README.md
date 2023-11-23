@@ -1,3 +1,3 @@
 # Dotfiles
 *Dotfiles* repo.
-<span style="color: blue">Containing dotfiles.</span>
+<span style="color:blue">Containing dotfiles.</span>
