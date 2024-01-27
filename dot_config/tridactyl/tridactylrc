@@ -1,3 +1,6 @@
+" Colorscheme
+colorscheme midnight
+
 " Browser shortcuts
 bind J tabnext
 bind K tabprev
