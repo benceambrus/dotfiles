@@ -3,5 +3,5 @@ komorebi*
 {{- end }}
 
 {{- if ne .chezmoi.os "linux" }}
-dot_config/lf
+.config/lf
 {{- end }}
