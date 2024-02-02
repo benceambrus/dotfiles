@@ -1,18 +1,25 @@
-# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
 Host bme-desktop
     HostName 152.66.5.73
     User ambrus
-    IdentityFile C:\\Users\\Ambri\\.ssh\\bme-desktop
+	{{- if eq .chezmoi.hostname "raspberrypi" }}
+	IdentityFile ~/.ssh/bme-desktop
+	{{- else if eq .chezmoi.hostname "AMBRUS-OTTHONI" }}
+    IdentityFile C:/Users\\Ambri\\.ssh\\bme-desktop
+	{{- end}}
     ForwardAgent yes
     ForwardX11 yes
     ForwardX11Trusted yes
     Compression yes
     Ciphers aes128-ctr
 
+Host github.com
+	IdentityFile ~/.ssh/github
+
+{{- if eq .chezmoi.hostname "AMBRUS-OTTHONI" }}
 Host gik-sar-18
     HostName 172.22.146.23
     User ambrus
-    IdentityFile c:\\Users\\Ambri\\.ssh\\gik-sar-18.pem
+    IdentityFile ~/.ssh/gik-sar-18.pem
     ForwardX11 yes
 	ForwardX11Trusted yes
 	Compression yes
@@ -21,17 +28,17 @@ Host gik-sar-18
 Host gik-ubuntu-20
     HostName 172.22.146.208
     User ambrus
-	IdentityFile c:\\Users\\Ambri\\.ssh\\gik-ubuntu-20
+	IdentityFile ~/.ssh/gik-ubuntu-20
 
 Host gik-fem-18
     HostName 172.22.146.24
     User ambrus
-    IdentityFile c:\\Users\\Ambri\\.ssh\\gik-fem-18
+    IdentityFile ~/.ssh/gik-fem-18
 
 Host raspberry
 	HostName 192.168.0.2
 	User pi
-	IdentityFile c:\\Users\\Ambri\\.ssh\\raspberry_ssh
+	IdentityFile ~/.ssh/raspberry_ssh
 
 Host hpc
 	HostName bwunicluster.scc.kit.edu
@@ -43,10 +50,12 @@ Host bme-radar
     User ambrus
     ForwardX11 yes
     ForwardX11Trusted yes
-    IdentityFile c:\\Users\\Ambri\\.ssh\\bme-radar
+    IdentityFile ~/.ssh/bme-radar
 
 Host bme-server
     HostName 152.66.5.194
     User ambrus
-    IdentityFile c:\\Users\\Ambri\\.ssh\\bme-server
-    
+    IdentityFile ~/.ssh/bme-server
+{{- end }}
+
+
