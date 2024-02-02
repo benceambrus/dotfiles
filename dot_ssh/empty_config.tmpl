@@ -1,11 +1,7 @@
 Host bme-desktop
     HostName 152.66.5.73
     User ambrus
-	{{- if eq .chezmoi.hostname "raspberrypi" }}
 	IdentityFile ~/.ssh/bme-desktop
-	{{- else if eq .chezmoi.hostname "AMBRUS-OTTHONI" }}
-    IdentityFile C:/Users\\Ambri\\.ssh\\bme-desktop
-	{{- end}}
     ForwardAgent yes
     ForwardX11 yes
     ForwardX11Trusted yes
@@ -16,6 +12,7 @@ Host github.com
 	IdentityFile ~/.ssh/github
 
 {{- if eq .chezmoi.hostname "AMBRUS-OTTHONI" }}
+
 Host gik-sar-18
     HostName 172.22.146.23
     User ambrus
