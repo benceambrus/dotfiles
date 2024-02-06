@@ -37,3 +37,8 @@ bindurl www.twitch.tv ;q hint -Jc div[class^='Layout'] > article > div[class^='L
 " Inoreader
 bindurl www.inoreader.com hint -J [class*="title_link"],[title*="Read later"],[id*="linkdiv"]
 
+" Search engine
+set searchurls.startpage https://www.startpage.com/sp/search?query=%s
+set searchengine startpage
+
+
