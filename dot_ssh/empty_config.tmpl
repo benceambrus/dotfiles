@@ -11,7 +11,7 @@ Host bme-desktop
 Host github.com
 	IdentityFile ~/.ssh/github
 
-{{- if or (.chezmoi.hostname "AMBRUS-OTTHONI") (eq .chezmoi.hostname "DESKTOP-ECCS97O") }}
+{{- if or ( eq.chezmoi.hostname "AMBRUS-OTTHONI") (eq .chezmoi.hostname "DESKTOP-ECCS97O") }}
 
 Host gik-sar-18
     HostName 172.22.146.23
