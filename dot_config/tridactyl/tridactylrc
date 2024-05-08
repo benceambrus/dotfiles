@@ -26,7 +26,7 @@ bindurl www.startpage.com f hint -Jc .w-gl__result-title,button,input
 bindurl www.startpage.com F hint -bJc .w-gl__result-title,button,input
 
 " Youtube
-bindurl www.youtube.com f hint -Jc yt-formatted-string,yt-icon,[id='video-title'],[id='search'],tp-yt-paper-button,tp-yt-paper-tab
+" bindurl www.youtube.com f hint -Jc yt-formatted-string,yt-icon,[id='video-title'],[id='search'],tp-yt-paper-button,tp-yt-paper-tab
 bindurl www.youtube.com ;q hint -Jc yt-formatted-string -W js -p tri.excmds.shellescape(JS_ARG).then(url => tri.excmds.exclaim_quiet('streamlink ' + url))
 
 " Twitch
