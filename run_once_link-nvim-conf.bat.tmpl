@@ -1,5 +1,0 @@
-{{ if eq .chezmoi.os "windows" -}}
-if not exist %LOCALAPPDATA%\\nvim\\ (
-mklink /D %LOCALAPPDATA%\\nvim %HOMEPATH%\\.config\\nvim 
-)
-{{ end -}}

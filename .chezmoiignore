@@ -1,7 +1,0 @@
-{{- if ne .chezmoi.os "windows" }}
-komorebi*
-{{- end }}
-
-{{- if ne .chezmoi.os "linux" }}
-.config/lf
-{{- end }}
