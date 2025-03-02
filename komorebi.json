@@ -1,0 +1,109 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.33/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "default_workspace_padding": 0,
+  "default_container_padding": 0,
+  "border": true,
+  "border_width": 4,
+  "border_offset": -1,
+  "theme": {
+    "palette": "Base16",
+    "name": "GruvboxDarkHard",
+    "unfocused_border": "Base0A",
+    "bar_accent": "Base09"
+  },
+  "stackbar": {
+    "height": 25,
+    "mode": "OnStack",
+    "label": "Title",
+    "tabs": {
+      "width": 300,
+      "font_family": "Cascadia Code",
+      "font_size": 18,
+      "focused_text": "#8e64a6",
+      "unfocused_text": "#b3b3b3",
+      "background": "#141414"
+    }
+  },
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": "I",
+          "layout": "BSP"
+        },
+        {
+          "name": "II",
+          "layout": "BSP"
+        },
+        {
+          "name": "III",
+          "layout": "BSP"
+        },
+        {
+          "name": "IV",
+          "layout": "BSP"
+        },
+        {
+          "name": "V",
+          "layout": "BSP"
+        },
+        {
+          "name": "VI",
+          "layout": "BSP"
+        },
+        {
+          "name": "VII",
+          "layout": "BSP"
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": "A",
+          "layout": "Rows"
+        },
+        {
+          "name": "B",
+          "layout": "Rows"
+        },
+        {
+          "name": "C",
+          "layout": "Rows"
+        },
+        {
+          "name": "D",
+          "layout": "Rows"
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": "1",
+          "layout": "Grid"
+        },
+        {
+          "name": "2",
+          "layout": "Grid"
+        },
+        {
+          "name": "3",
+          "layout": "Grid"
+        },
+        {
+          "name": "4",
+          "layout": "Grid"
+        }
+      ]
+    }
+  ],
+  "bar_configurations": [
+    "~/komorebi.bar.monitor_main.json",
+    "~/komorebi.bar.monitor_left.json",
+    "~/komorebi.bar.monitor_right.json"
+  ]
+}

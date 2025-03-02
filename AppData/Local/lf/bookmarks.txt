@@ -1,0 +1,4 @@
+kgnss  :: d:\Cloud\od-bme\Egyetem\Kurzusok\gnss_application_and_theory\2025\
+kgeod  :: d:\Cloud\od-bme\Egyetem\Kurzusok\geodezia_2\
+kurnav :: d:\Cloud\od-bme\Egyetem\Kurzusok\urnavigacio\
+

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.33/schema.bar.json",
+  "height": 30,
+  "monitor": {
+    "index": 2,
+    "work_area_offset": {
+      "top": 30,
+      "bottom": 30,
+      "left": 0,
+      "right": 0
+    }
+  },
+  "viewport": {
+    "inner_size": {
+      "x": 1920,
+      "y": 30
+    }
+  },
+  "font_family": "Cascadia Code",
+  "font_size": 11,
+  "theme": {
+    "palette": "Base16",
+    "name": "GruvboxDarkHard",
+    "accent": "Base09"
+  },
+  "left_widgets": [
+    {
+      "Komorebi": {
+        "workspaces": {
+          "enable": true,
+          "hide_empty_workspaces": true
+        },
+        "layout": {
+          "enable": true
+        },
+        "focused_window": {
+          "enable": true,
+          "show_icon": true
+        }
+      }
+    }
+  ],
+  "right_widgets": [
+  ]
+}

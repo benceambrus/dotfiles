@@ -1,0 +1,32 @@
+: set dircounts
+$ Gci
+: cd C:\
+: cd C:\\
+: mkdir lf
+& mkdir lf
+: touch lfrc
+! gci
+& gci
+&  gci
+: cd D:
+: D
+: D:
+& D:
+$ cd D:
+$ mkdir resources
+: cd C:\
+$ cd C:\
+: cd C
+: cd D:
+: cd D:\
+$ fd
+: fzf_jump 
+: fzf_jump 
+$ Invoke-FuzzySetLocation
+: fzf_jump 
+: fzf
+: fzf_jump 
+: fzf_jump 
+: cd AppData
+$ mkdir bat
+$ touch config
