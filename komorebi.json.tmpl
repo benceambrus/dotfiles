@@ -8,7 +8,7 @@
   "border": true,
   "border_width": 4,
   "border_offset": -1,
-{{- if eq chezmoi.hostname "AMBRUS-OTTHONI" }}
+{{- if eq .chezmoi.hostname "AMBRUS-OTTHONI" }}
   "theme": {
     "palette": "Base16",
     "name": "GruvboxDarkHard",
@@ -103,7 +103,7 @@
       ]
     }
   ],
-{{- if eq chezmoi.hostname "AMBRUS-OTTHONI" }}
+{{- if eq .chezmoi.hostname "AMBRUS-OTTHONI" }}
   "bar_configurations": [
     "~/.config/komorebi-bar/komorebi.bar.monitor_main.json",
     "~/.config/komorebi-bar/komorebi.bar.monitor_left.json",
