@@ -15,6 +15,9 @@ Set-Alias -Name titus -Value TitusUtil
 # Starship
 $ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
 Invoke-Expression (&starship init powershell)
+
+# Add fzf to path.
+$env:PATH = "C:\Users\Ambri\AppData\Local\Microsoft\WinGet\Links;$env:PATH"
 {{ end }}
 
 # Editor

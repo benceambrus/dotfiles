@@ -13,6 +13,9 @@ win + shift + i         : komorebic reload-configuration
 # Open WHKD config file in Neovim
 win + h			: Start-Process nvim -ArgumentList (Join-Path -Path $env:USERPROFILE -ChildPath ".config/whkdrc")
 
+# Open Windows terminal
+win + enter             : Start-Process wt
+
 win + x                 : komorebic close
 win + c                 : komorebic minimize
 
