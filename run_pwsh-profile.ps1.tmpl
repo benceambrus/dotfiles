@@ -1,0 +1,5 @@
+{{ if eq .chezmoi.hostname "AMBRUS-OTTHONI" }}
+$fileName = "D:\Documents\PowerShell\profile.ps1"
+{{ end }}
+# SRC_DIR is set in chezmoi config file.
+cat (Join-Path -Path $env:SRC_DIR "pwsh_profile.ps1.tmpl") | chezmoi execute-template --output=$fileName
