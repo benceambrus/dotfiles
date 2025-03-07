@@ -2584,5 +2584,14 @@
         "matching_strategy": "Equals"
       }
     ]
+  },
+  "PowerToys": {
+    "floating": [
+      {
+	"kind": "Exe",
+	"id": "PowerToys.AdvancedPaste.exe",
+	"matching_strategy": "Equals"
+      }
+    ]
   }
 }
