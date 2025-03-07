@@ -83,9 +83,9 @@ win + shift + tab       : komorebic cycle-workspace previous
 win + ctrl + tab        : komorebic focus-last-workspace
 
 # Focus workspace on every monitor
-win + ctrl + 1          komorebic focus-workspaces 0 
-win + ctrl + 2          komorebic focus-workspaces 1 
-win + ctrl + 3          komorebic focus-workspaces 2 
+win + ctrl + 1          : komorebic focus-workspaces 0 
+win + ctrl + 2          : komorebic focus-workspaces 1 
+win + ctrl + 3          : komorebic focus-workspaces 2 
 
 # Move windows across workspaces
 win + shift + 1         : komorebic move-to-workspace 0
