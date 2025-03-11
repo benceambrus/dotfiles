@@ -1634,7 +1634,7 @@
     ]
   },
   "ShareX": {
-    "tray_and_multi_window": [
+    "floating": [
       {
         "kind": "Exe",
         "id": "ShareX.exe",

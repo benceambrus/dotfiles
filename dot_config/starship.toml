@@ -14,10 +14,8 @@ $all[](#905AFF)$character"""
 
 # Change the default prompt characters
 [character]
-# success_symbol = "[](#905AFF)"
-# error_symbol = "[](#905AFF)"
-success_symbol = "[>](#905AFF)"
-error_symbol = "[>](#905AFF)"
+success_symbol = "[❯](#b8bb26)"
+error_symbol = "[❯](#cc241d)"
 
 # Shows an icon that should be included by zshrc script based on the distribution or os
 [env_var.STARSHIP_DISTRO]
@@ -39,6 +37,7 @@ truncation_symbol = "…/"
 home_symbol = " ~"
 read_only_style = "197"
 read_only = "  "
+style = "#8ec07c"
 format = "at [$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]

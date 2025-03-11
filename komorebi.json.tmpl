@@ -8,7 +8,7 @@
   "border": true,
   "border_width": 4,
   "border_offset": -1,
-{{- if eq .chezmoi.hostname "AMBRUS-OTTHONI" }}
+{{- if eq .chezmoi.hostname "home-desktop" }}
   "theme": {
     "palette": "Base16",
     "name": "GruvboxDarkHard",
@@ -103,11 +103,17 @@
       ]
     }
   ],
-{{- if eq .chezmoi.hostname "AMBRUS-OTTHONI" }}
+{{- if eq .chezmoi.hostname "home-desktop" }}
   "bar_configurations": [
-    "~/.config/komorebi-bar/komorebi.bar.monitor_main.json",
-    "~/.config/komorebi-bar/komorebi.bar.monitor_left.json",
-    "~/.config/komorebi-bar/komorebi.bar.monitor_right.json"
+    "~/.config/komorebi-bar/home-desktop/komorebi.bar.monitor_main.json",
+    "~/.config/komorebi-bar/home-desktop/komorebi.bar.monitor_left.json",
+    "~/.config/komorebi-bar/home-desktop/komorebi.bar.monitor_right.json"
+  ]
+{{- else if eq .chezmoi.hostname "bme-desktop" }}
+  "bar_configurations": [
+    "~/.config/komorebi-bar/bme-desktop/komorebi.bar.monitor_main.json",
+    "~/.config/komorebi-bar/bme-desktop/komorebi.bar.monitor_left.json",
+    "~/.config/komorebi-bar/bme-desktop/komorebi.bar.monitor_right.json"
   ]
 {{- end }}
 }
