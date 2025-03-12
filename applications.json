@@ -2490,19 +2490,13 @@
     ]
   },
   "mpv": {
-    "object_name_change": [
-      {
-        "kind": "Class",
-        "id": "mpv",
-        "matching_strategy": "Legacy"
-      }
-    ],
-    "floating":
+    "floating": [
       {
 	"kind": "Exe",
 	"id": "mpv.exe",
 	"matching_strategy": "Equals"
       }
+    ]
   },
   "mpv.net": {
     "object_name_change": [
