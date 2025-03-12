@@ -2496,7 +2496,13 @@
         "id": "mpv",
         "matching_strategy": "Legacy"
       }
-    ]
+    ],
+    "floating":
+      {
+	"kind": "Exe",
+	"id": "mpv.exe",
+	"matching_strategy": "Equals"
+      }
   },
   "mpv.net": {
     "object_name_change": [
