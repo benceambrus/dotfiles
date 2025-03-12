@@ -37,7 +37,7 @@ truncation_symbol = "…/"
 home_symbol = " ~"
 read_only_style = "197"
 read_only = "  "
-style = "#8ec07c"
+style = "green bold"
 format = "at [$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
