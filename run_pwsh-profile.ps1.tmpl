@@ -6,3 +6,4 @@ $fileName = "~\Documents\PowerShell\profile.ps1"
 
 # SRC_DIR is set in chezmoi config file.
 cat (Join-Path -Path $env:SRC_DIR ".chezmoitemplates\pwsh_profile") | chezmoi execute-template --output=$fileName
+Write-Host "PowerShell config applied."
