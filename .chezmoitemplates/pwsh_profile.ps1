@@ -16,6 +16,10 @@ Set-Alias -Name titus -Value TitusUtil
 $env:PATH = "C:\Users\Ambri\AppData\Local\Microsoft\WinGet\Links;$env:PATH"
 {{ end }}
 
+# Chezmoi Git Alias
+Function ChezmoiGit { git add .; git commit -m "Automatic commit from chezmoi-git."; git push origin main }
+Set-Alias -Name chezmoi-git -Value ChezmoiGit
+
 # Starship
 $ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
 Invoke-Expression (&starship init powershell)
