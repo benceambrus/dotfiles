@@ -30,7 +30,7 @@ cmd doc $lf -doc | less
 cmd open $start $Env:f
 
 # leave some space at the top and the bottom of the screen
-set scrolloff 10
+set scrolloff 50
 
 # use enter for shell commands
 map <enter> shell
@@ -52,6 +52,13 @@ set relativenumber
 
 # Create directory shortcut
 map a :push $mkdir<space>
+
+# Delete
+map D delete
+
+# Faster up/down navigation
+map J :push 5j
+map K :push 5k
 
 # Bookmark jump
 cmd bookmark_jump ${{

@@ -1,6 +1,6 @@
 # Alias commands
 # SSH
-{{ if eq .chezmoi.hostname "home-desktop" }}
+{{ if (and (eq .chezmoi.os "windows") (eq .chezmoi.hostname "home-desktop" )) }}
 Function SshBme { & ssh -Y BME-Desktop }
 Function SshRaspberry { & ssh raspberry }
 Function RpiGetVids { & ssh raspberry "cd /mnt/WD6TB/twc/download; find . -type f -exec basename {} \;"}
