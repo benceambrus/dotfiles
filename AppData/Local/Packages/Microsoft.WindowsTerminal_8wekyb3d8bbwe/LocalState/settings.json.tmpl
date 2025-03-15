@@ -134,7 +134,11 @@
             "bellStyle": "window",
             "colorScheme": 
             {
+{{- if eq .chezmoi.hostname "home-desktop" }}
                 "dark": "Gruvbox Dark",
+{{- else if eq .chezmoi.hostname "bme-desktop" }}
+                "dark": "Catppuccin Macchiato",
+{{- end }}
                 "light": "Gruvbox Light"
             },
             "cursorShape": "bar",
