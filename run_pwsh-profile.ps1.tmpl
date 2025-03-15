@@ -1,9 +1,18 @@
+$templateFile = "pwsh_profile.ps1"
+
 {{- if eq .chezmoi.hostname "home-desktop" }}
 $fileName = "D:\Documents\PowerShell\profile.ps1"
-{{- else if eq .chezmoi.hostname "bme-desktop" }}
-$fileName = "~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
-{{- end }}
 
 # SRC_DIR is set in chezmoi config file.
-cat (Join-Path -Path $env:SRC_DIR ".chezmoitemplates\pwsh_profile") | chezmoi execute-template --output=$fileName
-Write-Host "PowerShell config applied."
+cat (Join-Path -Path $env:SRC_DIR ".chezmoitemplates\$templateFile") | chezmoi execute-template --output=$fileName
+Write-Host "PowerShell config applied to $fileName."
+
+{{- else if eq .chezmoi.hostname "bme-desktop" }}
+$fileName = "~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
+
+# SRC_DIR is set in chezmoi config file.
+cat (Join-Path -Path $env:SRC_DIR ".chezmoitemplates\$templateFile") | chezmoi execute-template --output=$fileName
+Write-Host "PowerShell config applied to $fileName."
+
+{{- end }}
+
