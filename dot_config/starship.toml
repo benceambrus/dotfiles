@@ -12,13 +12,6 @@ format = """\
 [](#905AFF)$env_var\
 $all[](#905AFF)$character"""
 
-[font]
-size = 12.0
-
-[font.normal]
-family = "FiraCode Nerd Font Mono"
-style = "Regular"
-
 # Change the default prompt characters
 [character]
 success_symbol = "[❯](#b8bb26)"
