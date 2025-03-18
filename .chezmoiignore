@@ -13,4 +13,7 @@ AppData
 {{ if eq .chezmoi.os "windows" }}
 # LF config files (not located in .config)
 .config/lf
+
+# Fish
+.config/fish
 {{ end }}
