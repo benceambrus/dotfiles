@@ -2,7 +2,11 @@
   autoCommit = true
   autoPush = true
 [cd]
+{{- if eq .chezmoi.os "windows" }}
   command = "pwsh"
+{{- else if eq .chezmoi.os "linux" }}
+  command = "fish"
+{{- end }}
 {{- if eq .chezmoi.hostname "home-desktop" }}
 [scriptEnv]
   SRC_DIR = "~/.local/share/chezmoi"
