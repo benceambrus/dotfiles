@@ -1,4 +1,5 @@
 -- Global options
+vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.autoindent = true
 vim.opt.smarttab = true
