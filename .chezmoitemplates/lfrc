@@ -1,0 +1,103 @@
+{{ if eq .chezmoi.os "windows" }}
+# interpreter for shell commands
+set shell powershell
+set shellopts '-noprofile'
+
+# change the editor used in default editor keybinding
+# There is no builtin terminal editor installed in Windows. The default editor
+# mapping uses 'notepad' which launches in a separate GUI window. You may
+# instead install a terminal editor of your choice and replace the default
+# editor keybinding accordingly.
+map e $nvim $Env:f
+
+# change the pager used in default pager keybinding
+# The standard pager used in Windows is 'more' which is not a very capable
+# pager. You may instead install a pager of your choice and replace the default
+# pager keybinding accordingly.
+map i $bat --paging=always $Env:f
+
+# change the shell used in default shell keybinding
+map w $pwsh
+
+# change 'doc' command to use a different pager
+cmd doc $lf -doc | less
+
+# opener
+cmd open $start $Env:f
+
+# Bookmark jump
+cmd bookmark_jump ${{- "{{" }}
+    $LF_BOOKMARKS_PATH = "C:\Users\Ambri\AppData\Local\lf\bookmarks.txt"
+    $cdPath = (cat $LF_BOOKMARKS_PATH | fzf --layout=reverse --border=rounded --margin=25%,5%) -replace ".*:: ",""
+    lf -remote "send cd '$cdPath'"
+{{"}}"}}
+map b bookmark_jump
+
+# Edit bookmark file
+cmd bookmark_save ${{- "{{" }}
+    $LF_BOOKMARKS_PATH = "C:\Users\Ambri\AppData\Local\lf\bookmarks.txt"
+    nvim $LF_BOOKMARKS_PATH
+{{"}}"}}
+map B bookmark_save
+
+# Jump to directory with fzf
+cmd fzf_jump ${{- "{{" }}
+	$cdPath = (Get-ChildItem . -Recurse | Where-Object { $_.PSIsContainer } | Invoke-Fzf)
+	lf -remote "send cd '$cdPath'"
+{{"}}"}}
+{{ else if eq .chezmoi.os "linux" }}
+# Interpreter for shell commmands.
+set shell sh
+set shellopts '-eu'
+
+# Set internal field separator (IFS) to "\n" for shell commands
+# This is useful to automatically split file names in $fs and $fx properly
+# since default file separator used in these variables (i.e. 'filesep' option)
+ # is newline. You need to consider the values of these options and create youru# commands accordingly.
+set ifs "\n"
+
+# Execute current file.
+map x $$f
+map X !$f
+
+# Openers.
+map o &mimeopen $f
+map O $mimeopen --ask $f
+
+# Searchable bookmarks
+cmd bookmark_jump ${{- "{{" }}
+    res="$(cat $LF_BOOKMARK_PATH | fzf --layout=reverse --border=rounded --margin=25%,5% | sed -e 's/.*://')"
+    lf -remote "send $id cd \"$res\""
+{{"}}"}}
+map b bookmark_jump
+{{ end }}
+# leave some space at the top and the bottom of the screen
+set scrolloff 5
+
+# use enter for shell commands
+map <enter> shell
+
+# Drawbox around panes
+set drawbox
+
+# Incremental search
+set incsearch
+
+# Number of characters to type for find
+set findlen 2
+
+# Pane ratios
+set ratios '1:3:2'
+
+# Relative line numbers
+set relativenumber
+
+# Create directory shortcut
+map a :push $mkdir<space>
+
+# Delete
+map D delete
+
+# Faster up/down navigation
+map J :push 5j
+map K :push 5k

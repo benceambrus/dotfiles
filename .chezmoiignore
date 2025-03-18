@@ -1,4 +1,4 @@
-{{- if eq .chezmoi.os "linux" }}
+{{ if eq .chezmoi.os "linux" }}
 # Komorebi files
 komorebi.json
 applications.json
@@ -7,4 +7,10 @@ applications.json
 
 # Windows specific
 AppData
-{{- end }}
+.chezmoiscripts/windows/**
+{{ end }}
+
+{{ if eq .chezmoi.os "windows" }}
+# LF config files (not located in .config)
+.config/lf
+{{ end }}

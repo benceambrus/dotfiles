@@ -3,7 +3,7 @@
   autoPush = true
 [cd]
   command = "pwsh"
-{{ if eq .chezmoi.hostname "home-desktop" }}
+{{- if eq .chezmoi.hostname "home-desktop" }}
 [scriptEnv]
   SRC_DIR = "~/.local/share/chezmoi"
 {{ end }}
