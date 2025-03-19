@@ -17,7 +17,13 @@ $env:PATH = "C:\Users\Ambri\AppData\Local\Microsoft\WinGet\Links;$env:PATH"
 {{ end }}
 
 # Chezmoi Git Alias
-Function ChezmoiGit {cd ~\.local\share\chezmoi; git add .; git commit -m "Automatic commit from chezmoi-git."; git push origin main; exit }
+Function ChezmoiGit {
+    $currDir = $pwd
+    cd ~\.local\share\chezmoi; git add .
+    git commit -m "Automatic commit from chezmoi-git."
+    git push origin main
+    cd $currDir
+}
 Set-Alias -Name chezmoi-git -Value ChezmoiGit
 
 # Starship
