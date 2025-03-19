@@ -105,9 +105,9 @@ win + escape            : komorebic cycle-move-to-workspace next
 win + shift + escape    : komorebic cycle-move-to-workspace previous
 
 # Move windows across monitors
-win + shift + q         : komorebic move-to-monitor 1
-win + shift + w         : komorebic move-to-monitor 0
-win + shift + e         : komorebic move-to-monitor 2
+win + shift + w         : komorebic move-to-monitor 1
+win + shift + e         : komorebic move-to-monitor 0
+win + shift + r         : komorebic move-to-monitor 2
 
 # Switch monitors
 win + w 		: komorebic focus-monitor 1
