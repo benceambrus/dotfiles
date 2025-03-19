@@ -71,8 +71,8 @@ win + shift + o          : komorebic retile
 win + shift + p          : komorebic toggle-pause
 
 # Layouts
-win + r                 : komorebic flip-layout horizontal
-win + shift + r         : komorebic flip-layout vertical
+win + q                 : komorebic flip-layout horizontal
+win + shift + q         : komorebic flip-layout vertical
 
 # Workspaces
 win + 1                 : komorebic focus-workspace 0
