@@ -110,6 +110,6 @@ win + shift + w         : komorebic move-to-monitor 0
 win + shift + e         : komorebic move-to-monitor 2
 
 # Switch monitors
-win + q 				: komorebic focus-monitor 1
-win + w                 : komorebic focus-monitor 0
-win + e                 : komorebic focus-monitor 2
+win + w 		: komorebic focus-monitor 1
+win + e                 : komorebic focus-monitor 0
+win + r                 : komorebic focus-monitor 2
