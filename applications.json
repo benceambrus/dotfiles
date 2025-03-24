@@ -1443,6 +1443,13 @@
         "id": "PowerToys.PowerAccent.exe",
         "matching_strategy": "Equals"
       }
+    ],
+    "floating": [
+      {
+        "kind": "Exe",
+        "id": "PowerToys.AdvancedPaste.exe",
+        "matching_strategy": "Equals"
+      }
     ]
   },
   "Process Hacker": {
@@ -2492,9 +2499,9 @@
   "mpv": {
     "floating": [
       {
-	"kind": "Exe",
-	"id": "mpv.exe",
-	"matching_strategy": "Equals"
+        "kind": "Exe",
+        "id": "mpv.exe",
+        "matching_strategy": "Equals"
       }
     ]
   },
@@ -2582,15 +2589,6 @@
         "kind": "Class",
         "id": "VISIOA",
         "matching_strategy": "Equals"
-      }
-    ]
-  },
-  "PowerToys": {
-    "floating": [
-      {
-	"kind": "Exe",
-	"id": "PowerToys.AdvancedPaste.exe",
-	"matching_strategy": "Equals"
       }
     ]
   }
