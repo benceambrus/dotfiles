@@ -29,8 +29,8 @@ win + a                 : komorebic focus left
 win + s                 : komorebic focus down
 win + d                 : komorebic focus up
 win + f                 : komorebic focus right
-win + space             : komorebic cycle-focus next
-win + shift + space     : komorebic cycle-focus previous
+win + b                 : komorebic cycle-focus next
+win + shift + b         : komorebic cycle-focus previous
 # alt + shift + oem_4   : komorebic cycle-focus previous # oem_4 is [
 # alt + shift + oem_6   : komorebic cycle-focus next # oem_6 is ]
 
