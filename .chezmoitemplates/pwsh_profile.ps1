@@ -75,3 +75,8 @@ function y {
     }
     Remove-Item -Path $tmp
 }
+
+# Zoxide
+if (Get-Command -ErrorAction SilentlyContinue zoxide) { 
+    Invoke-Expression (& { (zoxide init powershell | Out-String) })
+}
