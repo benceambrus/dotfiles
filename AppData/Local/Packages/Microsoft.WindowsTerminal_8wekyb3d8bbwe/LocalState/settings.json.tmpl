@@ -165,11 +165,16 @@
                 "useAcrylic": true
             },
             {
+{{ if eq .chezmoi.hostname "bme-desktop" }}
+                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -ExecutionPolicy ByPass -NoExit -Command \"& 'C:\\Users\\ambrus\\anaconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\Users\\ambrus\\anaconda3 \"",
+                "icon": "C:\\Users\\ambrus\\anaconda3\\_conda.exe",
+{{ else }}
                 "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -ExecutionPolicy ByPass -NoExit -Command \"& 'C:\\ProgramData\\miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\ProgramData\\miniconda3' \"",
+                "icon": "C:\\ProgramData\\miniconda3\\_conda.exe",
+{{ end }}
                 "experimental.rightClickContextMenu": true,
                 "guid": "{0bb7d26c-81a6-4986-98dc-a76487b81631}",
                 "hidden": false,
-                "icon": "C:\\ProgramData\\miniconda3\\_conda.exe",
                 "name": "Anaconda Pwsh"
             },
             {

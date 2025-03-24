@@ -3,7 +3,7 @@
 {{ if (and (eq .chezmoi.os "windows") (eq .chezmoi.hostname "home-desktop" )) }}
 Function SshBme { & ssh -Y BME-Desktop }
 Function SshRaspberry { & ssh raspberry }
-Function RpiGetVids { & ssh raspberry "cd /mnt/WD6TB/twc/download; find . -type f -exec basename {} \;"}
+Function RpiGetVids { & ssh raspberry "cd /mnt/WD6TB/twc/download; find . -type f -exec basename {} \;" }
 
 Function TitusUtil { Invoke-WebRequest -useb https://christitus.com/win | Invoke-Expression }
 
@@ -35,7 +35,7 @@ $env:Editor = "nvim"
 
 # Vi-mode with cursor indicator
 Set-PsReadLineOption -EditMode Vi
-$OnViModeChange = [scriptblock]{
+$OnViModeChange = [scriptblock] {
     if ($args[0] -eq 'Command') {
         # Set the cursor to a blinking block.
         Write-Host -NoNewLine "`e[1 q"
@@ -48,7 +48,7 @@ $OnViModeChange = [scriptblock]{
 Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler $OnViModeChange
 
 # LFCD
-Function lfcd { lf -print-last-dir $args | Set-Location}
+Function lfcd { lf -print-last-dir $args | Set-Location }
 Set-Alias -Name l -Value lfcd
 
 # PSFzf options
@@ -63,4 +63,4 @@ Set-PsFzfOption -EnableAliasFuzzySetLocation # fd
 #$commandOverride = [ScriptBlock]{ param($Location) Write-Host $Location }
 #Set-PsFzfOption -AltCCommand $commandOverride
 
-
+# Conda
