@@ -1,6 +1,6 @@
 # Alias commands
 # SSH
-{ { if (and (eq .chezmoi.os "windows") (eq .chezmoi.hostname "home-desktop" )) } }
+{{ if (and (eq .chezmoi.os "windows") (eq .chezmoi.hostname "home-desktop" )) }}
 Function SshBme { & ssh -Y BME-Desktop }
 Function SshRaspberry { & ssh raspberry }
 Function RpiGetVids { & ssh raspberry "cd /mnt/WD6TB/twc/download; find . -type f -exec basename {} \;" }
@@ -14,7 +14,7 @@ Set-Alias -Name titus -Value TitusUtil
 
 # Add fzf to path.
 $env:PATH = "C:\Users\Ambri\AppData\Local\Microsoft\WinGet\Links;$env:PATH"
-{ { end } }
+{{ end }}
 
 # Chezmoi Git Alias
 Function ChezmoiGit {
@@ -27,7 +27,7 @@ Function ChezmoiGit {
 Set-Alias -Name chezmoi-git -Value ChezmoiGit
 
 # Starship
-if (Get-Command starhip) {
+if (Get-Command starship) {
     $ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
     Invoke-Expression (&starship init powershell)
 }
