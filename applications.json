@@ -825,6 +825,15 @@
       }
     ]
   },
+  "IrfanView": {
+    "ignore": [
+      {
+	"kind": "Exe",
+	"id": "i_view64.exe",
+	"matching_strategy": "Equals"
+      }
+    ]
+  },
   "Itch.io": {
     "tray_and_multi_window": [
       {
