@@ -95,3 +95,10 @@ if (Get-Command -ErrorAction SilentlyContinue) {
     Set-Alias -Name ls -Value eza-grid
     Set-Alias -Name ll -Value eza-long
 }
+
+# Mamba
+# !! Contents within this block are managed by 'mamba shell init' !!
+$Env:MAMBA_ROOT_PREFIX = "C:\Users\Ambri\miniforge3"
+$Env:MAMBA_EXE = "C:\Users\Ambri\miniforge3\Library\bin\mamba.exe"
+(& $Env:MAMBA_EXE 'shell' 'hook' -s 'powershell' -r $Env:MAMBA_ROOT_PREFIX) | Out-String | Invoke-Expression
+#endregion
