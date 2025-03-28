@@ -144,8 +144,8 @@
             "cursorShape": "bar",
             "font": 
             {
-                "face": "FiraCode Nerd Font Mono",
-                "size": 11,
+                "face": "Inconsolata Nerd Font",
+                "size": 13,
                 "weight": "normal"
             },
             "opacity": 85,
@@ -163,19 +163,6 @@
                 "padding": "2",
                 "startingDirectory": null,
                 "useAcrylic": true
-            },
-            {
-{{ if eq .chezmoi.hostname "bme-desktop" }}
-                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -ExecutionPolicy ByPass -NoExit -Command \"& 'C:\\Users\\ambrus\\anaconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\Users\\ambrus\\anaconda3 \"",
-                "icon": "C:\\Users\\ambrus\\anaconda3\\_conda.exe",
-{{ else }}
-                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -ExecutionPolicy ByPass -NoExit -Command \"& 'C:\\ProgramData\\miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\ProgramData\\miniconda3' \"",
-                "icon": "C:\\ProgramData\\miniconda3\\_conda.exe",
-{{ end }}
-                "experimental.rightClickContextMenu": true,
-                "guid": "{0bb7d26c-81a6-4986-98dc-a76487b81631}",
-                "hidden": false,
-                "name": "Anaconda Pwsh"
             },
             {
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
@@ -249,7 +236,7 @@
 	    "brightBlack": "#5B6078",
 	    "brightRed": "#ED8796",
 	    "brightGreen": "#A6DA95",
-     	    "brightYellow": "#EED49F",
+     	"brightYellow": "#EED49F",
 	    "brightBlue": "#8AADF4",
 	    "brightPurple": "#F5BDE6",
 	    "brightCyan": "#8BD5CA",

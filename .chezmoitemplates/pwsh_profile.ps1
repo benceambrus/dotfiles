@@ -27,9 +27,14 @@ Function ChezmoiGit {
 Set-Alias -Name chezmoi-git -Value ChezmoiGit
 
 # Starship
-if (Get-Command starship) {
-    $ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
-    Invoke-Expression (&starship init powershell)
+#if (Get-Command starship) {
+#    $ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
+#    Invoke-Expression (&starship init powershell)
+#}
+
+# Oh-my-posh
+if (Get-Command oh-my-posh) {
+    oh-my-posh --config $env:USERPROFILE\.config\oh-my-posh.omp.json init pwsh | Invoke-Expression
 }
 
 # Editor
@@ -81,4 +86,12 @@ function y {
 # Zoxide
 if (Get-Command -ErrorAction SilentlyContinue zoxide) { 
     Invoke-Expression (& { (zoxide init powershell | Out-String) })
+}
+
+# eza
+function eza-grid { & eza --group-directories-first --icons=always }
+function eza-long { & eza --long --group-directories-first --icons=always }
+if (Get-Command -ErrorAction SilentlyContinue) {
+    Set-Alias -Name ls -Value eza-grid
+    Set-Alias -Name ll -Value eza-long
 }

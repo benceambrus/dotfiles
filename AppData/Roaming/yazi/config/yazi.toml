@@ -70,6 +70,7 @@ rules = [
 	# Text
 	{ mime = "text/*", use = [
 		"edit",
+		"open",
 		"reveal",
 	] },
 	# Image
