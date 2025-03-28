@@ -62,7 +62,7 @@ keymap = [
 	{ on = "o",         run = "open",                        desc = "Open selected files" },
 	{ on = "O",         run = "open --interactive",          desc = "Open selected files interactively" },
 	{ on = "e",         run = "shell 'nvim %0' --block",     desc = "Open seleected file with Neovim" },
-	{ on = "i",         run = "shell 'bat %0' --block",      desc = "Inspect selected file with bat" },
+	{ on = "i",         run = "shell --block 'bat --paging=always %0'",      desc = "Inspect selected file with bat" },
 	{ on = "<Enter>",   run = "open",                        desc = "Open selected files" },
 	{ on = "<S-Enter>", run = "open --interactive",          desc = "Open selected files interactively" },
 	{ on = "y",         run = "yank",                        desc = "Yank selected files (copy)" },
