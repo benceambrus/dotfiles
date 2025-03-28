@@ -61,7 +61,7 @@
         {
           "foreground": "#CD4277",
           "style": "plain",
-          "template": "# ",
+          "template": "\uf105 ",
           "type": "text"
         }
       ],
