@@ -33,7 +33,7 @@ Set-Alias -Name chezmoi-git -Value ChezmoiGit
 #}
 
 # Oh-my-posh
-if (Get-Command oh-my-posh) {
+if (Get-Command -ErrorAction SilentlyContinue oh-my-posh) {
     oh-my-posh --config $env:USERPROFILE\.config\oh-my-posh.omp.json init pwsh | Invoke-Expression
 }
 
@@ -70,8 +70,6 @@ Set-PsFzfOption -EnableAliasFuzzySetLocation # fd
 #$commandOverride = [ScriptBlock]{ param($Location) Write-Host $Location }
 #Set-PsFzfOption -AltCCommand $commandOverride
 
-# Conda
-
 # Yazi cd
 function y {
     $tmp = [System.IO.Path]::GetTempFileName()
@@ -97,8 +95,9 @@ if (Get-Command -ErrorAction SilentlyContinue) {
 }
 
 # Mamba
+if (Get-Command -ErrorAction SilentlyContinue mamba) {
 # !! Contents within this block are managed by 'mamba shell init' !!
-$Env:MAMBA_ROOT_PREFIX = "C:\Users\Ambri\miniforge3"
-$Env:MAMBA_EXE = "C:\Users\Ambri\miniforge3\Library\bin\mamba.exe"
-(& $Env:MAMBA_EXE 'shell' 'hook' -s 'powershell' -r $Env:MAMBA_ROOT_PREFIX) | Out-String | Invoke-Expression
-#endregion
+    $Env:MAMBA_ROOT_PREFIX = "~\miniforge3"
+    $Env:MAMBA_EXE = "~\miniforge3\Library\bin\mamba.exe"
+    (& $Env:MAMBA_EXE 'shell' 'hook' -s 'powershell' -r $Env:MAMBA_ROOT_PREFIX) | Out-String | Invoke-Expression
+}

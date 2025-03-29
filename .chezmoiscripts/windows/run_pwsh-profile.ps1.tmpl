@@ -1,10 +1,8 @@
 {{- if eq .chezmoi.os "windows" }}
 $templateFile = "pwsh_profile.ps1"
-
 {{- if eq .chezmoi.hostname "home-desktop" }}
 $fileName = "D:\Documents\PowerShell\profile.ps1"
-
-{{- else if eq .chezmoi.hostname "bme-desktop" }}
+{{- else }}
 $fileName = "~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
 {{- end}}
 

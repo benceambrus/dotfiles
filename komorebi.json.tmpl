@@ -120,5 +120,9 @@
     "1": "GSM4B7A-4&7e5290e&0&UID206355",
     "2": "SAM06A5-4&7e5290e&0&UID200195"
   }
+{{- else if eq .chezmoi.hostname "home-laptop" }}
+  "bar_configurations": [
+    "~/.config/komorebi-bar/home-laptop/komorebi.bar.monitor_main.json",
+  ],
 {{- end }}
 }
