@@ -5,7 +5,7 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#39685b",
+          "foreground": "#4d8676",
           "style": "plain",
           "template": "\ueb99 {{ .UserName }} on",
           "type": "session"
