@@ -96,7 +96,7 @@ if (Get-Command -ErrorAction SilentlyContinue) {
 
 # Mamba
 if (Get-Command -ErrorAction SilentlyContinue mamba) {
-# !! Contents within this block are managed by 'mamba shell init' !!
+    # !! Contents within this block are managed by 'mamba shell init' !!
     $Env:MAMBA_ROOT_PREFIX = "~\miniforge3"
     $Env:MAMBA_EXE = "~\miniforge3\Library\bin\mamba.exe"
     (& $Env:MAMBA_EXE 'shell' 'hook' -s 'powershell' -r $Env:MAMBA_ROOT_PREFIX) | Out-String | Invoke-Expression

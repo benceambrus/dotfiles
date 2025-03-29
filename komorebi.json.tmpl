@@ -15,6 +15,44 @@
     "unfocused_border": "Base0A",
     "bar_accent": "Base09"
   },
+  "bar_configurations": [
+    "~/.config/komorebi-bar/home-desktop/komorebi.bar.monitor_main.json",
+    "~/.config/komorebi-bar/home-desktop/komorebi.bar.monitor_left.json",
+    "~/.config/komorebi-bar/home-desktop/komorebi.bar.monitor_right.json"
+  ],
+  "theme": {
+    "palette": "Base16",
+    "name": "GruvboxDarkHard",
+    "unfocused_border": "Base0A",
+    "bar_accent": "Base09"
+  },
+{{- else if eq .chezmoi.hostname "bme-desktop" }}
+  "theme": {
+    "palette": "Catppuccin",
+    "name": "Mocha",
+    "unfocused_border": "Yellow",
+    "bar_accent": "Mauve"
+  },
+  "bar_configurations": [
+    "~/.config/komorebi-bar/bme-desktop/komorebi.bar.monitor_main.json",
+    "~/.config/komorebi-bar/bme-desktop/komorebi.bar.monitor_left.json",
+    "~/.config/komorebi-bar/bme-desktop/komorebi.bar.monitor_right.json"
+  ],
+  "display_index_preferences": {
+    "0": "SAM03C2-5&217f22ba&0&UID4353",
+    "1": "GSM4B7A-4&7e5290e&0&UID206355",
+    "2": "SAM06A5-4&7e5290e&0&UID200195"
+  },
+{{- else if eq .chezmoi.hostname "home-laptop" }}
+  "bar_configurations": [
+    "~/.config/komorebi-bar/home-laptop/komorebi.bar.monitor_main.json"
+  ],
+  "theme": {
+    "palette": "Base16",
+    "name": "EverforestDarkHard",
+    "unfocused_border": "Base0A",
+    "bar_accent": "Base09"
+  },
 {{- end }}
   "stackbar": {
     "height": 25,
@@ -102,27 +140,5 @@
         }
       ]
     }
-  ],
-{{- if eq .chezmoi.hostname "home-desktop" }}
-  "bar_configurations": [
-    "~/.config/komorebi-bar/home-desktop/komorebi.bar.monitor_main.json",
-    "~/.config/komorebi-bar/home-desktop/komorebi.bar.monitor_left.json",
-    "~/.config/komorebi-bar/home-desktop/komorebi.bar.monitor_right.json"
   ]
-{{- else if eq .chezmoi.hostname "bme-desktop" }}
-  "bar_configurations": [
-    "~/.config/komorebi-bar/bme-desktop/komorebi.bar.monitor_main.json",
-    "~/.config/komorebi-bar/bme-desktop/komorebi.bar.monitor_left.json",
-    "~/.config/komorebi-bar/bme-desktop/komorebi.bar.monitor_right.json"
-  ],
-  "display_index_preferences": {
-    "0": "SAM03C2-5&217f22ba&0&UID4353",
-    "1": "GSM4B7A-4&7e5290e&0&UID206355",
-    "2": "SAM06A5-4&7e5290e&0&UID200195"
-  }
-{{- else if eq .chezmoi.hostname "home-laptop" }}
-  "bar_configurations": [
-    "~/.config/komorebi-bar/home-laptop/komorebi.bar.monitor_main.json",
-  ],
-{{- end }}
 }
