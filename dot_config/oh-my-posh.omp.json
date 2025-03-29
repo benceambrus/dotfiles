@@ -43,7 +43,12 @@
           "type": "python",
           "style": "plain",
           "foreground": "#007427",
-          "template": "  ({{ .Venv }}) - {{ .Full }}"
+	  "properties": {
+	      "display_mode": "environment",
+	      "fetch_virtual_env": "true",
+	      "display_virtual_env": "true"
+	  },
+          "template": "  ({{ if .Venv }}{{ .Venv }}): {{ .Full }}{{ end }}"
         }
       ],
       "type": "prompt"
