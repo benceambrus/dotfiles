@@ -1,32 +1,32 @@
 {{ if eq .chezmoi.hostname "home-laptop" }}
     {{- template "komorebi_base" dict 
-        "theme_palette" `"Base16"`
-        "theme_name" `"EverforestDarkHard"`
-        "theme_unfocused_border" `"Base0A"`
-        "theme_bar_accent" `"Base09"`
+        "theme_palette"          "Base16"
+        "theme_name"             "EverforestDarkHard"
+        "theme_unfocused_border" "Base0A"
+        "theme_bar_accent"       "Base0A"
         "bar_configs" 
-            `"~/.config/komorebi-bar/home-laptop/monitor_main.json"`
+            "~/.config/komorebi-bar/home-laptop/monitor_main.json"
     -}}
 {{ else if eq .chezmoi.hostname "home-desktop" }}
     {{- template "komorebi_base" dict 
-        "theme_palette" `"Base16"`
-        "theme_name" `"GruvboxDarkHard"`
-        "theme_unfocused_border" `"Base0A"`
-        "theme_bar_accent" `"Base09"`
+        "theme_palette"          "Base16"
+        "theme_name"             "GruvboxDarkHard"
+        "theme_unfocused_border" "Base0A"
+        "theme_bar_accent"       "Base09"
         "bar_configs" 
-            `"~/.config/komorebi-bar/home-desktop/monitor_main.json",
-             "~/.config/komorebi-bar/home-desktop/monitor_right.json",
-             "~/.config/komorebi-bar/home-desktop/monitor_left.json"`
+            `~/.config/komorebi-bar/home-desktop/monitor_main.json",
+            "~/.config/komorebi-bar/home-desktop/monitor_right.json",
+            "~/.config/komorebi-bar/home-desktop/monitor_left.json`
     -}}
 {{ else if eq .chezmoi.hostname "bme-desktop" }}
     {{- template "komorebi_base" dict 
-        "theme_palette" `"Catppuccin"`
-        "theme_name" `"Mocha"`
-        "theme_unfocused_border" `"Base0A"`
-        "theme_bar_accent" `"Base09"`
+        "theme_palette"          "Catppuccin"
+        "theme_name"             "Mocha"
+        "theme_unfocused_border" "Base0A"
+        "theme_bar_accent"       "Base09"
         "bar_configs" 
-            `"~/.config/komorebi-bar/home-desktop/monitor_main.json",
-             "~/.config/komorebi-bar/home-desktop/monitor_right.json",
-             "~/.config/komorebi-bar/home-desktop/monitor_left.json"`
+            `~/.config/komorebi-bar/home-desktop/monitor_main.json",
+            "~/.config/komorebi-bar/home-desktop/monitor_right.json",
+            "~/.config/komorebi-bar/home-desktop/monitor_left.json`
     -}}
 {{ end }}

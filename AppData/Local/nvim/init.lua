@@ -14,6 +14,9 @@ vim.opt.scrolloff = 4
 
 vim.g.mapleader = ","
 
+-- Colorscheme
+vim.cmd.colorscheme("lunaperche")
+
 -- Lazy.nvim
 require("config.lazy")
 

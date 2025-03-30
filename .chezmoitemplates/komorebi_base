@@ -9,12 +9,12 @@
   "border_width": 4,
   "border_offset": -1,
   "theme": {
-    "name": {{ .theme_name }},
-    "palette": {{ .theme_palette }},
-    "unfocused_border": {{ .theme_unfocused_border }},
-    "bar_accent": {{ .theme_bar_accent }}
+    "name": "{{ .theme_name }}",
+    "palette": "{{ .theme_palette }}",
+    "unfocused_border": "{{ .theme_unfocused_border }}",
+    "bar_accent": "{{ .theme_bar_accent }}"
   },
-  "bar_configurations": [ {{ .bar_configs }} ],
+  "bar_configurations": [ "{{ .bar_configs }}" ],
   "stackbar": {
     "height": 25,
     "mode": "OnStack",
