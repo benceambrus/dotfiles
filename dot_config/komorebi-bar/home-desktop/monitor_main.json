@@ -17,11 +17,6 @@
   },
   "font_family": "Cascadia Code",
   "font_size": 11,
-  "theme": {
-    "palette": "Base16",
-    "name": "GruvboxDarkHard",
-    "accent": "Base09"
-  },
   "left_widgets": [
     {
       "Komorebi": {

@@ -16,11 +16,6 @@
       "y": 30
     }
   },
-  "theme": {
-    "palette": "Base16",
-    "name": "GruvboxDarkHard",
-    "accent": "Base09"
-  },
   "font_family": "Cascadia Code",
   "font_size": 11,
   "left_widgets": [

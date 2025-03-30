@@ -1,6 +1,5 @@
 {
   "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.33/schema.bar.json",
-  "height": 30,
   "monitor": {
     "index": 2,
     "work_area_offset": {
@@ -12,17 +11,12 @@
   },
   "viewport": {
     "inner_size": {
-      "x": 1920,
+      "x": 1440,
       "y": 30
     }
   },
   "font_family": "Cascadia Code",
   "font_size": 11,
-  "theme": {
-    "palette": "Base16",
-    "name": "GruvboxDarkHard",
-    "accent": "Base09"
-  },
   "left_widgets": [
     {
       "Komorebi": {
@@ -40,6 +34,6 @@
       }
     }
   ],
-  "right_widgets": [
-  ]
+  "center_widgets": [],
+  "right_widgets": []
 }
