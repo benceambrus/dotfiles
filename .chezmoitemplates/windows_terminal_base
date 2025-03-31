@@ -295,9 +295,9 @@
         },
         {
             "background": "#EAEDC8",
-            "black": "#708089",
+            "black": "#a0afb8",
             "blue": "#3A94C5",
-            "brightBlack": "#708089",
+            "brightBlack": "#a0afb8",
             "brightBlue": "#3A94C5",
             "brightCyan": "#35A77C",
             "brightGreen": "#93B259",
@@ -312,7 +312,7 @@
             "name": "Everforest Light Medium",
             "purple": "#DF69BA",
             "red": "#F85552",
-            "selectionBackground": "#939F91",
+            "selectionBackground": "#bac1b9",
             "white": "#E9F0E9",
             "yellow": "#DFA000"
         },
