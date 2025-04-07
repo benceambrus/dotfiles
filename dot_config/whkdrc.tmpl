@@ -110,6 +110,12 @@ win + shift + e         : komorebic move-to-monitor 0
 win + shift + r         : komorebic move-to-monitor 2
 
 # Switch monitors
-win + w 		: komorebic focus-monitor 1
+{{ if eq .chezmoi.hostname "bme-desktop" }}
+win + r                 : komorebic focus-monitor 0
+win + w                 : komorebic focus-monitor 2
+win + e                 : komorebic focus-monitor 1
+{{ else if eq .chezmoi.hostname "home-desktop" }}
+win + w                 : komorebic focus-monitor 1
 win + e                 : komorebic focus-monitor 0
 win + r                 : komorebic focus-monitor 2
+{{ end }}
