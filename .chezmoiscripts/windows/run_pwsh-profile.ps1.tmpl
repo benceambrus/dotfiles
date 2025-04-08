@@ -3,7 +3,7 @@ $templateFile = "pwsh_profile.ps1"
 {{- if eq .chezmoi.hostname "home-desktop" }}
 $fileName = "D:\Documents\PowerShell\profile.ps1"
 {{- else }}
-$fileName = "~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
+$fileName = "~\Documents\PowerShell\profile.ps1"
 {{- end}}
 
 # SRC_DIR is set in chezmoi config file.
