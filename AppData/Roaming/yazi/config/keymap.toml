@@ -84,9 +84,12 @@ keymap = [
 	{ on = "s",         run = "search --via=fd",             desc = "Search files by name via fd" },
 	{ on = "S",         run = "search --via=rg",             desc = "Search files by content via ripgrep" },
 	{ on = "<C-s>",     run = "escape --search",             desc = "Cancel the ongoing search" },
+
+  # Plugins
 	{ on = "z",         run = "plugin zoxide-cust",          desc = "Jump to a directory via zoxide" },
 	{ on = "Z",         run = "plugin fzf",                  desc = "Jump to a file/directory via fzf" },
 	{ on = "f",         run = "plugin jump-to-char",         desc = "Jump to char" },
+	{ on = "m",         run = "plugin relative-motions",     desc = "Trigger a new relative motion" },
 
 	# Linemode
 	{ on = [ "m", "s" ], run = "linemode size",        desc = "Linemode: size" },

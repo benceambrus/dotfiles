@@ -3,5 +3,10 @@ use = "yazi-rs/plugins:jump-to-char"
 rev = "2730199"
 hash = "368680a4fbb900b47939db92ccc1274d"
 
+[[plugin.deps]]
+use = "dedukun/relative-motions"
+rev = "61ae795"
+hash = "ab343e321fc9d30c035ec58ade607b8"
+
 [flavor]
 deps = []
