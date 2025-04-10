@@ -4,7 +4,13 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
+{{ if eq .chezmoi.hostname "home-desktop" }}
 			colorscheme = "gruvbox",
+{{ else if eq .chezmoi.hostname "home-laptop" }}
+			colorscheme = "everforest",
+{{ else if eq .chezmoi.hostname "bme-desktop" }}
+			colorscheme = "catppuccin-macchiato",
+{{ end }}
 		},
 	},
 }
