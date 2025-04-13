@@ -11,11 +11,21 @@
 
 ;; Default layer in kanata.
 (deflayer base
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9    f10  f11  f12  home end ins del
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9    f10  f11  f12 @col end ins del
   grv  1    2    3    4    5    6    7    8    9    0    /    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ] 
   esc  @a   @s   @d   @f   g    h    @j   @k   @l   @;   '    \    ret
   lsft lsgt z    x    c    v    b    n    m    ,    .    -    rsft
+  lctl lalt @nav           spc            @sym @mou rctl pgup up   pgdn
+                                                         left down right
+)
+
+(deflayer colemak
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9    f10  f11  f12 @base end ins del
+  grv  1    2    3    4    5    6    7    8    9    0    /    =    bspc
+  tab  q    w    f    p    g    j    l    u    y    ;    [    ] 
+  esc  a    r    s    t    d    h    n    e    i    o    '    \    ret
+  lsft lsgt z    x    c    v    b    k    m    ,    .    -    rsft
   lctl lalt @nav           spc            @sym @mou rctl pgup up   pgdn
                                                          left down right
 )
@@ -26,7 +36,7 @@
   _    _        home   up     end     _         _    7    8    9    kp*  S-6  _ 
   caps C-left   left   down   right   C-right   _    4    5    6    S-3  -    _    @base
   _    lalt     _      _      _       _         _    _    1    2    3    .    _ 
-  _    _        _             _                 0    _    _    _    _    _
+  _    _        _             del               0    _    _    _    _    _
                                                                _    _    _
 )
 
@@ -46,9 +56,19 @@
   _    C-A-v    C-A-w  S-6   S-2     S-4      _    C-A-f C-A-g [    ]    \    _    
   RA-1 RA-'     RA-c   RA-3  S-3     S-7       _    S-8  S-9  RA-, RA-; RA--  _    @base
   _    S-5      C-A-x  C-A-q S-1     RA-7      RA-x _    RA-b RA-n RA-lsgt   RA-y    _    
-  _    _        _             ret               _    _    _    _    _    _
+  _    _        _                    ret            _    _    _    _    _    _
                                                                _    _    _
 )
+
+;; (deflayer WINWORD.EXE
+;;    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+;;    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+;;    _    _    _    _    @eq  _    _    _    _    _    _    _    _ 
+;;    esc  @a   @s   @d   @f   _    _    @j   @k   @l   @;   _    _    _
+;;    _    _    _    _    _    _    _    _    _    _    _    _    _
+;;    _    _    @nav      _              @nav _    _    _    _    _
+;;                                                      _    _    _
+;; )
 
 (defvar
   mmove-int 5 ;; Interval for mouse movement
@@ -64,6 +84,7 @@
     nav (layer-while-held navnum)
     base (layer-switch base)
     sym (layer-while-held sym)
+    col (layer-switch colemak)
 
     ;; Mouse movements
     mou (layer-while-held mou)
@@ -77,6 +98,11 @@
     mwdn (mwheel-down $mwheel-int $distance)
     mwle (mwheel-left $mwheel-int $distance)
     mwri (mwheel-right $mwheel-int $distance)
+
+    ;; Word shortcuts
+    eq (fork
+      r A-S-7 (lalt)
+    )
 )
 
 (defcfg
@@ -95,12 +121,12 @@
 
   left-hand-keys (
     q w e r t
-    g
+    a s d f g
     z x c v b
   )
   right-hand-keys (
     y u i o p
-    h
+    h j k l ;
     n m , . /
   )
 )
