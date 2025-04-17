@@ -33,7 +33,7 @@
 (deflayer navnum
   _    _        _      _      _       _         _    _    _    _    _    _    _    _  _  _  _
   _    _        _      _      _       _         _    nlck _    _    _    _    _    lrld
-  _    _        home   up     end     _         _    7    8    9    kp*  S-6  _ 
+  _    bspc     home   up     end     _         _    7    8    9    kp*  S-6  _ 
   caps C-left   left   down   right   C-right   _    4    5    6    S-3  -    _    @base
   _    lalt     _      _      _       _         _    _    1    2    3    .    _ 
   _    _        _             del               0    _    _    _    _    _
@@ -53,22 +53,12 @@
 (deflayer sym
   _    _        _      _      _       _         _    _    _    _    _    _    _    _  _  _  _
   _    _        _      _      _       _         _    _    _    _    _    _    _             _ 
-  _    C-A-v    C-A-w  S-6   S-2     S-4      _    C-A-f C-A-g [    ]    \    _    
-  RA-1 RA-'     RA-c   RA-3  S-3     S-7       _    S-8  S-9  RA-, RA-; RA--  _    @base
-  _    S-5      C-A-x  C-A-q S-1     RA-7      RA-x _    RA-b RA-n RA-lsgt   RA-y    _    
+  _    C-A-v    C-A-w  S-6   S-2     S-4        _    C-A-f C-A-g [    ]    \    _    
+  RA-1 RA-'     RA-c   RA-3  S-3     S-7        RA-j S-8  S-9  RA-, RA-; RA--  _    @base
+  _    S-5      C-A-x  C-A-q S-1     RA-7       RA-x _    RA-b RA-n RA-lsgt   RA-y    _    
   _    _        _                    ret            _    _    _    _    _    _
                                                                _    _    _
 )
-
-;; (deflayer WINWORD.EXE
-;;    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
-;;    _    _    _    _    _    _    _    _    _    _    _    _    _    _
-;;    _    _    _    _    @eq  _    _    _    _    _    _    _    _ 
-;;    esc  @a   @s   @d   @f   _    _    @j   @k   @l   @;   _    _    _
-;;    _    _    _    _    _    _    _    _    _    _    _    _    _
-;;    _    _    @nav      _              @nav _    _    _    _    _
-;;                                                      _    _    _
-;; )
 
 (defvar
   mmove-int 5 ;; Interval for mouse movement
