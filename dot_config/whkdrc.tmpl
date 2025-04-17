@@ -104,18 +104,19 @@ win + shift + 8         : komorebic move-to-workspace 7
 win + escape            : komorebic cycle-move-to-workspace next
 win + shift + escape    : komorebic cycle-move-to-workspace previous
 
-# Move windows across monitors
-win + shift + w         : komorebic move-to-monitor 1
-win + shift + e         : komorebic move-to-monitor 0
-win + shift + r         : komorebic move-to-monitor 2
-
-# Switch monitors
+# Switch monitors and move workspaces
 {{ if eq .chezmoi.hostname "bme-desktop" }}
 win + r                 : komorebic focus-monitor 0
 win + w                 : komorebic focus-monitor 2
 win + e                 : komorebic focus-monitor 1
+win + shift + r         : komorebic move-to-monitor 0
+win + shift + w         : komorebic move-to-monitor 2
+win + shift + e         : komorebic move-to-monitor 1
 {{ else if eq .chezmoi.hostname "home-desktop" }}
 win + w                 : komorebic focus-monitor 1
 win + e                 : komorebic focus-monitor 0
 win + r                 : komorebic focus-monitor 2
+win + shift + w         : komorebic move-to-monitor 1
+win + shift + e         : komorebic move-to-monitor 0
+win + shift + r         : komorebic move-to-monitor 2
 {{ end }}
