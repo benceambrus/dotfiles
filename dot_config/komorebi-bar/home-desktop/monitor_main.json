@@ -34,8 +34,7 @@
       }
     }
   ],
-  "center_widgets": [
-  ],
+  "center_widgets": [],
   "right_widgets": [
     {
       "Update": {
@@ -68,7 +67,7 @@
     {
       "Time": {
         "enable": true,
-        "format": "TwentyFourHour"
+        "format": "TwentyFourHourWithoutSeconds"
       }
     },
     {

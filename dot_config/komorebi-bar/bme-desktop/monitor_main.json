@@ -67,7 +67,7 @@
     {
       "Time": {
         "enable": true,
-        "format": "TwentyFourHour"
+        "format": "TwentyFourHourWithoutSeconds"
       }
     },
     {
