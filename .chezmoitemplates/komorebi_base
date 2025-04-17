@@ -12,7 +12,7 @@
       "enabled": true,
       "duration": 200,
       "fps": 120,
-      "style": "EaseOutSine"
+      "style": "EaseInSine"
   },
   "theme": {
     "name": "{{ .theme_name }}",
