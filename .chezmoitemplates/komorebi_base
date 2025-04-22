@@ -6,7 +6,7 @@
   "default_workspace_padding": 0,
   "default_container_padding": 0,
   "border": true,
-  "border_width": 4,
+  "border_width": 6,
   "border_offset": -1,
   "animation": {
       "enabled": true,
@@ -18,17 +18,20 @@
     "name": "{{ .theme_name }}",
     "palette": "{{ .theme_palette }}",
     "unfocused_border": "{{ .theme_unfocused_border }}",
-    "bar_accent": "{{ .theme_bar_accent }}"
+    "bar_accent": "{{ .theme_bar_accent }}",
+    "floating_border": "{{ .theme_floating_border }}",
+    "single_border": "{{ .theme_single_border }}",
+    "stack_border": "{{ .theme_stack_border }}"
   },
   "bar_configurations": [ "{{ .bar_configs }}" ],
   "stackbar": {
-    "height": 25,
+    "height": 15,
     "mode": "OnStack",
     "label": "Title",
     "tabs": {
       "width": 300,
       "font_family": "Cascadia Code",
-      "font_size": 18,
+      "font_size": 12,
       "focused_text": "#8e64a6",
       "unfocused_text": "#b3b3b3",
       "background": "#141414"
