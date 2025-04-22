@@ -88,11 +88,6 @@
     mwdn (mwheel-down $mwheel-int $distance)
     mwle (mwheel-left $mwheel-int $distance)
     mwri (mwheel-right $mwheel-int $distance)
-
-    ;; Word shortcuts
-    eq (fork
-      r A-S-7 (lalt)
-    )
 )
 
 (defcfg
