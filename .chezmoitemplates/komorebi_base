@@ -8,12 +8,6 @@
   "border": true,
   "border_width": 6,
   "border_offset": -1,
-  "animation": {
-      "enabled": true,
-      "duration": 200,
-      "fps": 120,
-      "style": "EaseInSine"
-  },
   "theme": {
     "name": "{{ .theme_name }}",
     "palette": "{{ .theme_palette }}",
