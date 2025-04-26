@@ -828,9 +828,9 @@
   "IrfanView": {
     "ignore": [
       {
-	"kind": "Exe",
-	"id": "i_view64.exe",
-	"matching_strategy": "Equals"
+        "kind": "Exe",
+        "id": "i_view64.exe",
+        "matching_strategy": "Equals"
       }
     ]
   },
@@ -1044,6 +1044,15 @@
         "kind": "Class",
         "id": "#32770",
         "matching_strategy": "Legacy"
+      }
+    ]
+  },
+  "Microsoft Command Pallette": {
+    "ignore": [
+      {
+        "kind": "Class",
+        "id": "WinUIDesktopWin32WindowClass",
+        "matching_strategy": "Equals"
       }
     ]
   },
