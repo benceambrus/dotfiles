@@ -8,5 +8,15 @@ use = "dedukun/relative-motions"
 rev = "61ae795"
 hash = "ab343e321fc9d30c035ec58ade607b8"
 
+[[plugin.deps]]
+use = "MasouShizuka/projects"
+rev = "4f11ecc"
+hash = "caecdb1b9a69c6393af201a100ff958d"
+
+[[plugin.deps]]
+use = "stelcodes/bunny"
+rev = "a64f32a"
+hash = "fec5486b47d2142c1234fcdd59120bbb"
+
 [flavor]
 deps = []

@@ -1,1 +1,48 @@
-require("relative-motions"):setup({ show_numbers = "relative", show_motion = true, enter_mode = "first" })
+-- Relative relative-motions
+require("relative-motions"):setup({
+	show_numbers = "relative",
+	show_motion = true,
+	enter_mode = "first",
+})
+
+-- Projects
+require("projects"):setup({
+	save = {
+		method = "lua", -- yazi | lua
+		-- lua_save_path = "", -- comment out to get the default value
+		-- windows: "%APPDATA%/yazi/state/projects.json"
+		-- unix: "~/.local/state/yazi/projects.json"
+	},
+	last = {
+		update_after_save = true,
+		update_after_load = true,
+		load_after_start = false,
+	},
+	merge = {
+		quit_after_merge = false,
+	},
+	notify = {
+		enable = true,
+		title = "Projects",
+		timeout = 3,
+		level = "info",
+	},
+})
+
+-- Bunny
+local user_dir = "C:/Users/ambrus"
+require("bunny"):setup({
+	hops = {
+		{ key = { "d", "d" }, path = "D:/", desc = "Drive: D" },
+		{ key = { "d", "c" }, path = "C:/", desc = "Drive: C" },
+		{ key = { "h", "c" }, path = user_dir .. "/.config", desc = "Config" },
+		{ key = { "h", "a" }, path = user_dir .. "/AppData", desc = "AppData" },
+		{ key = { "c", "b" }, path = "D:/Cloud/od-bme/Egyetem/Kurzusok/", desc = "OneDrive: BME" },
+		{ key = { "c", "p" }, path = "D:/Cloud/OneDrive/", desc = "OneDrive: Personal" },
+		{ key = { "c", "e" }, path = "D:/Cloud/OneDrive - epito.bme.hu/", desc = "OneDrive: epito" },
+		-- key and path attributes are required, desc is optional
+	},
+	desc_strategy = "path", -- If desc isn't present, use "path" or "filename", default is "path"
+	notify = false, -- Notify after hopping, default is false
+	fuzzy_cmd = "fzf", -- Fuzzy searching command, default is "fzf"
+})
