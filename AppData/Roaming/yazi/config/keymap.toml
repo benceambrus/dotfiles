@@ -21,6 +21,9 @@ prepend_keymap = [
   # Operations
   { on = "e",         run = "shell 'nvim \"%0\"' --block",                desc = "Open seleected file with Neovim" },
   { on = "i",         run = "shell 'bat --paging=always \"%0\"' --block", desc = "Inspect selected file with bat" },
+  # Tabs
+	{ on = "á", run = "tab_switch 1 --relative",  desc = "Switch to the next tab" },
+	{ on = "ő", run = "tab_switch -1 --relative", desc = "Switch to the previous tab" },
 ]
 
 # keymap = [
