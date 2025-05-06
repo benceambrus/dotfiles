@@ -30,7 +30,7 @@ require("projects"):setup({
 })
 
 -- Bunny
-local user_dir = "C:/Users/ambrus"
+local user_dir = os.getenv("USERPROFILE")
 require("bunny"):setup({
 	hops = {
 		{ key = { "d", "d" }, path = "D:/", desc = "Drive: D" },
