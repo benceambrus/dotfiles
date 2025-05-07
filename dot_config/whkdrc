@@ -16,7 +16,7 @@ win + shift + ctrl + x  : Stop-Process -Name "whkd"; Start-Process "whkd" -Windo
 # alt + b                 : if ($wshell.AppActivate('Chrome') -eq $False) { start chrome }
 
 # Open WHKD config file in Neovim
-win + h			: Start-Process nvim -ArgumentList (Join-Path -Path $env:USERPROFILE -ChildPath ".config/whkdrc")
+win + z		         	: Start-Process nvim -ArgumentList (Join-Path -Path $env:USERPROFILE -ChildPath ".config/whkdrc")
 
 # Open Windows terminal
 win + return            : Start-Process wt
@@ -25,10 +25,10 @@ win + x                 : komorebic close
 win + c                 : komorebic minimize
 
 # Focus windows
-win + a                 : komorebic focus left
-win + s                 : komorebic focus down
-win + d                 : komorebic focus up
-win + f                 : komorebic focus right
+win + h                 : komorebic focus left
+win + j                 : komorebic focus down
+win + k                 : komorebic focus up
+win + l                 : komorebic focus right
 win + b                 : komorebic cycle-focus next
 win + shift + b         : komorebic cycle-focus previous
 # alt + shift + oem_4   : komorebic cycle-focus previous # oem_4 is [
@@ -39,17 +39,17 @@ win + y                 : komorebic cycle-layout next
 win + shift + y         : komorebic cycle-layout previous
 
 # Move windows
-win + shift + a         : komorebic move left
-win + shift + s         : komorebic move down
-win + shift + d         : komorebic move up
-win + shift + f         : komorebic move right
+win + shift + h         : komorebic move left
+win + shift + j         : komorebic move down
+win + shift + k         : komorebic move up
+win + shift + l         : komorebic move right
 win + shift + return    : komorebic promote
 
 # Stack windows
-win + ctrl + a          : komorebic stack left
-win + ctrl + s          : komorebic stack down
-win + ctrl + d          : komorebic stack up
-win + ctrl + f          : komorebic stack right
+win + ctrl + h          : komorebic stack left
+win + ctrl + j          : komorebic stack down
+win + ctrl + k          : komorebic stack up
+win + ctrl + l          : komorebic stack right
 win + ctrl + c          : komorebic unstack # oem_1 is ;
 win + ctrl + y          : komorebic cycle-stack previous # oem_4 is [
 win + ctrl + x          : komorebic cycle-stack next # oem_6 is ]
@@ -105,18 +105,11 @@ win + escape            : komorebic cycle-move-to-workspace next
 win + shift + escape    : komorebic cycle-move-to-workspace previous
 
 # Switch monitors and move workspaces
-{{ if eq .chezmoi.hostname "bme-desktop" }}
-win + r                 : komorebic focus-monitor 0
-win + w                 : komorebic focus-monitor 2
-win + e                 : komorebic focus-monitor 1
-win + shift + r         : komorebic move-to-monitor 0
-win + shift + w         : komorebic move-to-monitor 2
-win + shift + e         : komorebic move-to-monitor 1
-{{ else if eq .chezmoi.hostname "home-desktop" }}
-win + w                 : komorebic focus-monitor 1
-win + e                 : komorebic focus-monitor 0
-win + r                 : komorebic focus-monitor 2
-win + shift + w         : komorebic move-to-monitor 1
-win + shift + e         : komorebic move-to-monitor 0
-win + shift + r         : komorebic move-to-monitor 2
-{{ end }}
+
+win + s                 : komorebic focus-monitor 1
+win + d                 : komorebic focus-monitor 0
+win + f                 : komorebic focus-monitor 2
+win + shift + s         : komorebic move-to-monitor 1
+win + shift + d         : komorebic move-to-monitor 0
+win + shift + f         : komorebic move-to-monitor 2
+
