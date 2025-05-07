@@ -279,7 +279,7 @@ widgets:
   clock:
     type: "yasb.clock.ClockWidget"
     options:
-      label: "<span>\uf017</span> {%d/%m/%Y, %H:%M}"
+      label: "<span>\uf017</span> {%Y-%m-%d %H:%M}"
       timezones: [] #Looking up time zone info from registry
       calendar:
         alignment: "center"
