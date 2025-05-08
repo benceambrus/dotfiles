@@ -1,5 +1,7 @@
 {{ if eq .chezmoi.hostname "home-laptop" }}
     {{- template "komorebi_base" dict 
+        "display_index_preferences" 
+            "{}"
         "theme_palette"          "Base16"
         "theme_name"             "EverforestDarkHard"
         "theme_unfocused_border" "Base0A"
@@ -12,6 +14,8 @@
     -}}
 {{ else if eq .chezmoi.hostname "home-desktop" }}
     {{- template "komorebi_base" dict 
+        "display_index_preferences" 
+            "{}"
         "theme_palette"          "Base16"
         "theme_name"             "GruvboxDarkHard"
         "theme_unfocused_border" "Base0A"
@@ -26,6 +30,8 @@
     -}}
 {{ else if eq .chezmoi.hostname "bme-desktop" }}
     {{- template "komorebi_base" dict 
+        "display_index_preferences" 
+            `"0": "SAM03C2-5&217f22ba&0&UID4353", "1": "GSM4B7A-4&7e5290e&0&UID206355", "2": "SAM06A5-4&7e5290e&0&UID200195"`
         "theme_palette"          "Catppuccin"
         "theme_name"             "Mocha"
         "theme_unfocused_border" "Yellow"
