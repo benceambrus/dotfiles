@@ -15,7 +15,7 @@
 {{ else if eq .chezmoi.hostname "home-desktop" }}
     {{- template "komorebi_base" dict 
         "display_index_preferences" 
-            "{}"
+            `"0": "GSM773B-5&29ae46df&1&UID4356", "1": "GSM5A26-5&29ae46df&1&UID4353", "2": "GSM5AB7-5&29ae46df&1&UID4352"`
         "theme_palette"          "Base16"
         "theme_name"             "GruvboxDarkHard"
         "theme_unfocused_border" "Base0A"

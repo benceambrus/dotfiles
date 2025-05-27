@@ -28,7 +28,7 @@ win + c                 : komorebic minimize
 win + h                 : komorebic focus left
 win + j                 : komorebic focus down
 win + k                 : komorebic focus up
-win + l                 : komorebic focus right
+win + oem_1             : komorebic focus right
 win + b                 : komorebic cycle-focus next
 win + shift + b         : komorebic cycle-focus previous
 # alt + shift + oem_4   : komorebic cycle-focus previous # oem_4 is [
@@ -42,14 +42,14 @@ win + shift + y         : komorebic cycle-layout previous
 win + shift + h         : komorebic move left
 win + shift + j         : komorebic move down
 win + shift + k         : komorebic move up
-win + shift + l         : komorebic move right
+win + shift + oem_1     : komorebic move right
 win + shift + return    : komorebic promote
 
 # Stack windows
 win + ctrl + h          : komorebic stack left
 win + ctrl + j          : komorebic stack down
 win + ctrl + k          : komorebic stack up
-win + ctrl + l          : komorebic stack right
+win + ctrl + oem_1      : komorebic stack right
 win + ctrl + c          : komorebic unstack # oem_1 is ;
 win + ctrl + y          : komorebic cycle-stack previous # oem_4 is [
 win + ctrl + x          : komorebic cycle-stack next # oem_6 is ]
