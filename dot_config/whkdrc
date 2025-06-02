@@ -83,9 +83,9 @@ win + 5                 : komorebic focus-workspace 4
 win + 6                 : komorebic focus-workspace 5
 win + 7                 : komorebic focus-workspace 6
 win + 8                 : komorebic focus-workspace 7
-win + tab               : komorebic cycle-workspace next
-win + shift + tab       : komorebic cycle-workspace previous
-win + ctrl + tab        : komorebic focus-last-workspace
+win + r                 : komorebic cycle-workspace next
+win + e                 : komorebic cycle-workspace previous
+win + w                 : komorebic focus-last-workspace
 
 # Focus workspace on every monitor
 win + ctrl + 1          : komorebic focus-workspaces 0 
