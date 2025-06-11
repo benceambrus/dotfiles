@@ -1,14 +1,17 @@
 .shell powershell
 
-# Restart komorebi, komorebi-bar and whkd
-# alt + o               : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
-win + shift + x         : Stop-Process -Name "komorebi","komorebi-bar","whkd"; Start-Process komorebic -ArgumentList "start","--bar","--whkd" -WindowStyle Hidden
+# Stop komorebi, komorebi-bar and whkd
+win + shift + ctrl + x  : Stop-Process -Name "komorebi","komorebi-bar","whkd" #; Start-Process komorebic -ArgumentList "start","--bar","--whkd" -WindowStyle Hidden
+# Start komorebi and whkdrc
+win + shift + ctrl + u  : Start-Process -Name komorebic -ArgumentList "start","--whkd"
+# Start komorebi with bar and whkd
+win + shift + ctrl + i  : Start-Process -Name komorebic -ArgumentList "start","--bar","--whkd"
+# Start komorebi with bar, whkd and masir
+win + shift + ctrl + o  : Start-Process -Name komorebic -ArgumentList "start","--bar","--whkd","--masir"
+
 
 # Reload configuration
 win + shift + i         : komorebic reload-configuration
-
-# Restart whkd
-win + shift + ctrl + x  : Stop-Process -Name "whkd"; Start-Process "whkd" -WindowStyle Hidden
 
 # App shortcuts - these require shell to be pwsh / powershell
 # The apps will be focused if open, or launched if not open
