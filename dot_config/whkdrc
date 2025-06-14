@@ -4,12 +4,15 @@
 # alt + o               : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
 win + shift + x         : Stop-Process -Name "komorebi","komorebi-bar","masir"
 win + shift + u         : Start-Process "komorebi" -WindowStyle Hidden
-win + shift + i         : Stop-Process  "whkd"; Start-Process -Name "whkd" -WindowStyle Hidden
+win + shift + i         : Stop-Process -Name "whkd"; Start-Process "whkd" -WindowStyle Hidden
 win + shift + o         : Start-Process "masir" -WindowStyle Hidden
 win + shift + p         : Start-Process "komorebi-bar" -WindowStyle Hidden
 
 # Reload configuration
 win + shift + r         : komorebic reload-configuration
+
+# Restart whkd
+win + shift + ctrl + x  : Stop-Process -Name "whkd"; Start-Process "whkd" -WindowStyle Hidden
 
 # App shortcuts - these require shell to be pwsh / powershell
 # The apps will be focused if open, or launched if not open
@@ -32,6 +35,8 @@ win + k                 : komorebic focus up
 win + oem_1             : komorebic focus right
 win + b                 : komorebic cycle-focus next
 win + shift + b         : komorebic cycle-focus previous
+# alt + shift + oem_4   : komorebic cycle-focus previous # oem_4 is [
+# alt + shift + oem_6   : komorebic cycle-focus next # oem_6 is ]
 
 # Cycle layouts
 win + y                 : komorebic cycle-layout next
