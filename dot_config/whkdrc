@@ -1,17 +1,15 @@
 .shell powershell
 
-# Stop komorebi, komorebi-bar and whkd
-win + shift + ctrl + x  : Stop-Process -Name "komorebi","komorebi-bar","whkd" #; Start-Process komorebic -ArgumentList "start","--bar","--whkd" -WindowStyle Hidden
-# Start komorebi and whkdrc
-win + shift + ctrl + u  : Start-Process -Name komorebic -ArgumentList "start","--whkd"
-# Start komorebi with bar and whkd
-win + shift + ctrl + i  : Start-Process -Name komorebic -ArgumentList "start","--bar","--whkd"
-# Start komorebi with bar, whkd and masir
-win + shift + ctrl + o  : Start-Process -Name komorebic -ArgumentList "start","--bar","--whkd","--masir"
-
+# Restart komorebi, komorebi-bar and whkd
+# alt + o               : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
+win + shift + x         : Stop-Process -Name "komorebi","komorebi-bar","masir"
+win + shift + u         : Start-Process "komorebi" -WindowStyle Hidden
+win + shift + i         : Stop-Process  "whkd"; Start-Process -Name "whkd" -WindowStyle Hidden
+win + shift + o         : Start-Process "masir" -WindowStyle Hidden
+win + shift + p         : Start-Process "komorebi-bar" -WindowStyle Hidden
 
 # Reload configuration
-win + shift + i         : komorebic reload-configuration
+win + shift + r         : komorebic reload-configuration
 
 # App shortcuts - these require shell to be pwsh / powershell
 # The apps will be focused if open, or launched if not open
@@ -19,7 +17,7 @@ win + shift + i         : komorebic reload-configuration
 # alt + b                 : if ($wshell.AppActivate('Chrome') -eq $False) { start chrome }
 
 # Open WHKD config file in Neovim
-win + z		         	: Start-Process nvim -ArgumentList (Join-Path -Path $env:USERPROFILE -ChildPath ".config/whkdrc")
+win + z                 : Start-Process nvim -ArgumentList (Join-Path -Path $env:USERPROFILE -ChildPath ".config/whkdrc")
 
 # Open Windows terminal
 win + return            : Start-Process wt
@@ -34,8 +32,6 @@ win + k                 : komorebic focus up
 win + oem_1             : komorebic focus right
 win + b                 : komorebic cycle-focus next
 win + shift + b         : komorebic cycle-focus previous
-# alt + shift + oem_4   : komorebic cycle-focus previous # oem_4 is [
-# alt + shift + oem_6   : komorebic cycle-focus next # oem_6 is ]
 
 # Cycle layouts
 win + y                 : komorebic cycle-layout next
@@ -70,8 +66,8 @@ win + t                 : komorebic toggle-float
 win + g                 : komorebic toggle-monocle
 
 # Window manager options
-win + shift + o          : komorebic retile
-win + shift + p          : komorebic toggle-pause
+win + shift + t          : komorebic retile
+win + shift + g          : komorebic toggle-pause
 
 # Layouts
 win + q                 : komorebic flip-layout horizontal
@@ -88,7 +84,7 @@ win + 7                 : komorebic focus-workspace 6
 win + 8                 : komorebic focus-workspace 7
 win + r                 : komorebic cycle-workspace next
 win + e                 : komorebic cycle-workspace previous
-win + w                 : komorebic focus-last-workspace
+win + tab               : komorebic focus-last-workspace
 
 # Focus workspace on every monitor
 win + ctrl + 1          : komorebic focus-workspaces 0 
