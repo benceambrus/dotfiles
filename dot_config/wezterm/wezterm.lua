@@ -47,8 +47,25 @@ config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 
+-- Colors
+config.colors = {
+	-- Tab bar
+	tab_bar = {
+		background = "#282828",
+		active_tab = {
+			bg_color = "fbf1c7",
+			fg_color = "fe8019",
+			intensity = "Bold",
+		},
+		inactive_tab = {
+			bg_color = "#d5c4a1",
+			fg_color = "#cc241d",
+		},
+	},
+}
+
 -- Keybinds
-config.leader = { mods = "CTRL", key = "a", timeout_milliseconds = 2000 }
+config.leader = { mods = "CTRL", key = "w", timeout_milliseconds = 2000 }
 config.keys = {
 	-- Launcher
 	{ mods = "LEADER", key = "l", action = wezterm.action.ShowLauncher },
