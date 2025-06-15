@@ -20,14 +20,14 @@ config.launch_menu = {
 
 -- Color Scheme
 -- Change automatically based on OS mode
-function get_appearance()
+local function get_appearance()
 	if wezterm.gui then
 		return wezterm.gui.get_appearance()
 	end
 	return "Dark"
 end
 
-function scheme_for_appearance(appearance)
+local function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
 		return "Gruvbox dark, medium (base16)"
 	else
@@ -39,7 +39,7 @@ config.color_scheme = scheme_for_appearance(get_appearance())
 -- Font settings
 config.font_size = 14
 config.line_height = 1.3
-config.font = wezterm.font("Inconsolata Nerd Font", { weight = "Bold", italic = false })
+config.font = wezterm.font("Inconsolata Nerd Font", { weight = "Regular", italic = false })
 
 -- Window appearance
 config.window_decorations = "RESIZE"
@@ -74,6 +74,10 @@ config.keys = {
 	{ mods = "LEADER", key = "k", action = wezterm.action.ActivatePaneDirection("Up") },
 	{ mods = "LEADER", key = "l", action = wezterm.action.ActivatePaneDirection("Right") },
 	{ mods = "LEADER", key = "x", action = wezterm.action.CloseCurrentPane({ confirm = true }) },
+	{ mods = "LEADER|CTRL", key = "u", action = wezterm.action.AdjustPaneSize({ "Left", 3 }) },
+	{ mods = "LEADER|CTRL", key = "i", action = wezterm.action.AdjustPaneSize({ "Down", 3 }) },
+	{ mods = "LEADER|CTRL", key = "o", action = wezterm.action.AdjustPaneSize({ "Up", 3 }) },
+	{ mods = "LEADER|CTRL", key = "p", action = wezterm.action.AdjustPaneSize({ "Right", 3 }) },
 }
 
 -- Finally, return the configuration to wezterm:
