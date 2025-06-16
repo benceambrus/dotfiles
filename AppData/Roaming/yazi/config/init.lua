@@ -37,6 +37,7 @@ require("bunny"):setup({
 		{ key = { "d", "c" }, path = "C:/", desc = "Drive: C" },
 		{ key = { "h", "c" }, path = user_dir .. "/.config", desc = "Config" },
 		{ key = { "h", "a" }, path = user_dir .. "/AppData", desc = "AppData" },
+		{ key = { "h", "d" }, path = user_dir .. "/.local/share/chezmoi", desc = "chezmoi" },
 		{ key = { "c", "b" }, path = "D:/Cloud/od-bme/Egyetem/Kurzusok/", desc = "OneDrive: BME" },
 		{ key = { "c", "p" }, path = "D:/Cloud/OneDrive/", desc = "OneDrive: Personal" },
 		{ key = { "c", "e" }, path = "D:/Cloud/OneDrive - epito.bme.hu/", desc = "OneDrive: epito" },
