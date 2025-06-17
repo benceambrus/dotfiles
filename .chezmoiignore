@@ -16,4 +16,7 @@ AppData
 
 # Fish
 .config/fish
+
+# tmux
+.tmux.conf
 {{ end }}
