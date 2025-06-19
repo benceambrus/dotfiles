@@ -6,7 +6,9 @@ local config = wezterm.config_builder()
 
 -- General
 config.automatically_reload_config = true
+{{- if eq .chezmoi.os "windows" }}
 config.default_prog = { "pwsh.exe", "-NoLogo" }
+{{- end }}
 config.max_fps = 144
 config.animation_fps = 60
 
@@ -20,6 +22,16 @@ config.launch_menu = {
 
 -- Color Scheme
 -- Change automatically based on OS mode
+{{- if eq .chezmoi.hostname "bme-desktop" }}
+local light_colorscheme = "Catppuccin Latte"
+local dark_colorscheme = "Catppuccin Macchiato"
+{{ else if eq .chezmoi.hostname "home-desktop" }}
+local light_colorscheme = "Gruvbox light, medium (base16)"
+local dark_colorscheme = "Gruvbox dark, medium (base16)"
+{{ else if eq .chezmoi.hostname "home-laptop" }}
+local light_colorscheme = "Everforest Light (Gogh)"
+local dark_colorscheme = "Everforest Dark (Gogh)"
+{{- end }}
 local function get_appearance()
 	if wezterm.gui then
 		return wezterm.gui.get_appearance()
@@ -29,9 +41,9 @@ end
 
 local function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
-		return "Gruvbox dark, medium (base16)"
+		return dark_colorscheme
 	else
-		return "Gruvbox light, medium (base16)"
+		return light_colorscheme
 	end
 end
 config.color_scheme = scheme_for_appearance(get_appearance())
