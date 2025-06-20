@@ -18,6 +18,7 @@ prepend_keymap = [
   { on = "f",         run = "plugin jump-to-char",         desc = "Jump to char" },
   { on = "m",         run = "plugin relative-motions",     desc = "Trigger a new relative motion" },
   { on = "b",         run = "plugin bunny",                desc = "Run bunny"},
+  { on = "s",         run = "plugin easyjump",             desc = "Run easyjump"},
   # Operations
   { on = "e",         run = "shell 'nvim \"%0\"' --block",                desc = "Open seleected file with Neovim" },
   { on = "i",         run = "shell 'bat --paging=always \"%0\"' --block", desc = "Inspect selected file with bat" },
