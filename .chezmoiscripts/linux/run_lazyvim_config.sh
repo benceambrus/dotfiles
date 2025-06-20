@@ -1,0 +1,5 @@
+{{- if eq .chezmoi.os "linux" }}
+#!/bin/sh
+# Link the nvim lua config dir to the one in the chezmoi source state.
+ln -s $HOME/.local/share/chezmoi/AppData/Local/nvim/lua/ $HOME/.config/nvim/lua
+{{- end }}
