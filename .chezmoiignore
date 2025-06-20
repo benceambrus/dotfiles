@@ -1,3 +1,4 @@
+# On Linux ignore:
 {{ if eq .chezmoi.os "linux" }}
 # Komorebi files
 komorebi.json
@@ -5,11 +6,11 @@ applications.json
 .config/whkdrc
 .config/komorebi-bar
 
-# Windows specific
 AppData
 .chezmoiscripts/windows/**
 {{ end }}
 
+# On Windows ignore:
 {{ if eq .chezmoi.os "windows" }}
 # LF config files (not located in .config)
 .config/lf
@@ -19,4 +20,7 @@ AppData
 
 # tmux
 .tmux.conf
+
+# Yazi is in a diff. location
+.config/yazi
 {{ end }}

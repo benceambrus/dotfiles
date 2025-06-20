@@ -13,15 +13,24 @@ prepend_keymap = [
   { on = [ "P", "m" ], run = "plugin projects 'merge current'", desc = "Merge current tab to other projects" },
   { on = [ "P", "M" ], run = "plugin projects 'merge all'", desc = "Merge current project to other projects" },
   # Other plugins
+{{- if eq .chezmoi.os "windows" }}
   { on = "z",         run = "plugin zoxide-cust",          desc = "Jump to a directory via zoxide" },
+{{- else if eq .chezmoi.os "linux" }}
+  { on = "z",         run = "plugin zoxide",               desc = "Jump to a directory via zoxide" },
+{{- end }}
   { on = "Z",         run = "plugin fzf",                  desc = "Jump to a file/directory via fzf" },
   { on = "f",         run = "plugin jump-to-char",         desc = "Jump to char" },
   { on = "m",         run = "plugin relative-motions",     desc = "Trigger a new relative motion" },
   { on = "b",         run = "plugin bunny",                desc = "Run bunny"},
   { on = "s",         run = "plugin easyjump",             desc = "Run easyjump"},
   # Operations
+{{- if eq .chezmoi.os "windows" }}
   { on = "e",         run = "shell 'nvim \"%0\"' --block",                desc = "Open seleected file with Neovim" },
   { on = "i",         run = "shell 'bat --paging=always \"%0\"' --block", desc = "Inspect selected file with bat" },
+{{- else if eq .chezmoi.os "linux" }}
+  { on = "e",         run = "shell 'nvim \"$0\"' --block",                desc = "Open seleected file with Neovim" },
+  { on = "i",         run = "shell 'bat --paging=always \"$0\"' --block", desc = "Inspect selected file with bat" },
+{{- end }}
   # Tabs
 	{ on = "á", run = "tab_switch 1 --relative",  desc = "Switch to the next tab" },
 	{ on = "ő", run = "tab_switch -1 --relative", desc = "Switch to the previous tab" },
