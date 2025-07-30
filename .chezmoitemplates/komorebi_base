@@ -36,20 +36,46 @@
     {
       "workspaces": [
         {
-          "name": "I",
-          "layout": "BSP"
+          "name": "WEB",
+          "layout": "BSP",
+          "workspace_rules": [
+            {
+                "kind": "Exe",
+                "id": "zen.exe"
+            }
+          ]
+
+
         },
         {
-          "name": "II",
-          "layout": "BSP"
+          "name": "EXP",
+          "layout": "BSP",
+          "workspace_rules": [
+            {
+                "kind": "Exe",
+                "id": "TOTALCMD64.EXE"
+            }
+          ]
         },
         {
-          "name": "III",
-          "layout": "BSP"
+          "name": "CMD",
+          "layout": "BSP",
+          "workspace_rules": [
+            {
+                "kind": "Exe",
+                "id": "wezterm-gui.exe"
+              }
+          ]
         },
         {
-          "name": "IV",
-          "layout": "BSP"
+          "name": "COD",
+          "layout": "BSP",
+          "workspace_rules": [
+            {
+                "kind": "Exe",
+                "id": "Code.exe"
+              }
+          ]
         },
         {
           "name": "V",
