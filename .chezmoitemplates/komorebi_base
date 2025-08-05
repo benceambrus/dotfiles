@@ -38,14 +38,6 @@
         {
           "name": "WEB",
           "layout": "BSP",
-          "workspace_rules": [
-            {
-                "kind": "Exe",
-                "id": "zen.exe"
-            }
-          ]
-
-
         },
         {
           "name": "EXP",

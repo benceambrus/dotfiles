@@ -304,7 +304,7 @@ widgets:
     type: "komorebi.workspaces.WorkspaceWidget"
     options:
       label_offline: "\u26a1 Offline"
-      label_workspace_btn: "\udb81\udc3d"
+      label_workspace_btn: "{index}"
       label_workspace_active_btn: "\udb81\udc3e"
       label_workspace_populated_btn: "\udb81\udc3e"
       label_default_name: "{index}"
