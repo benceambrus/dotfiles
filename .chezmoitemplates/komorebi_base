@@ -42,32 +42,14 @@
         {
           "name": "EXP",
           "layout": "BSP",
-          "workspace_rules": [
-            {
-                "kind": "Exe",
-                "id": "TOTALCMD64.EXE"
-            }
-          ]
         },
         {
           "name": "CMD",
           "layout": "BSP",
-          "workspace_rules": [
-            {
-                "kind": "Exe",
-                "id": "wezterm-gui.exe"
-              }
-          ]
         },
         {
           "name": "COD",
           "layout": "BSP",
-          "workspace_rules": [
-            {
-                "kind": "Exe",
-                "id": "Code.exe"
-              }
-          ]
         },
         {
           "name": "V",
