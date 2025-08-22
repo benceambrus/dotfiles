@@ -69,19 +69,19 @@
       "workspaces": [
         {
           "name": "A",
-          "layout": "Rows"
+          "layout": "BSP"
         },
         {
           "name": "B",
-          "layout": "Rows"
+          "layout": "BSP"
         },
         {
           "name": "C",
-          "layout": "Rows"
+          "layout": "BSP"
         },
         {
           "name": "D",
-          "layout": "Rows"
+          "layout": "BSP"
         }
       ]
     },
