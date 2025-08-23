@@ -21,13 +21,14 @@ config.launch_menu = {
 }
 
 -- Color Scheme
+local color_scheme_dirs = { "~/.config/wezterm/colors" }
 -- Change automatically based on OS mode
 {{- if eq .chezmoi.hostname "bme-desktop" }}
 local light_colorscheme = "Catppuccin Latte"
 local dark_colorscheme = "Catppuccin Macchiato"
 {{ else if eq .chezmoi.hostname "home-desktop" }}
-local light_colorscheme = "Everforest Light Medium (Gogh)"
-local dark_colorscheme = "Everforest Dark Medium (Gogh)"
+local light_colorscheme = "Everforest Light (Medium)"
+local dark_colorscheme = "Everforest Dark (Medium)"
 {{ else if eq .chezmoi.hostname "home-laptop" }}
 local light_colorscheme = "Ef-Melissa-Light"
 local dark_colorscheme = "Everforest Dark (Gogh)"
