@@ -109,10 +109,10 @@ win + escape            : komorebic cycle-move-to-workspace next
 win + shift + escape    : komorebic cycle-move-to-workspace previous
 
 # Switch monitors and move workspaces
-win + m                   : komorebic focus-monitor 1
-win + oem_comma           : komorebic focus-monitor 0
+win + m                   : komorebic focus-monitor 0
+win + oem_comma           : komorebic focus-monitor 1
 win + oem_period          : komorebic focus-monitor 2
-win + shift + m           : komorebic move-to-monitor 1
-win + shift + oem_comma   : komorebic move-to-monitor 0
+win + shift + m           : komorebic move-to-monitor 0
+win + shift + oem_comma   : komorebic move-to-monitor 1
 win + shift + oem_period  : komorebic move-to-monitor 2
 
