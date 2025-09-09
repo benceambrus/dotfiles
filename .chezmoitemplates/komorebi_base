@@ -36,51 +36,31 @@
     {
       "workspaces": [
         {
-          "name": "WEB",
+          "name": "1",
           "layout": "BSP",
         },
         {
-          "name": "EXP",
+          "name": "2",
           "layout": "BSP",
         },
         {
-          "name": "CMD",
+          "name": "3",
           "layout": "BSP",
         },
         {
-          "name": "COD",
+          "name": "4",
           "layout": "BSP",
         },
         {
-          "name": "V",
+          "name": "5",
           "layout": "BSP"
         },
         {
-          "name": "VI",
+          "name": "6",
           "layout": "BSP"
         },
         {
-          "name": "VII",
-          "layout": "BSP"
-        }
-      ]
-    },
-    {
-      "workspaces": [
-        {
-          "name": "A",
-          "layout": "BSP"
-        },
-        {
-          "name": "B",
-          "layout": "BSP"
-        },
-        {
-          "name": "C",
-          "layout": "BSP"
-        },
-        {
-          "name": "D",
+          "name": "7",
           "layout": "BSP"
         }
       ]
@@ -89,19 +69,39 @@
       "workspaces": [
         {
           "name": "1",
-          "layout": "Grid"
+          "layout": "BSP"
         },
         {
           "name": "2",
-          "layout": "Grid"
+          "layout": "BSP"
         },
         {
           "name": "3",
-          "layout": "Grid"
+          "layout": "BSP"
         },
         {
           "name": "4",
-          "layout": "Grid"
+          "layout": "BSP"
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": "1",
+          "layout": "BSP"
+        },
+        {
+          "name": "2",
+          "layout": "BSP"
+        },
+        {
+          "name": "3",
+          "layout": "BSP"
+        },
+        {
+          "name": "4",
+          "layout": "BSP"
         }
       ]
     }
