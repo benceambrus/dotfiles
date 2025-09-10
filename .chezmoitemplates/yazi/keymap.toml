@@ -20,7 +20,7 @@ prepend_keymap = [
 {{- end }}
   { on = "Z",         run = "plugin fzf",                  desc = "Jump to a file/directory via fzf" },
   { on = "f",         run = "plugin jump-to-char",         desc = "Jump to char" },
-  { on = "m",         run = "plugin relative-motions",     desc = "Trigger a new relative motion" },
+  { on = "n",         run = "plugin relative-motions",     desc = "Trigger a new relative motion" },
   { on = "b",         run = "plugin bunny",                desc = "Run bunny"},
   { on = "s",         run = "plugin searchjump -- autocd", desc = "Run searchjump and cd into dir"},
   # Operations
