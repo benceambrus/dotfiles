@@ -1,0 +1,11 @@
+{{ if eq .chezmoi.hostname "home-laptop" }}
+  "~/.config/komorebi-bar/home-laptop/monitor_main.json"
+{{ else if eq .chezmoi.hostname "home-desktop" }}
+  "~/.config/komorebi-bar/home-desktop/monitor_main.json",
+  "~/.config/komorebi-bar/home-desktop/monitor_right.json",
+  "~/.config/komorebi-bar/home-desktop/monitor_left.json"
+{{ else if eq .chezmoi.hostname "bme-desktop" }}
+  "~/.config/komorebi-bar/bme-desktop/monitor_main.json",
+  "~/.config/komorebi-bar/bme-desktop/monitor_right.json",
+  "~/.config/komorebi-bar/bme-desktop/monitor_left.json"
+{{ end }}
