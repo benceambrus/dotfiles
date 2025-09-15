@@ -3,14 +3,14 @@
   "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
   "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Insert",
-  "display_index_preferences": { {{ template "komorebi/display_preferences" . }} },
+  "display_index_preferences": { {{- template "komorebi/display_preferences" . -}} },
   "default_workspace_padding": 0,
   "default_container_padding": 0,
   "border": true,
   "border_width": 6,
   "border_offset": -1,
-  "theme": { {{ template "komorebi/theme" . }} },
-  "bar_configurations": [ {{ template "komorebi/bar_config" . }} ],
+  "theme": {{- template "komorebi/theme" . -}},
+  "bar_configurations": [ {{- template "komorebi/bar_config" . -}} ],
   "stackbar": {
     "height": 15,
     "mode": "OnStack",
@@ -24,5 +24,5 @@
       "background": "#141414"
     }
   },
-  "monitors": [ {{ template "komorebi/workspaces" . }}]
+  "monitors": [ {{- template "komorebi/workspaces" . -}}]
 }

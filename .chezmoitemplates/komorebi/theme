@@ -16,7 +16,7 @@
     "bar_accent": "Base09",
     "floating_border": "Base0E",
     "single_border": "Base08",
-    "stack_border": Base0D"
+    "stack_border": "Base0D"
   }
 {{ else if eq .chezmoi.hostname "bme-desktop" }}
   {
