@@ -22,13 +22,8 @@ prepend_keymap = [
   { on = "f",         run = "plugin jump-to-char",         desc = "Jump to char" },
   { on = "n",         run = "plugin relative-motions",     desc = "Trigger a new relative motion" },
   { on = "b",         run = "plugin bunny",                desc = "Run bunny"},
-<<<<<<< Updated upstream
   { on = "s",         run = "plugin easyjump",             desc = "Run searchjump and cd into dir"},
   # { on = "s",         run = "plugin searchjump -- autocd", desc = "Run searchjump and cd into dir"},
-=======
-  # { on = "s",         run = "plugin searchjump -- autocd", desc = "Run searchjump and cd into dir"},
-  { on = "s",         run = "plugin easyjump", desc = "Run searchjump and cd into dir"},
->>>>>>> Stashed changes
   # Operations
 {{- if eq .chezmoi.os "windows" }}
   { on = "e",         run = "shell 'nvim \"%0\"' --block",                desc = "Open seleected file with Neovim" },
