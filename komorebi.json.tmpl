@@ -1,5 +1,5 @@
 {{ if eq .chezmoi.hostname "home-laptop" }}
-    {{- template "komorebi_base" dict 
+    {{- template "komorebi/komorebi_base" dict 
         "display_index_preferences" 
             `"0": "LEN40A9-4&32b67c77&0&UID265988"`
         "theme_palette"          "Base16"
@@ -13,7 +13,7 @@
             "~/.config/komorebi-bar/home-laptop/monitor_main.json"
     -}}
 {{ else if eq .chezmoi.hostname "home-desktop" }}
-    {{- template "komorebi_base" dict 
+    {{- template "komorebi/komorebi_base" dict 
         "display_index_preferences" 
             `"0": "GSM5A26-5&29ae46df&1&UID4353", "1": "GSM773B-5&29ae46df&1&UID4356", "2": "GSM5AB7-5&29ae46df&1&UID4352"`
         "theme_palette"          "Base16"
@@ -29,7 +29,7 @@
             "~/.config/komorebi-bar/home-desktop/monitor_left.json`
     -}}
 {{ else if eq .chezmoi.hostname "bme-desktop" }}
-    {{- template "komorebi_base" dict 
+    {{- template "komorebi/komorebi_base" dict 
         "display_index_preferences" 
             `"0": "LEN60AF-4&7e5290e&0&UID206355", "1": "SAM03C2-5&217f22ba&0&UID4353", "2": "SAM06A5-4&7e5290e&0&UID200195"`
         "theme_palette"          "Catppuccin"
