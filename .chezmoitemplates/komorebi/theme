@@ -1,0 +1,31 @@
+{{- if eq .chezmoi.hostname "home-laptop" -}}
+  {
+    "palette": "Base16",
+    "name": "EverforestDarkHard",
+    "unfocused_border": "Base0A",
+    "bar_accent": "Base0A",
+    "floating_border": "Base0E",
+    "single_border": "Base08",
+    "stack_border": Base0C"
+  }
+{{ else if eq .chezmoi.hostname "home-desktop" }}
+  {
+    "palette": "Base16",
+    "name": "Everforest",
+    "unfocused_border": "Base0A",
+    "bar_accent": "Base09",
+    "floating_border": "Base0E",
+    "single_border": "Base08",
+    "stack_border": Base0D"
+  }
+{{ else if eq .chezmoi.hostname "bme-desktop" }}
+  {
+    "palette": "Catppuccin",
+    "name": "Mocha",
+    "unfocused_border": "Yellow",
+    "bar_accent": "Mauve",
+    "floating_border": "Mauve",
+    "single_border": "Red",
+    "stack_border": "Green"
+  }
+{{ end }}
