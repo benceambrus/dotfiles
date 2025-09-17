@@ -2,20 +2,20 @@
     {
       "workspaces": [
         {
-          "name": "1",
-          "layout": "BSP",
+          "name": "EMAIL",
+          "layout": "BSP"
         },
         {
           "name": "2",
-          "layout": "BSP",
+          "layout": "BSP"
         },
         {
           "name": "3",
-          "layout": "BSP",
+          "layout": "BSP"
         },
         {
           "name": "4",
-          "layout": "BSP",
+          "layout": "BSP"
         },
         {
           "name": "5",
