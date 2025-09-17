@@ -1,4 +1,48 @@
-{{- if eq .chezmoi.hostname "bme-desktop" }}
+{{- if eq .chezmoi.hostname "bme-desktop" -}}
+    {
+      "workspaces": [
+        {
+          "name": "1",
+          "layout": "BSP"
+        },
+        {
+          "name": "2",
+          "layout": "BSP"
+        },
+        {
+          "name": "3",
+          "layout": "BSP"
+        },
+        {
+          "name": "4",
+          "layout": "BSP"
+        },
+        {
+          "name": "5",
+          "layout": "BSP"
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": "1",
+          "layout": "BSP"
+        },
+        {
+          "name": "2",
+          "layout": "BSP"
+        },
+        {
+          "name": "3",
+          "layout": "BSP"
+        },
+        {
+          "name": "4",
+          "layout": "BSP"
+        }
+      ]
+    },
     {
       "workspaces": [
         {
@@ -6,72 +50,16 @@
           "layout": "BSP"
         },
         {
-          "name": "2",
+          "name": "TEAMS",
           "layout": "BSP"
         },
         {
-          "name": "3",
-          "layout": "BSP"
-        },
-        {
-          "name": "4",
-          "layout": "BSP"
-        },
-        {
-          "name": "5",
-          "layout": "BSP"
-        },
-        {
-          "name": "6",
-          "layout": "BSP"
-        },
-        {
-          "name": "7",
-          "layout": "BSP"
-        }
-      ]
-    },
-    {
-      "workspaces": [
-        {
-          "name": "1",
-          "layout": "BSP"
-        },
-        {
-          "name": "2",
-          "layout": "BSP"
-        },
-        {
-          "name": "3",
-          "layout": "BSP"
-        },
-        {
-          "name": "4",
-          "layout": "BSP"
-        }
-      ]
-    },
-    {
-      "workspaces": [
-        {
-          "name": "1",
-          "layout": "BSP"
-        },
-        {
-          "name": "2",
-          "layout": "BSP"
-        },
-        {
-          "name": "3",
-          "layout": "BSP"
-        },
-        {
-          "name": "4",
+          "name": "OBSIDIAN",
           "layout": "BSP"
         }
       ]
     }
-{{- else if eq .chezmoi.hostname "home-desktop" }}
+{{- else if eq .chezmoi.hostname "home-desktop" -}}
     {
       "workspaces": [
         {
@@ -93,13 +81,29 @@
         {
           "name": "5",
           "layout": "BSP"
-        },
+        }
+      ]
+    },
+    {
+      "workspaces": [
         {
-          "name": "6",
+          "name": "1",
           "layout": "BSP"
         },
         {
-          "name": "7",
+          "name": "2",
+          "layout": "BSP"
+        },
+        {
+          "name": "3",
+          "layout": "BSP"
+        },
+        {
+          "name": "4",
+          "layout": "BSP"
+        },
+        {
+          "name": "5",
           "layout": "BSP"
         }
       ]
@@ -121,46 +125,26 @@
         {
           "name": "4",
           "layout": "BSP"
-        }
-      ]
-    },
-    {
-      "workspaces": [
-        {
-          "name": "1",
-          "layout": "BSP"
         },
         {
-          "name": "2",
-          "layout": "BSP"
-        },
-        {
-          "name": "3",
-          "layout": "BSP"
-        },
-        {
-          "name": "4",
+          "name": "5",
           "layout": "BSP"
         }
       ]
     }
-{{- else if eq .chezmoi.hostname "home-laptop" }}
+{{- else if eq .chezmoi.hostname "home-laptop" -}}
     {
       "workspaces": [
         {
-          "name": "1",
+          "name": "EXP",
           "layout": "BSP"
         },
         {
-          "name": "2",
+          "name": "BRW",
           "layout": "BSP"
         },
         {
-          "name": "3",
-          "layout": "BSP"
-        },
-        {
-          "name": "4",
+          "name": "EMAIL",
           "layout": "BSP"
         }
       ]

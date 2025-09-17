@@ -6,7 +6,7 @@
     "bar_accent": "Base0A",
     "floating_border": "Base0E",
     "single_border": "Base08",
-    "stack_border": Base0C"
+    "stack_border": "Base0C"
   }
 {{ else if eq .chezmoi.hostname "home-desktop" }}
   {
