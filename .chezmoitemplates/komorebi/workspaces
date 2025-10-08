@@ -46,7 +46,7 @@
     {
       "workspaces": [
         {
-          "name": "1",
+          "name": "EMAIL",
           "layout": "BSP"
         },
         {
