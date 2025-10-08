@@ -46,6 +46,58 @@
     {
       "workspaces": [
         {
+          "name": "1",
+          "layout": "BSP"
+        },
+        {
+          "name": "TEAMS",
+          "layout": "BSP"
+        },
+        {
+          "name": "OBSIDIAN",
+          "layout": "BSP"
+        },
+        {
+          "name": "4",
+          "layout": "BSP"
+        },
+        {
+          "name": "5",
+          "layout": "BSP"
+        },
+        {
+          "name": "6",
+          "layout": "BSP"
+        },
+        {
+          "name": "7",
+          "layout": "BSP"
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": "TC",
+          "layout": "BSP"
+        },
+        {
+          "name": "2",
+          "layout": "BSP"
+        },
+        {
+          "name": "3",
+          "layout": "BSP"
+        },
+        {
+          "name": "4",
+          "layout": "BSP"
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
           "name": "EMAIL",
           "layout": "BSP"
         },
@@ -55,6 +107,10 @@
         },
         {
           "name": "OBSIDIAN",
+          "layout": "BSP"
+        },
+        {
+          "name": "4",
           "layout": "BSP"
         }
       ]
