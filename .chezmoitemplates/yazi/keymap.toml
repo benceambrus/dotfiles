@@ -34,7 +34,7 @@ prepend_keymap = [
 {{- end }}
   # Tabs
 	{ on = "á", run = "tab_switch 1 --relative",  desc = "Switch to the next tab" },
-	{ on = "ő", run = "tab_switch -1 --relative", desc = "Switch to the previous tab" },
+	{ on = "ó", run = "tab_switch -1 --relative", desc = "Switch to the previous tab" },
 ]
 
 # keymap = [
