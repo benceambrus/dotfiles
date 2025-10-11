@@ -9,7 +9,7 @@ alt + shift + o         : Start-Process "masir" -WindowStyle Hidden
 alt + shift + p         : Start-Process "komorebi-bar" -WindowStyle Hidden
 
 # Reload configuration
-alt + shift + r         : komorebic reload-configuration
+# alt + shift + r         : komorebic reload-configuration
 
 # Restart whkd
 alt + shift + ctrl + x  : Stop-Process -Name "whkd"; Start-Process "whkd" -WindowStyle Hidden
@@ -108,8 +108,8 @@ alt + shift + 5         : komorebic move-to-workspace 4
 alt + shift + 6         : komorebic move-to-workspace 5
 alt + shift + 7         : komorebic move-to-workspace 6
 alt + shift + 8         : komorebic move-to-workspace 7
-alt + escape            : komorebic cycle-move-to-workspace next
-alt + shift + escape    : komorebic cycle-move-to-workspace previous
+alt + shift + r         : komorebic cycle-move-to-workspace next
+alt + shift + e         : komorebic cycle-move-to-workspace previous
 
 # Switch monitors and move workspaces
 alt + m                   : komorebic focus-monitor 0
