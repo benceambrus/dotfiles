@@ -92,7 +92,7 @@ alt + 7                 : komorebic focus-workspace 6
 alt + 8                 : komorebic focus-workspace 7
 alt + r                 : komorebic cycle-workspace next
 alt + e                 : komorebic cycle-workspace previous
-alt + tab               : komorebic focus-last-workspace
+win + tab               : komorebic focus-last-workspace
 
 # Focus workspace on every monitor
 alt + win + 1          : komorebic focus-workspaces 0 
