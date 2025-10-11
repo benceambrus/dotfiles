@@ -32,7 +32,7 @@ alt + c                 : komorebic minimize
 alt + h                 : komorebic focus left
 alt + j                 : komorebic focus down
 alt + k                 : komorebic focus up
-alt + l             : komorebic focus right
+alt + l                 : komorebic focus right
 # alt + oem_1             : komorebic focus right
 alt + b                 : komorebic cycle-focus next
 alt + shift + b         : komorebic cycle-focus previous
@@ -52,16 +52,16 @@ alt + shift + l     : komorebic move right
 alt + shift + return    : komorebic promote
 
 # Stack windows
-alt + ctrl + h          : komorebic stack left
-alt + ctrl + j          : komorebic stack down
-alt + ctrl + k          : komorebic stack up
-alt + ctrl + l      : komorebic stack right
+alt + win + h          : komorebic stack left
+alt + win + j          : komorebic stack down
+alt + win + k          : komorebic stack up
+alt + win + l          : komorebic stack right
 # alt + ctrl + oem_1      : komorebic stack right
-alt + ctrl + c          : komorebic unstack # oem_1 is ;
-alt + ctrl + y          : komorebic cycle-stack previous # oem_4 is [
-alt + ctrl + x          : komorebic cycle-stack next # oem_6 is ]
-alt + ctrl + q          : komorebic stack-all
-alt + ctrl + w          : komorebic unstack-all
+alt + win + c          : komorebic unstack # oem_1 is ;
+alt + win + y          : komorebic cycle-stack previous # oem_4 is [
+alt + win + x          : komorebic cycle-stack next # oem_6 is ]
+alt + win + q          : komorebic stack-all
+alt + win + w          : komorebic unstack-all
 
 # Resize
 alt + u                 : komorebic resize-axis horizontal increase
@@ -95,9 +95,9 @@ alt + e                 : komorebic cycle-workspace previous
 alt + tab               : komorebic focus-last-workspace
 
 # Focus workspace on every monitor
-alt + ctrl + 1          : komorebic focus-workspaces 0 
-alt + ctrl + 2          : komorebic focus-workspaces 1 
-alt + ctrl + 3          : komorebic focus-workspaces 2 
+alt + win + 1          : komorebic focus-workspaces 0 
+alt + win + 2          : komorebic focus-workspaces 1 
+alt + win + 3          : komorebic focus-workspaces 2 
 
 # Move windows across workspaces
 alt + shift + 1         : komorebic move-to-workspace 0
