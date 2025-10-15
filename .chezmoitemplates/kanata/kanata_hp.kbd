@@ -1,0 +1,144 @@
+;; Default state of the keyboard.
+(defsrc
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9    f10  f11  f12  prtsc del
+  grv  1    2    3    4    5    6    7    8    9     0    /    =    bspc home
+  tab  q    w    e    r    t    y    u    i    o     p    [    ]    pgup
+  caps a    s    d    f    g    h    j    k    l     ;    '    \    ret
+  lsft lsgt z    x    c    v    b    n    m    ,     .    -    rsft end
+  lctl lmet lalt           spc            ralt menu  rctl left up   right
+                                                               down
+)
+
+;; Default layer with home row mods.
+(deflayer base
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9    f10  f11  f12  prtsc del
+  grv  1    2    3    4    5    6    7    8    9     0    /    =    bspc home
+  tab  q    w    e    r    t    y    u    i    o     p    [    ]    pgup
+  esc  @a   @s   @d   @f   g    h    @j   @k   @l    @;    '    \   ret
+  lsft lsgt z    x    c    v    b    n    m    ,     .    -    rsft end
+  lctl lmet @nav           spc            @sym @mou  rctl left up   right
+                                                               down
+)
+
+;; Base layer without home row mods (needed for the advanced home row mods setup)
+(deflayer nomods
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9    f10  f11  f12  prtsc del
+  grv  1    2    3    4    5    6    7    8    9     0    /    =    bspc home
+  tab  q    w    e    r    t    y    u    i    o     p    [    ]    pgup
+  esc  a    s    d    f    g    h    j    k    l     ;    '    \   ret
+  lsft lsgt z    x    c    v    b    n    m    ,     .    -    rsft end
+  lctl lmet @nav           spc            ralt menu  rctl left up   right
+                                                               down
+)
+
+(deflayer navnum
+  _    _      _      _      _       _         _    _    _    _    _    _    _    _    _
+  _    _      _      _      _       _         _    nlck _    _    _    _    _    lrld _
+  caps bspc   home   up     end     _         _    7    8    9    kp*  S-6  _    _ 
+  @cwc C-left left   down   right   C-right   _    4    5    6    S-3  -    _    @base
+  _    lalt   _      pgup   pgdn    _         _    _    1    2    3    .    _    _ 
+  _    _      _             del               0    _    _    _    _    _
+                                                                  _ 
+)
+
+(deflayer mou
+  _    _        _      _      _       _         _    _    _    _    _    _    _    _  _
+  _    _        _      _      _       _         _    _    _    _    _    _    _    _  _
+  _    @mwle    @mwdn  @mup   @mwup   @mwri     _    _    _    _    _    _    _    _ 
+  caps _        @mle   @mdn   @mri    _   _     _    _    _    _    _    _    _
+  _    lalt     _      mrtp   mmtp   mltp       _    _    _    _    _    _    _    _ 
+  _    _        _             _                 _    _    _    _    _    _
+                                                                    _
+)
+
+(deflayer sym
+  _    _        _      _      _       _         _    _    _    _    _    _    _    _  _ 
+  _    _        _      _      _       _         _    _    _    _    _    _    _    _  _ 
+  _    C-A-v    C-A-w  S-6   S-2     S-4        RA-5 C-A-f C-A-g [    ]    \  _  _
+  RA-1 RA-'     RA-c   RA-3  S-3     S-7        RA-j S-8  S-9  RA-, RA-; RA--  _    @base
+  _    S-5      C-A-x  RA-q  S-1     RA-7       RA-x _    RA-b RA-n RA-lsgt   RA-y    _   _
+  _    _        _                    ret            _    _    _    _    _    _
+                                                                   _
+)
+
+(defvar
+  mmove-int 5 ;; Interval for mouse movement
+  acceleration-time 500
+  min 1
+  max 3
+  mwheel-int 15 ;; Interval for mouse wheel
+  distance 40
+)
+
+(defalias
+    ;; Layer switching
+    nav (layer-while-held navnum)
+    base (layer-switch base)
+    sym (layer-while-held sym)
+
+    ;; Caps-word
+    cwc (caps-word-custom 
+      2000
+      (a b c d e f g h i j k l m n o p q r s t u v w x y z 0 / = [ ] ; ' \ grv 1 2 3 4 5 6 7 8 9 -)
+      ()
+    )
+
+    ;; Mouse movements
+    mou (layer-while-held mou)
+    mup (movemouse-accel-up $mmove-int $acceleration-time $min $max)
+    mdn (movemouse-accel-down $mmove-int $acceleration-time $min $max)
+    mle (movemouse-accel-left $mmove-int $acceleration-time $min $max)
+    mri (movemouse-accel-right $mmove-int $acceleration-time $min $max)
+
+    ;; Mouse scrollwheel
+    mwup (mwheel-up $mwheel-int $distance)
+    mwdn (mwheel-down $mwheel-int $distance)
+    mwle (mwheel-left $mwheel-int $distance)
+    mwri (mwheel-right $mwheel-int $distance)
+)
+
+(defcfg
+    windows-altgr cancel-lctl-press
+    process-unmapped-keys yes
+    movemouse-inherit-accel-state yes
+)
+
+;; Advanced homerow mods
+(defvar
+  ;; Note: consider using different time values for your different fingers.
+  ;; For example, your pinkies might be slower to release keys and index
+  ;; fingers faster.
+  tap-time 200
+  hold-time 150
+
+  left-hand-keys (
+    q w e r t
+    g
+    z x c v b
+  )
+  right-hand-keys (
+    y u i o p
+    h
+    n m , . /
+  )
+)
+
+(deffakekeys
+  to-base (layer-switch base)
+)
+(defalias
+  tap (multi
+    (layer-switch nomods)
+    (on-idle-fakekey to-base tap 20)
+  )
+
+  a (tap-hold-release-keys $tap-time $hold-time (multi a @tap) lmet $left-hand-keys)
+  s (tap-hold-release-keys $tap-time $hold-time (multi s @tap) lalt $left-hand-keys)
+  d (tap-hold-release-keys $tap-time $hold-time (multi d @tap) lsft $left-hand-keys)
+  f (tap-hold-release-keys $tap-time $hold-time (multi f @tap) lctl $left-hand-keys)
+  j (tap-hold-release-keys $tap-time $hold-time (multi j @tap) lctl $right-hand-keys)
+  k (tap-hold-release-keys $tap-time $hold-time (multi k @tap) lsft $right-hand-keys)
+  l (tap-hold-release-keys $tap-time $hold-time (multi l @tap) lalt $right-hand-keys)
+  ; (tap-hold-release-keys $tap-time $hold-time (multi ; @tap) lmet $right-hand-keys)
+)
+

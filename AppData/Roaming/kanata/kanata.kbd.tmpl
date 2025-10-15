@@ -1,0 +1,5 @@
+{{ if eq .chezmoi.hostname "bme-laptop" }}
+{{ template "kanata/kanata_hp.kbd" . }}
+{{ else if eq .chezmoi.hostname "home-laptop" }}
+{{ template "kanata/kanata_lenovo.kbd" . }}
+{{ end }}

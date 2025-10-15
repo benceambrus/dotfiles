@@ -31,6 +31,14 @@ require("projects"):setup({
 
 -- Bunny
 local user_dir = os.getenv("USERPROFILE")
+{{ if eq .chezmoi.hostname "bme-laptop" }}
+local download_dir = "C:/Users/ambrus/Downloads/"
+local cloud_root = "C:/Users/ambrus/Cloud/"
+{{ else }}
+local download_dir = "D:/Downloads/"
+local cloud_root = "D:/Cloud/"
+{{ end }}
+
 require("bunny"):setup({
 	hops = {
 		{ key = { "d", "d" }, path = "D:/", desc = "Drive: D" },
@@ -38,10 +46,10 @@ require("bunny"):setup({
 		{ key = { "h", "c" }, path = user_dir .. "/.config", desc = "Config" },
 		{ key = { "h", "a" }, path = user_dir .. "/AppData", desc = "AppData" },
 		{ key = { "h", "d" }, path = user_dir .. "/.local/share/chezmoi", desc = "chezmoi" },
-		{ key = { "h", "w" }, path = "D:/Downloads/" },
-		{ key = { "c", "b" }, path = "D:/Cloud/OneDrive - Budapesti Műszaki és Gazdaságtudományi Egyetem/Egyetem/Kurzusok/", desc = "OneDrive: BME" },
-		{ key = { "c", "p" }, path = "D:/Cloud/OneDrive/", desc = "OneDrive: Personal" },
-		{ key = { "c", "e" }, path = "D:/Cloud/OneDrive - epito.bme.hu/", desc = "OneDrive: epito" },
+		{ key = { "h", "w" }, path = download_dir },
+		{ key = { "c", "b" }, path = cloud_root .. "OneDrive - Budapesti Műszaki és Gazdaságtudományi Egyetem/Egyetem/Kurzusok/", desc = "OneDrive: BME" },
+		{ key = { "c", "p" }, path = cloud_root .. "OneDrive/", desc = "OneDrive: Personal" },
+		{ key = { "c", "e" }, path = cloud_root .. "OneDrive - epito.bme.hu/", desc = "OneDrive: epito" },
 		-- key and path attributes are required, desc is optional
 	},
 	desc_strategy = "path", -- If desc isn't present, use "path" or "filename", default is "path"

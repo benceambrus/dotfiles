@@ -8,6 +8,8 @@ return {
       colorscheme = "everforest",
 {{- else if eq .chezmoi.hostname "home-laptop" }}
       colorscheme = "everforest",
+{{- else if eq .chezmoi.hostname "bme-laptop" }}
+      colorscheme = "everforest",
 {{- else if eq .chezmoi.hostname "bme-desktop" }}
       colorscheme = "catppuccin-macchiato",
 {{- end }}

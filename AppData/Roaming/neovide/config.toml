@@ -2,22 +2,8 @@ frame = "none" # No window frame
 idle = true # No frames are rendered while idle
 
 [font]
-size = 14.0
+normal = ["JetBrainsMono Nerd Font"]
+size = 12.0
 hinting = "full"
 edging = "antialias"
-style = "Regular"
-
-[[font.normal]]
-family = "Inconsolata Nerd Font Mono"
-style = "Regular"
-
-[[font.normal]]
-family = "CaskaydiaCove Nerd Font"
-style = "Regular"
-
-[[font.normal]]
-family = "JetBrainsMono Nerd Font Propo"
-style = "ExtraLight"
-
-
 
