@@ -188,7 +188,7 @@
         }
       ]
     }
-{{- else if eq .chezmoi.hostname "home-laptop" -}}
+{{- else if (or (eq .chezmoi.hostname "home-laptop") (eq .chezmoi.hostname "bme-laptop")) -}}
     {
       "workspaces": [
         {

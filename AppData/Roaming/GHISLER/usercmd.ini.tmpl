@@ -1,0 +1,3 @@
+{{ if eq .chezmoi.hostname "bme-laptop" }}
+{{- template totalcmd/laptop/usercmd.ini . -}}
+{{ end }}

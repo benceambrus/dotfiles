@@ -1,4 +1,4 @@
-{{- if eq .chezmoi.hostname "home-laptop" -}}
+{{- if (or (eq .chezmoi.hostname "home-laptop") (eq .chezmoi.hostname "bme-laptop")) -}}
   {
     "palette": "Base16",
     "name": "EverforestDarkHard",
