@@ -9,6 +9,13 @@
   "border": true,
   "border_width": 4,
   "border_offset": -1,
+  "manage_rules": [
+    {
+      "kind": "Exe",
+      "id": "MATLAB.exe",
+      "matching_strategy": "Equals"
+    }
+  ],
   "theme": {{- template "komorebi/theme" . -}},
   "bar_configurations": [ {{- template "komorebi/bar_config" . -}} ],
   "stackbar": {
