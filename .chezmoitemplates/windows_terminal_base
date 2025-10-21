@@ -204,9 +204,9 @@
             "cursorShape": "bar",
             "font": 
             {
-                "face": "Inconsolata Nerd Font",
-                "size": 13,
-                "weight": "normal"
+                "face": "JetBrainsMono Nerd Font ",
+                "size": 12,
+                "weight": "light"
             },
             "opacity": 85,
             "useAcrylic": true

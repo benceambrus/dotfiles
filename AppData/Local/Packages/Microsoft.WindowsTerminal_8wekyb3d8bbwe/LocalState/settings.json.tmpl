@@ -3,7 +3,7 @@
         "colorscheme_light" "Gruvbox Light"
         "colorscheme_dark"  "Gruvbox Dark"
     -}}
-{{ else if eq .chezmoi.hostname "home-laptop" }}
+{{ else if (or (eq .chezmoi.hostname "home-laptop") (eq .chezmoi.hostname "bme-laptop")) }}
     {{- template "windows_terminal_base" dict 
         "colorscheme_light" "Everforest Light Medium"
         "colorscheme_dark"  "Everforest Dark Medium"
