@@ -11,6 +11,18 @@
           "type": "session"
         },
         {
+          "foreground": "#f57d26",
+          "style": "plain",
+          "template": " {{ .HostName }}",
+          "type": "session"
+        },
+        {
+          "foreground": "#4d8676",
+          "style": "plain",
+          "template": " in",
+          "type": "session"
+        },
+        {
           "foreground": "#0CA0D8",
           "properties": {
             "folder_separator_icon": "/",
