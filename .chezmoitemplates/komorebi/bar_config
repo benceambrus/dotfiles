@@ -1,7 +1,7 @@
 {{ if eq .chezmoi.hostname "home-laptop" }}
   "~/.config/komorebi-bar/home-laptop/monitor_main.json"
 {{ else if eq .chezmoi.hostname "bme-laptop" }}
-  "~/.config/komorebi-bar/home-laptop/monitor_main.json"
+  "~/.config/komorebi-bar/bme-laptop/monitor_main.json"
 {{ else if eq .chezmoi.hostname "home-desktop" }}
   "~/.config/komorebi-bar/home-desktop/monitor_main.json",
   "~/.config/komorebi-bar/home-desktop/monitor_right.json",
