@@ -9,7 +9,7 @@ add_newline = true
 # $all[╰─](#905AFF)$character"""
 
 format = """\
-$username$hostname$directory$fill$git_branch$git_status$fill$python
+$username$hostname$directory$git_branch$git_status$fill$python
 $character\
 """
 
