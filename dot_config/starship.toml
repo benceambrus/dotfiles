@@ -9,8 +9,9 @@ add_newline = true
 # $all[╰─](#905AFF)$character"""
 
 format = """\
-[](#905AFF)$env_var\
-$all[](#905AFF)$character"""
+$username$hostname$directory$fill$git_branch$git_status$fill$python
+$character\
+"""
 
 # Change the default prompt characters
 [character]
@@ -25,11 +26,18 @@ disabled = false
 
 # Shows the username
 [username]
-style_user = "white bold"
-style_root = "black bold"
-format = "[$user]($style) "
-disabled = true  # disable in powershell
-show_always = false
+style_user = "#4d8676 bold"
+style_root = "red bold"
+format = "[\ueb99 $user]($style) "
+disabled = false  # disable in powershell
+show_always = true
+
+[fill]
+symbol = " "
+
+[hostname]
+ssh_only = false
+format = "on [$ssh_symbol$hostname](#f57d26 bold) "
 
 [directory]
 truncation_length = 10
@@ -37,11 +45,11 @@ truncation_symbol = "…/"
 home_symbol = "~"
 read_only_style = "197"
 read_only = "  "
-style = "green bold"
-format = "at [$path]($style)[$read_only]($read_only_style) "
+style = "#0ca0d8 bold"
+format = "in [\uf07b $path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
-symbol = " "
+symbol = " "
 format = "on [$symbol$branch]($style) "
 truncation_length = 10
 truncation_symbol = "…/"
