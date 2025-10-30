@@ -9,7 +9,7 @@ add_newline = true
 # $all[╰─](#905AFF)$character"""
 
 format = """\
-$username$hostname$directory$git_branch$git_status$fill$python
+$username$hostname$directory$git_branch$git_status$fill$all\
 $character\
 """
 
@@ -37,10 +37,10 @@ symbol = " "
 
 [hostname]
 ssh_only = false
-format = "on [$ssh_symbol$hostname](#f57d26 bold) "
+format = "on $ssh_symbol(#428715)[󰍹 $hostname](#f57d26 bold) "
 
 [directory]
-truncation_length = 10
+truncation_length = 4
 truncation_symbol = "…/"
 home_symbol = "~"
 read_only_style = "197"
@@ -64,7 +64,7 @@ untracked = " "
 ahead = "⇡${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 behind = "⇣${count}"
-stashed = " "
+stashed = " "
 modified = " "
 staged = '[++\($count\)](green)'
 renamed = "襁 "
@@ -83,11 +83,10 @@ format = "via [ $context](bold blue) "
 format = "via [ $version](bold purple) "
 
 [python]
-symbol = " "
-python_binary = "python3"
+symbol = " "
 
 [nodejs]
-format = "via [ $version](bold green) "
+format = "via [ $version](bold green) "
 disabled = true
 
 [ruby]
