@@ -34,11 +34,11 @@
 (deflayer navnum
   _    _      _      _      _       _         _    _    _    _    _    _    _    _    _
   _    _      _      _      _       _         _    nlck _    _    _    _    _    lrld _
-  caps bspc   home   up     end     _         _    7    8    9    kp*  S-6  _    _ 
-  @cwc C-left left   down   right   C-right   _    4    5    6    S-3  -    _    @base
-  _    lalt   _      pgup   pgdn    _         _    _    1    2    3    .    _    _ 
+  caps bspc   home   up     end     _         bspc 7    8    9    kp*  S-6  _    _ 
+  @cwc C-left left   down   right   C-right   _    4    5    6    -    S-3  _    @base
+  _    del    _      pgdn   menu    pgup      _    0    1    2    3    .    _    _ 
   _    _      _             del               0    _    _    _    _    _
-                                                                  _ 
+                                                                 _ 
 )
 
 (deflayer mou
