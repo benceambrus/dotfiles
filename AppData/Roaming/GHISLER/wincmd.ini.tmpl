@@ -1,5 +1,7 @@
 {{ if eq .chezmoi.hostname "bme-laptop" }}
-{{ template "totalcmd/laptop/wincmd.ini" . }}
+{{ template "totalcmd/laptop/bme-laptop/wincmd.ini" . }}
+{{ else if eq .chezmoi.hostname "home-laptop" }}
+{{ template "totalcmd/laptop/home-laptop/wincmd.ini" . }}
 {{ else if (or (eq .chezmoi.hostname "bme-desktop") (eq .chezmoi.hostname "home-desktop"))}}
 {{ template "totalcmd/desktop/wincmd.ini" . }}
 {{ end }}
