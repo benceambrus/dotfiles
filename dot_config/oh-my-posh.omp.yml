@@ -1,0 +1,66 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+final_space: true
+version: 3
+blocks:
+  - type: prompt
+    alignment: left
+    segments:
+      - type: session
+        style: plain
+        foreground: "#4d8676"
+        template: "\ueb99 {{ .UserName }}"
+      - type: text
+        style: plain
+        template: " on "
+      - type: session
+        style: plain
+        foreground_templates:
+          - "{{ if .SSHSession }}#3A94C5{{ else }}#f57d26{{ end }}"
+        template: "{{ if .SSHSession }}󰖟 {{ .HostName }}{{ else }}󰍹 {{ .HostName }}{{ end }}"
+      - type: text
+        style: plain
+        template: " in "
+      - type: path
+        style: plain
+        foreground: "#0CA0D8"
+        properties:
+          style: "agnoster_short"
+          max_depth: 2
+          folder_separator_icon: "/"
+        template: "󰉋 {{ .Path }}"
+      - type: git
+        style: plain
+        foreground: "#14A5AE"
+        properties:
+          fetch_stash_count: true
+          fetch_upstream_icon: true
+          home_enabled: true
+        template: " {{ .UpstreamIcon }} {{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}"
+  - type: prompt
+    alignment: right
+    newline: false
+    segments:
+      - type: python
+        style: plain
+        foreground: "#007427"
+        properties:
+          display_mode: "environment"
+          fetch_virtual_env: true
+          display_virtual_env: true
+          home_enabled: true
+        template: " ({{ if .Venv }}{{ .Venv }}):{{ .Full }}{{ end }}"
+  - type: prompt
+    alignment: "left"
+    newline: true
+    segments:
+      - type: root
+        style: plain
+        foreground: "#CD5E42"
+        template: "\ue3bf"
+      - type: text
+        style: plain
+        foreground: "#CD4277"
+        template: "\uf105"
+
+
+        

@@ -1,28 +1,11 @@
 # Alias commands
-# SSH
-{{ if (and (eq .chezmoi.os "windows") (eq .chezmoi.hostname "home-desktop" )) }}
-Function SshBme
-{ & ssh -Y BME-Desktop 
-}
-Function SshRaspberry
-{ & ssh raspberry 
-}
-Function RpiGetVids
-{ & ssh raspberry "cd /mnt/WD6TB/twc/download; find . -type f -exec basename {} \;" 
-}
-
 Function TitusUtil
 { Invoke-WebRequest -useb https://christitus.com/win | Invoke-Expression 
 }
-
-Set-Alias -Name rpi -Value SshRaspberry
-Set-Alias -Name bme -Value SshBme
-Set-Alias -Name rpivids -Value RpiGetVids
 Set-Alias -Name titus -Value TitusUtil
 
 # Add fzf to path.
 $env:PATH = "C:\Users\Ambri\AppData\Local\Microsoft\WinGet\Links;$env:PATH"
-{{ end }}
 
 # Chezmoi Git Alias
 Function ChezmoiGit
@@ -36,17 +19,17 @@ Function ChezmoiGit
 Set-Alias -Name chezmoi-git -Value ChezmoiGit
 
 # Starship
-if (Get-Command starship)
-{
-  $ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
-  Invoke-Expression (&starship init powershell)
-}
+# if (Get-Command starship)
+# {
+#   $ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
+#   Invoke-Expression (&starship init powershell)
+# }
 
 # Oh-my-posh
-# if (Get-Command -ErrorAction SilentlyContinue oh-my-posh)
-# {
-#   oh-my-posh --config $env:USERPROFILE\.config\oh-my-posh.omp.json init pwsh | Invoke-Expression
-# }
+if (Get-Command -ErrorAction SilentlyContinue oh-my-posh)
+{
+  oh-my-posh --config $env:USERPROFILE\.config\oh-my-posh.omp.yml init pwsh | Invoke-Expression
+}
 
 # Editor
 $env:Editor = "nvim"
@@ -108,16 +91,17 @@ function eza-grid
 function eza-long
 { & eza --long --group-directories-first --icons=always 
 }
-if (Get-Command -ErrorAction SilentlyContinue)
+if (Get-Command eza -ErrorAction SilentlyContinue)
 {
   Set-Alias -Name ls -Value eza-grid
   Set-Alias -Name ll -Value eza-long
 }
 
 # Mamba
-# if (Get-Command -ErrorAction SilentlyContinue mamba) {
-#     # !! Contents within this block are managed by 'mamba shell init' !!
-#     $Env:MAMBA_ROOT_PREFIX = "~\miniforge3"
-#     $Env:MAMBA_EXE = "~\miniforge3\Library\bin\mamba.exe"
-#     (& $Env:MAMBA_EXE 'shell' 'hook' -s 'powershell' -r $Env:MAMBA_ROOT_PREFIX) | Out-String | Invoke-Expression
-# }
+if (Get-Command mamba -ErrorAction SilentlyContinue)
+{
+  # !! Contents within this block are managed by 'mamba shell init' !!
+  $Env:MAMBA_ROOT_PREFIX = "~\miniforge3"
+  $Env:MAMBA_EXE = "~\miniforge3\Library\bin\mamba.exe"
+  (& $Env:MAMBA_EXE 'shell' 'hook' -s 'powershell' -r $Env:MAMBA_ROOT_PREFIX) | Out-String | Invoke-Expression
+}
