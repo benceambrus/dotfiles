@@ -34,6 +34,9 @@ if (Get-Command -ErrorAction SilentlyContinue oh-my-posh)
 # Editor
 $env:Editor = "nvim"
 
+# Komorebi config location
+$Env:KOMOREBI_CONFIG_HOME = "$Env:USERPROFILE\.config\komorebi"
+
 # Vi-mode with cursor indicator
 Set-PsReadLineOption -EditMode Vi
 $OnViModeChange = [scriptblock] {
