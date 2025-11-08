@@ -1,3 +1,18 @@
+# Custom functions
+## Path extension
+Function ExtendPath
+{
+  param (
+    [Parameter(Mandatory)]
+    [string]$Path,
+    [string]$Context = "User"
+  )
+
+  $CurrentPath = [System.Environment]::GetEnvironmentVariable("Path", $Context)
+  $NewPath = "{0}{1};" -f $CurrentPath,$Path
+  [System.Environment]::SetEnvironmentVariable("Path", $NewPath, $Context)
+}
+
 # Alias commands
 Function TitusUtil
 { Invoke-WebRequest -useb https://christitus.com/win | Invoke-Expression 
