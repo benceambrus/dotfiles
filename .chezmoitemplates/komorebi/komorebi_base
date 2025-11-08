@@ -7,7 +7,7 @@
   "default_workspace_padding": 0,
   "default_container_padding": 0,
   "border": true,
-  "border_width": 4,
+  "border_width": 5,
   "border_offset": -1,
   "manage_rules": [
     {
@@ -19,11 +19,11 @@
   "theme": {{- template "komorebi/theme" . -}},
   "bar_configurations": [ {{- template "komorebi/bar_config" . -}} ],
   "stackbar": {
-    "height": 15,
+    "height": 20,
     "mode": "OnStack",
     "label": "Title",
     "tabs": {
-      "width": 300,
+      "width": 250,
       "font_family": "Cascadia Code",
       "font_size": 12,
       "focused_text": "#8e64a6",

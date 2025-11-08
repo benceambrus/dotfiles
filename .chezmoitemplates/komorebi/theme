@@ -6,7 +6,8 @@
     "bar_accent": "Base0A",
     "floating_border": "Base0E",
     "single_border": "Base08",
-    "stack_border": "Base0C"
+    "stack_border": "Base0C",
+    "monocle_border": "Base0B"
   }
 {{ else if eq .chezmoi.hostname "home-desktop" }}
   {
@@ -16,7 +17,8 @@
     "bar_accent": "Base09",
     "floating_border": "Base0E",
     "single_border": "Base08",
-    "stack_border": "Base0D"
+    "stack_border": "Base0D",
+    "monocle_border": "Base0B"
   }
 {{ else if eq .chezmoi.hostname "bme-desktop" }}
   {
@@ -26,6 +28,7 @@
     "bar_accent": "Mauve",
     "floating_border": "Mauve",
     "single_border": "Red",
-    "stack_border": "Green"
+    "stack_border": "Green",
+    "monocle_border": "Blue"
   }
 {{ end }}
