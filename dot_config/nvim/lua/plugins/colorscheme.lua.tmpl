@@ -12,6 +12,8 @@ return {
       colorscheme = "everforest",
 {{- else if eq .chezmoi.hostname "bme-desktop" }}
       colorscheme = "catppuccin-macchiato",
+{{- else -}}
+      colorscheme = "everforest",
 {{- end }}
 		},
 	},
