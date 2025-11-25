@@ -8,6 +8,6 @@
   "~/.config/komorebi-bar/home-desktop/monitor_left.json"
 {{ else if eq .chezmoi.hostname "bme-desktop" }}
   "~/.config/komorebi-bar/bme-desktop/monitor_main.json",
-  "~/.config/komorebi-bar/bme-desktop/monitor_right.json",
-  "~/.config/komorebi-bar/bme-desktop/monitor_left.json"
+  "~/.config/komorebi-bar/bme-desktop/monitor_left.json",
+  "~/.config/komorebi-bar/bme-desktop/monitor_right.json"
 {{ end }}
