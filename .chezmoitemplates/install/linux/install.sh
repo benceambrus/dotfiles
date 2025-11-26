@@ -1,6 +1,5 @@
 #!/bin/bash
 
-<<<<<<< Updated upstream
 WORKDIR=~/install
 mkdir -p ${WORKDIR}
 cd ${WORKDIR}
@@ -49,9 +48,6 @@ mv ~/.local/share/nvim{,.bak}
 mv ~/.local/state/nvim{,.bak}
 mv ~/.cache/nvim{,.bak}
 git clone https://github.com/LazyVim/starter ~/.config/nvim
-=======
-# NVIM
->>>>>>> Stashed changes
 
 # Oh-my-posh
 curl -s https://ohmyposh.dev/install.sh | bash -s
