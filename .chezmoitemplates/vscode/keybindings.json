@@ -1,0 +1,201 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "shift+tab",
+    "command": "editor.action.inlineSuggest.acceptNextLine"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "-vscode-neovim.send",
+    "when": "editorTextFocus && neovim.ctrlKeysNormal.k && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "-vscode-neovim.send",
+    "when": "editorTextFocus && neovim.ctrlKeysInsert.k && neovim.init && neovim.mode == 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp",
+    "when": "(editorTextFocus && neovim.mode == 'normal') || terminalFocus"
+  },
+  {
+    "key": "ctrl+w k",
+    "command": "-workbench.action.navigateUp",
+    "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+w h",
+    "command": "-workbench.action.navigateLeft",
+    "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-workbench.action.navigateDown",
+    "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "-workbench.action.navigateRight",
+    "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'"
+  },
+  {
+    "key": "ctrl+w x",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+e e",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+e shift+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "ctrl+e f b",
+    "command": "workbench.action.showAllEditors"
+  },
+  {
+    "key": "shift+h",
+    "command": "workbench.action.previousEditorInGroup",
+    "when": "editortextfocus !! !inputfocus"
+  },
+  {
+    "key": "shift+l",
+    "command": "workbench.action.nextEditorInGroup",
+    "when": "editortextfocus || !inputfocus"
+  },
+
+  // Coding
+  {
+    "key": "shift+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "neovim.mode != 'insert' && editortextfocus"
+  },
+  {
+    "key": "shift+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "neovim.mode != 'insert' && editortextfocus"
+  },
+  {
+    "key": "ctrl+e k",
+    "command": "editor.action.showHover",
+    "when": "neovim.mode == 'normal'"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "editor.action.inlineSuggest.hide"
+  },
+  {
+    "key": "ctrl+e c a",
+    "command": "editor.action.codeAction",
+    "when": "neovim.mode == 'normal'"
+  },
+  {
+    "key": "ctrl+e c r",
+    "command": "editor.action.rename",
+    "when": "neovim.mode == 'normal'"
+  },
+  {
+    "key": "ctrl+e c s",
+    "command": "workbench.action.gotoSymbol",
+    "when": "neovim.mode == 'normal'"
+  },
+  {
+    "key": "ctrl+e g d",
+    "command": "editor.action.revealDefinition",
+    "when": "neovim.mode == 'normal'"
+  },
+  {
+    "key": "ctrl+e g r",
+    "command": "editor.action.goToReferences",
+    "when": "neovim.mode == 'normal'"
+  },
+  {
+    "key": "ctrl+e s g",
+    "command": "workbench.action.findInFiles"
+  },
+  {
+    "key": "ctrl+e n",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "neovim.mode == 'normal' || neovim.mode == 'visual'"
+  },
+
+  // File explorer and splits
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "c",
+    "command": "filesExplorer.copy",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "s",
+    "command": "explorer.openToSide",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "ctrl+e s",
+    "command": "workbench.action.splitEditorDown"
+  },
+  {
+    "key": "ctrl+e v",
+    "command": "workbench.action.splitEditorRight"
+  },
+  {
+    "key": "shift+s",
+    "command": "runCommands",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+    "args": {
+      "commands": [
+        "workbench.action.splitEditorDown",
+        "explorer.openAndPassFocus",
+        "workbench.action.closeOtherEditors"
+      ]
+    }
+  }
+]
