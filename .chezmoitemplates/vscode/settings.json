@@ -1,31 +1,43 @@
 {
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
-    },
-    "workbench.colorTheme": "Everforest Dark",
-    "editor.formatOnSave": true,
-    "editor.fontFamily": "CaskaydiaCove Nerd Font, Consolas, 'Courier New', monospace",
-    "editor.fontLigatures": true,
-    "editor.fontVariations": true,
-    "python-envs.defaultEnvManager": "ms-python.python:conda",
-    "python-envs.defaultPackageManager": "ms-python.python:conda",
-    "python.defaultInterpreterPath": "c:\\Users\\ambrus\\miniforge3\\envs\\dev",
-    "[python]": {
-        "editor.defaultFormatter": "charliermarsh.ruff"
-    },
-    "vscode-neovim.ctrlKeysForInsertMode": [
-        "a",
-        "c",
-        "d",
-        "h",
-        "j",
-        "m",
-        "o",
-        "r",
-        "t",
-        "u"
-    ],
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+  // Theme and Appearance
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredDarkColorTheme": "Everforest Dark",
+  "workbench.preferredLightColorTheme": "Everforest Light",
+  "editor.fontFamily": "CaskaydiaCove Nerd Font, Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontVariations": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "window.density.editorTabHeight": "compact",
+
+  // Neovim Integration
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "vscode-neovim.ctrlKeysForInsertMode": [
+    "a",
+    "c",
+    "d",
+    "h",
+    "j",
+    "m",
+    "o",
+    "r",
+    "t",
+    "u",
+    "w"
+  ],
+
+  // Python Environment
+  "python-envs.defaultEnvManager": "ms-python.python:conda",
+  "python-envs.defaultPackageManager": "ms-python.python:conda",
+  "python.defaultInterpreterPath": "c:\\Users\\ambrus\\miniforge3\\envs\\dev",
+
+  // Formatter Settings
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

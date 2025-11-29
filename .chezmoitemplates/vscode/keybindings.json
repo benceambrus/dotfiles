@@ -1,22 +1,32 @@
-// Place your key bindings in this file to override the defaults
 [
+  // Suggestions (Copilot, IntelliCode, etc.)
+  {
+    "key": "tab",
+    "command": "editor.action.inlineSuggest.acceptNextLine",
+    "when": "neovim.mode == 'insert' && editorTextFocus && inlineSuggestionVisible"
+  },
+  {
+    "key": "tab",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "editor.action.triggerSuggest"
+  },
+  {
+    "key": "ctrl+.",
+    "command": "hideSuggestWidget",
+    "when": "neovim.mode == 'insert' && editorTextFocus && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+.",
+    "command": "editor.action.inlineSuggest.hide",
+    "when": "neovim.mode == 'insert' && editorTextFocus && inlineSuggestionVisible"
+  },
   {
     "key": "shift+tab",
     "command": "editor.action.inlineSuggest.acceptNextLine"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "-vscode-neovim.send",
-    "when": "editorTextFocus && neovim.ctrlKeysNormal.k && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "-vscode-neovim.send",
-    "when": "editorTextFocus && neovim.ctrlKeysInsert.k && neovim.init && neovim.mode == 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "-workbench.action.quickOpen"
   },
   {
     "key": "ctrl+k",
@@ -24,39 +34,19 @@
     "when": "(editorTextFocus && neovim.mode == 'normal') || terminalFocus"
   },
   {
-    "key": "ctrl+w k",
-    "command": "-workbench.action.navigateUp",
-    "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'"
-  },
-  {
     "key": "ctrl+h",
     "command": "workbench.action.navigateLeft"
-  },
-  {
-    "key": "ctrl+w h",
-    "command": "-workbench.action.navigateLeft",
-    "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'"
   },
   {
     "key": "ctrl+j",
     "command": "workbench.action.navigateDown"
   },
   {
-    "key": "ctrl+j",
-    "command": "-workbench.action.navigateDown",
-    "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'"
-  },
-  {
     "key": "ctrl+l",
     "command": "workbench.action.navigateRight"
   },
   {
-    "key": "ctrl+w l",
-    "command": "-workbench.action.navigateRight",
-    "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'"
-  },
-  {
-    "key": "ctrl+w x",
+    "key": "ctrl+e x",
     "command": "workbench.action.closeActiveEditor"
   },
   {
@@ -74,24 +64,24 @@
   {
     "key": "shift+h",
     "command": "workbench.action.previousEditorInGroup",
-    "when": "editortextfocus !! !inputfocus"
+    "when": "!inputFocus"
   },
   {
     "key": "shift+l",
     "command": "workbench.action.nextEditorInGroup",
-    "when": "editortextfocus || !inputfocus"
+    "when": "!inputFocus"
   },
 
   // Coding
   {
     "key": "shift+j",
     "command": "editor.action.moveLinesDownAction",
-    "when": "neovim.mode != 'insert' && editortextfocus"
+    "when": "neovim.mode != 'insert' && editorTextFocus"
   },
   {
     "key": "shift+k",
     "command": "editor.action.moveLinesUpAction",
-    "when": "neovim.mode != 'insert' && editortextfocus"
+    "when": "neovim.mode != 'insert' && editorTextFocus"
   },
   {
     "key": "ctrl+e k",
@@ -135,6 +125,43 @@
     "key": "ctrl+e n",
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "neovim.mode == 'normal' || neovim.mode == 'visual'"
+  },
+
+  // Debugging
+  {
+    "key": "ctrl+e d s",
+    "command": "workbench.action.debug.start",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  {
+    "key": "ctrl+e d s",
+    "command": "workbench.action.debug.continue",
+    "when": "neovim.mode == 'normal' && editorTextFocus && inDebugMode"
+  },
+  {
+    "key": "ctrl+e d b",
+    "command": "editor.debug.action.toggleBreakpoint",
+    "when": "neovim.mode == 'normal' && editorTextFocus"
+  },
+  {
+    "key": "ctrl+e d e",
+    "command": "workbench.action.debug.stop",
+    "when": "neovim.mode == 'normal' && editorTextFocus && inDebugMode"
+  },
+  {
+    "key": "ctrl+e d g",
+    "command": "workbench.action.debug.stepOver",
+    "when": "neovim.mode == 'normal' && editorTextFocus && inDebugMode"
+  },
+  {
+    "key": "ctrl+e d G",
+    "command": "workbench.action.debug.stepInto",
+    "when": "neovim.mode == 'normal' && editorTextFocus && inDebugMode"
+  },
+  {
+    "key": "ctrl+e d t",
+    "command": "workbench.action.debug.selectDebugConsole",
+    "when": "neovim.mode == 'normal' && editorTextFocus && inDebugMode"
   },
 
   // File explorer and splits
@@ -197,5 +224,41 @@
         "workbench.action.closeOtherEditors"
       ]
     }
+  },
+
+  // Unbindings
+  {
+    "key": "ctrl+k",
+    "command": "-vscode-neovim.send",
+    "when": "editorTextFocus && neovim.ctrlKeysNormal.k && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "-vscode-neovim.send",
+    "when": "editorTextFocus && neovim.ctrlKeysInsert.k && neovim.init && neovim.mode == 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+w k",
+    "command": "-workbench.action.navigateUp",
+    "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'"
+  },
+  {
+    "key": "ctrl+w h",
+    "command": "-workbench.action.navigateLeft",
+    "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-workbench.action.navigateDown",
+    "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "-workbench.action.navigateRight",
+    "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'"
   }
 ]
