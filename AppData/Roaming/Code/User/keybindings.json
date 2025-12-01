@@ -77,6 +77,10 @@
     "key": "ctrl+e t",
     "command": "workbench.action.terminal.toggleTerminal"
   },
+  {
+    "key": "ctrl+e p",
+    "command": "workbench.action.showCommands"
+  },
 
   // Coding
   {
