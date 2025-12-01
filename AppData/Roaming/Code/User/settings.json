@@ -10,7 +10,6 @@
   "window.density.editorTabHeight": "compact",
   "workbench.tips.enabled": false,
   "window.menuBarVisibility": "compact",
-  "editor.cursorBlinking": "expand",
   "editor.minimap.enabled": false,
 
   // Neovim Integration
@@ -47,5 +46,7 @@
 
   // Editor Settings
   "editor.acceptSuggestionOnEnter": "off",
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "editor.cursorBlinking": "expand",
+  "workbench.activityBar.location": "top"
 }
