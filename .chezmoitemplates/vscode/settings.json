@@ -24,10 +24,11 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
 
-  // APC settings
-  "apc.font.family": "FiraCode Nerd Font",
-  "apc.monospace.font.family": "FiraCode Nerd Font",
+  // Custom UI settings
+  "custom-ui-style.font.monospace": "FiraCode Nerd Font",
+  "custom-ui-style.font.sansSerif": "FiraCode Nerd Font",
 
   // Neovim Integration
   "extensions.experimental.affinity": {
@@ -64,7 +65,7 @@
   // Editor Settings
   "editor.acceptSuggestionOnEnter": "off",
   "files.insertFinalNewline": true,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 5000,
 

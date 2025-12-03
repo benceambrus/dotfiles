@@ -15,7 +15,11 @@ config.animation_fps = 60
 -- Launcher menu
 config.launch_menu = {
 	{
+{{ if eq .chezmoi.hostname "home-desktop" }}
+		args = { "C:/Programs/QMK_MSYS/shell_connector.cmd" },
+{{ else if eq .chezmoi.hostname "bme-desktop" }}
 		args = { "C:/Program Files/QMK_MSYS/shell_connector.cmd" },
+{{ end }}
 		label = "QMK MSYS",
 	},
 }
