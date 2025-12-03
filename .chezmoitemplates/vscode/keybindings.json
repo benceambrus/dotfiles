@@ -32,7 +32,6 @@
   {
     "key": "ctrl+k",
     "command": "workbench.action.navigateUp",
-    "when": "(editorTextFocus && neovim.mode == 'normal') || terminalFocus"
   },
   {
     "key": "ctrl+h",
@@ -88,7 +87,13 @@
     "key": "ctrl+oem_1", // ctrl+é
     "command": "workbench.action.increaseViewSize"
   },
-  // Coding
+  // Which key
+  {
+    "key": "space",
+    "command": "whichkey.show",
+    "when": "(neovim.mode == 'normal' && editorFocus) || (!editorFocus && !inputFocus)"
+  },
+    // Coding
   {
     "key": "shift+j",
     "command": "editor.action.moveLinesDownAction",
@@ -275,3 +280,4 @@
     "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'"
   }
 ]
+

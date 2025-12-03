@@ -69,5 +69,6 @@
   "files.autoSaveDelay": 5000,
 
   // Terminal Settings
-  "terminal.integrated.fontWeightBold": "normal"
+  "terminal.integrated.fontWeightBold": "normal",
+  termnil
 }
