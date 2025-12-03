@@ -28,7 +28,6 @@
     "key": "shift+tab",
     "command": "editor.action.inlineSuggest.acceptNextLine"
   },
-
   // Window navigation and management
   {
     "key": "ctrl+k",
@@ -77,7 +76,18 @@
     "key": "ctrl+e t",
     "command": "workbench.action.terminal.toggleTerminal"
   },
-
+  {
+    "key": "ctrl+e p",
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "ctrl+oem_7", // ctrl+á
+    "command": "workbench.action.decreaseViewSize"
+  },
+  {
+    "key": "ctrl+oem_1", // ctrl+é
+    "command": "workbench.action.increaseViewSize"
+  },
   // Coding
   {
     "key": "shift+j",
@@ -132,7 +142,6 @@
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "neovim.mode == 'normal' || neovim.mode == 'visual'"
   },
-
   // Debugging
   {
     "key": "ctrl+e d s",
@@ -169,7 +178,6 @@
     "command": "workbench.action.debug.selectDebugConsole",
     "when": "neovim.mode == 'normal' && editorTextFocus && inDebugMode"
   },
-
   // File explorer and splits
   {
     "key": "r",
@@ -231,7 +239,6 @@
       ]
     }
   },
-
   // Unbindings
   {
     "key": "ctrl+k",

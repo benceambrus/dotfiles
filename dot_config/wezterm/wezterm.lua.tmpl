@@ -114,10 +114,10 @@ config.keys = {
 	{ mods = "LEADER", key = "k", action = wezterm.action.ActivatePaneDirection("Up") },
 	{ mods = "LEADER", key = "l", action = wezterm.action.ActivatePaneDirection("Right") },
 	{ mods = "LEADER", key = "x", action = wezterm.action.CloseCurrentPane({ confirm = true }) },
-	{ mods = "LEADER|CTRL", key = "u", action = wezterm.action.AdjustPaneSize({ "Left", 3 }) },
-	{ mods = "LEADER|CTRL", key = "i", action = wezterm.action.AdjustPaneSize({ "Down", 3 }) },
-	{ mods = "LEADER|CTRL", key = "o", action = wezterm.action.AdjustPaneSize({ "Up", 3 }) },
-	{ mods = "LEADER|CTRL", key = "p", action = wezterm.action.AdjustPaneSize({ "Right", 3 }) },
+	{ mods = "LEADER", key = "u", action = wezterm.action.AdjustPaneSize({ "Left", 3 }) },
+	{ mods = "LEADER", key = "i", action = wezterm.action.AdjustPaneSize({ "Down", 3 }) },
+	{ mods = "LEADER", key = "o", action = wezterm.action.AdjustPaneSize({ "Up", 3 }) },
+	{ mods = "LEADER", key = "p", action = wezterm.action.AdjustPaneSize({ "Right", 3 }) },
 }
 
 -- Finally, return the configuration to wezterm:

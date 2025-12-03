@@ -1,8 +1,13 @@
 {
   // Theme and Appearance
   "window.autoDetectColorScheme": true,
+{{- if eq .chezmoi.hostname "bme-desktop" }}
+  "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+  "workbench.preferredLightColorTheme": "Catppuccin Latte",
+{{- else }}
   "workbench.preferredDarkColorTheme": "Everforest Dark",
   "workbench.preferredLightColorTheme": "Everforest Light",
+{{- end }}
   "editor.fontFamily": "FiraCode Nerd Font, CaskaydiaCove Nerd Font, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontVariations": true,
@@ -12,6 +17,17 @@
   "window.menuBarVisibility": "compact",
   "editor.cursorBlinking": "expand",
   "editor.minimap.enabled": false,
+  "workbench.activityBar.location": "top",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "workbench.tree.renderIndentGuides": "none",
+  "editor.renderWhitespace": "trailing",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+
+  // APC settings
+  "apc.font.family": "FiraCode Nerd Font",
+  "apc.monospace.font.family": "FiraCode Nerd Font",
 
   // Neovim Integration
   "extensions.experimental.affinity": {
@@ -47,5 +63,11 @@
 
   // Editor Settings
   "editor.acceptSuggestionOnEnter": "off",
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "workbench.startupEditor": "none"
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 5000,
+
+  // Terminal Settings
+  "terminal.integrated.fontWeightBold": "normal"
 }
