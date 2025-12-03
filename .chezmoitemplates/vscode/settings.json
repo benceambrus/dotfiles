@@ -51,7 +51,6 @@
   // Python Environment
   "python-envs.defaultEnvManager": "ms-python.python:conda",
   "python-envs.defaultPackageManager": "ms-python.python:conda",
-  "python.defaultInterpreterPath": "c:\\Users\\ambrus\\miniforge3\\envs\\dev",
 
   // Formatter Settings
   "editor.formatOnSave": true,
