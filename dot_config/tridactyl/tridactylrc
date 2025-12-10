@@ -1,10 +1,13 @@
+" Bind for sourcing the config
+bind <CA-p> source --url https://raw.githubusercontent.com/benceambrus/dotfiles/refs/heads/main/dot_config/tridactyl/tridactylrc
+
 " Set smooth scrolling
 set smoothscroll true
 bind j scrollline 5
 bind k scrollline -5
 
 " Colorscheme
-colorscheme midnight
+colorscheme auto
 
 " Browser shortcuts
 bind J tabnext
