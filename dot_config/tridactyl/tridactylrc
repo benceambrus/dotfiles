@@ -6,8 +6,8 @@ set smoothscroll true
 bind j scrollline 5
 bind k scrollline -5
 
-" Colorscheme
-colorscheme auto
+" Theme
+set theme auto
 
 " Browser shortcuts
 bind J tabnext
