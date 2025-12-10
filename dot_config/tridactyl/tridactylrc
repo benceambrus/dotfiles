@@ -18,7 +18,7 @@ bind K tabprev
 " Website shortcuts
 bind ge tabopen edu.epito.bme.hu
 bind gn tabopen neptun.bme.hu/oktatoi/login.aspx
-bind gm tabopen -c personal www.youtube.com
+bind gm tabopen -c Music www.youtube.com
 bind gy winopen youtube.com/playlist?list=WL
 
 " Custom binds
@@ -37,12 +37,12 @@ bindurl www.startpage.com F hint -bJc .w-gl__result-title,button,input
 
 " Youtube
 " bindurl www.youtube.com f hint -Jc yt-formatted-string,yt-icon,[id='video-title'],[id='search'],tp-yt-paper-button,tp-yt-paper-tab
-bindurl www.youtube.com ;q hint -Jc yt-formatted-string -W js -p tri.excmds.shellescape(JS_ARG).then(url => tri.excmds.exclaim_quiet('streamlink ' + url))
+" bindurl www.youtube.com ;q hint -Jc yt-formatted-string -W js -p tri.excmds.shellescape(JS_ARG).then(url => tri.excmds.exclaim_quiet('streamlink ' + url))
 
 " Twitch
-bindurl www.twitch.tv f hint -Jc a,input
+" bindurl www.twitch.tv f hint -Jc a,input
 " Show only videos for opening in streamlink
-bindurl www.twitch.tv ;q hint -Jc div[class^='Layout'] > article > div[class^='Layout'] a[data-focusable='true'],nav[id='side-nav'] a -W js -p tri.excmds.shellescape(JS_ARG).then(url => tri.excmds.exclaim_quiet('streamlink ' + url))
+" bindurl www.twitch.tv ;q hint -Jc div[class^='Layout'] > article > div[class^='Layout'] a[data-focusable='true'],nav[id='side-nav'] a -W js -p tri.excmds.shellescape(JS_ARG).then(url => tri.excmds.exclaim_quiet('streamlink ' + url))
 
 " Inoreader
 bindurl www.inoreader.com hint -J [class*="title_link"],[title*="Read later"],[id*="linkdiv"]
