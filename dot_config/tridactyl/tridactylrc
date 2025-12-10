@@ -3,8 +3,10 @@ bind <CA-p> source --url https://raw.githubusercontent.com/benceambrus/dotfiles/
 
 " Set smooth scrolling
 set smoothscroll true
-bind j scrollline 5
-bind k scrollline -5
+bind j scrollline 7
+bind k scrollline -7
+bind h scrollpx -100
+bind l scrollpx 100
 
 " Theme
 set theme auto
