@@ -32,8 +32,8 @@ set hintnames short
 
 " " Custom hints for websites
 " Search engines
-bindurl www.startpage.com f hint -Jc .w-gl__result-title,button,input
-bindurl www.startpage.com F hint -bJc .w-gl__result-title,button,input
+" bindurl www.startpage.com f hint -Jc .w-gl__result-title,button,input
+" bindurl www.startpage.com F hint -bJc .w-gl__result-title,button,input
 
 " Youtube
 " bindurl www.youtube.com f hint -Jc yt-formatted-string,yt-icon,[id='video-title'],[id='search'],tp-yt-paper-button,tp-yt-paper-tab
@@ -51,4 +51,6 @@ bindurl www.inoreader.com hint -J [class*="title_link"],[title*="Read later"],[i
 set searchurls.startpage https://www.startpage.com/sp/search?query=%s
 set searchengine startpage
 
+" Unbinds
+unbind <C-e> " originally: scrollline 10
 
