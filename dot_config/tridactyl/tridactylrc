@@ -21,6 +21,9 @@ bind gn tabopen neptun.bme.hu/oktatoi/login.aspx
 bind gm tabopen -c Music www.youtube.com
 bind gy winopen youtube.com/playlist?list=WL
 
+"" Edu - Go to Grades
+bind gj js tri.xpath = ("//span[text()='Grades']/.."); tri.res = document.evaluate(tri.xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(1); tri.res.click();
+
 " Custom binds
 bind gd tabdetach
 bind gD composite tabduplicate; tabdetach
