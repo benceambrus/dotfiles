@@ -59,4 +59,5 @@ bindurl www.inoreader.com hint -J [class*="title_link"],[title*="Read later"],[i
 
 " Unbinds
 unbind <C-e> " originally: scrollline 10
+unbind . " originally: repeat last action
 
