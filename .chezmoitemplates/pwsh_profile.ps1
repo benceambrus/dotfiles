@@ -79,9 +79,9 @@ Set-PsFzfOption -PSReadLineChordProvider 'Ctrl+t' -PSReadLineChordReverseHistory
 Set-PsFzfOption -EnableAliasFuzzyEdit # fe
 Set-PsFzfOption -EnableAliasFuzzyHistory # fh
 Set-PsFzfOption -EnableAliasFuzzyKillProcess # fkill
-Set-PsFzfOption -EnableAliasFuzzySetLocation # fd
-#$commandOverride = [ScriptBlock]{ param($Location) Write-Host $Location }
-#Set-PsFzfOption -AltCCommand $commandOverride
+# Set-PsFzfOption -EnableAliasFuzzySetLocation # fd
+# $commandOverride = [ScriptBlock]{ param($Location) Write-Host $Location }
+# Set-PsFzfOption -AltCCommand $commandOverride
 
 # Yazi cd
 function y

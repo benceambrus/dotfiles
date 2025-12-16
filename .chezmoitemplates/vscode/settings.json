@@ -25,6 +25,10 @@
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.colorCustomizations": {
+    "sideBar.border": "default",
+    "panel.border": "default",
+  },
 
   // Custom UI settings
   "custom-ui-style.font.monospace": "FiraCode Nerd Font",
@@ -45,6 +49,7 @@
     "r",
     "t",
     "u",
+    "v",
     "w"
   ],
 
