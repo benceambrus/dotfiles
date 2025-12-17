@@ -8,7 +8,9 @@ set hintnames short
 
 " Search engine
 set searchurls.startpage https://www.startpage.com/sp/search?query=%s
-set searchengine startpage
+set searchurls.he https://www.helyesiras.mta.hu/helyesiras/default/suggest?q=%s " MTA helyesírás
+set searchurls.ke https://www.helyesiras.mta.hu/helyesiras/default/kulegy?q=%s  " MTA külőn v egybe
+" set searchengine startpage
 
 " Global bindings
 "" Bind for sourcing the config
