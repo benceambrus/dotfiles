@@ -335,7 +335,7 @@
             "brightGreen": "#93B259",
             "brightPurple": "#DF69BA",
             "brightRed": "#F85552",
-            "brightWhite": "#E9F0E9",
+            "brightWhite": "#BDC3AF",
             "brightYellow": "#DFA000",
             "cursorColor": "#000000",
             "cyan": "#35A77C",
@@ -345,7 +345,7 @@
             "purple": "#DF69BA",
             "red": "#F85552",
             "selectionBackground": "#bac1b9",
-            "white": "#E9F0E9",
+            "white": "#BDC3AF",
             "yellow": "#DFA000"
         },
         {
