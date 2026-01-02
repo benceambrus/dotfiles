@@ -31,6 +31,7 @@ require("projects"):setup({
 
 -- Bunny
 local user_dir = os.getenv("USERPROFILE")
+local username = os.getenv("USERNAME")
 {{ if eq .chezmoi.hostname "bme-laptop" }}
 local download_dir = "C:/Users/ambrus/Downloads/"
 local cloud_root = "C:/Users/ambrus/Cloud/"
@@ -43,6 +44,7 @@ require("bunny"):setup({
 	hops = {
 		{ key = { "d", "d" }, path = "D:/", desc = "Drive: D" },
 		{ key = { "d", "c" }, path = "C:/", desc = "Drive: C" },
+		{ key = { "d", "w" }, path = "\\\\wsl.localhost\\Ubuntu\\home\\" .. username, desc = "WSL: Ubuntu" },
 		{ key = { "h", "c" }, path = user_dir .. "/.config", desc = "Config" },
 		{ key = { "h", "a" }, path = user_dir .. "/AppData", desc = "AppData" },
 		{ key = { "h", "d" }, path = user_dir .. "/.local/share/chezmoi", desc = "chezmoi" },

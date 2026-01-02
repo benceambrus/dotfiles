@@ -9,6 +9,10 @@ SRC_DIR = "~/.local/share/chezmoi"
 command = "nvim"
 args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
 
+[merge]
+command = "nvim"
+args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
+
 [cd]
 {{- if eq .chezmoi.os "windows" }}
 command = "pwsh"
