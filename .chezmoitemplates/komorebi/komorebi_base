@@ -16,6 +16,13 @@
       "matching_strategy": "Equals"
     }
   ],
+  "ignore_rules": [
+    {
+      "kind": "Exe",
+      "id": "Wow.exe",
+      "matching_strategy": "Equals"
+    }
+  ],
   "theme": {{- template "komorebi/theme" . -}},
   "bar_configurations": [ {{- template "komorebi/bar_config" . -}} ],
   "stackbar": {
