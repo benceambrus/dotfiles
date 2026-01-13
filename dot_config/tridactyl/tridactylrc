@@ -2,7 +2,7 @@
 set theme auto
 
 " Hint setup
-set hintchars asdfjgkléá
+set hintchars qweruiopasdfjklé
 set hintfiltermode simple
 set hintnames short
 
@@ -16,7 +16,8 @@ set searchurls.ke https://www.helyesiras.mta.hu/helyesiras/default/kulegy?q=%s
 
 " Global bindings
 "" Bind for sourcing the config
-bind <CA-p> source --url https://raw.githubusercontent.com/benceambrus/dotfiles/refs/heads/main/dot_config/tridactyl/tridactylrc
+bind <CA-r> source --url https://raw.githubusercontent.com/benceambrus/dotfiles/refs/heads/main/dot_config/tridactyl/tridactylrc
+bind <CA-l> source ~/.config/tridactyl/tridactylrc
 
 "" Set smooth scrolling
 set smoothscroll true
