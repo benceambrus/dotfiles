@@ -124,3 +124,6 @@ if (Get-Command eza -ErrorAction SilentlyContinue)
 #   & $Env:MAMBA_EXE 'config' 'set' 'changeps1' 'False'
 #   (& $Env:MAMBA_EXE 'shell' 'hook' -s 'powershell' -r $Env:MAMBA_ROOT_PREFIX) | Out-String | Invoke-Expression
 # }
+
+# mise-en-place
+(&mise activate pwsh) | Out-String | Invoke-Expression
