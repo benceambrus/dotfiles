@@ -126,4 +126,7 @@ if (Get-Command eza -ErrorAction SilentlyContinue)
 # }
 
 # mise-en-place
-(&mise activate pwsh) | Out-String | Invoke-Expression
+if (Get-Command mise -ErrorAction SilentlyContinue)
+{
+  (&mise activate pwsh) | Out-String | Invoke-Expression
+}
