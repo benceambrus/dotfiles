@@ -49,9 +49,13 @@ require("bunny"):setup({
 		{ key = { "h", "a" }, path = user_dir .. "/AppData", desc = "AppData" },
 		{ key = { "h", "d" }, path = user_dir .. "/.local/share/chezmoi", desc = "chezmoi" },
 		{ key = { "h", "w" }, path = download_dir },
-		{ key = { "c", "b" }, path = cloud_root .. "OneDrive - Budapesti Műszaki és Gazdaságtudományi Egyetem/Egyetem/Kurzusok/", desc = "OneDrive: BME" },
+		{ key = { "c", "b" }, path = cloud_root .. "OneDrive - Budapesti Műszaki és Gazdaságtudományi Egyetem", desc = "OneDrive: BME" },
 		{ key = { "c", "p" }, path = cloud_root .. "OneDrive/", desc = "OneDrive: Personal" },
 		{ key = { "c", "e" }, path = cloud_root .. "OneDrive - epito.bme.hu/", desc = "OneDrive: epito" },
+		{ key = { "w", "c" }, path = cloud_root .. "OneDrive - Budapesti Műszaki és Gazdaságtudományi Egyetem/Egyetem/Kurzusok/", desc = "Work: Courses" },
+		{ key = { "w", "g" }, path = cloud_root .. "OneDrive - Budapesti Műszaki és Gazdaságtudományi Egyetem/Egyetem/Kurzusok/gnss_application_and_theory/2026", desc = "Work: Courses/GNSS" },
+		{ key = { "w", "u" }, path = cloud_root .. "OneDrive - Budapesti Műszaki és Gazdaságtudományi Egyetem/Egyetem/Kurzusok/urnavigacio/2025", desc = "Work: Courses/Urnavi" },
+		{ key = { "w", "s" }, path = cloud_root .. "OneDrive - Budapesti Műszaki és Gazdaságtudományi Egyetem/Egyetem/Kurzusok/geodezia_2", desc = "Work: Courses/Geodezia_2" },
 		-- key and path attributes are required, desc is optional
 	},
 	desc_strategy = "path", -- If desc isn't present, use "path" or "filename", default is "path"
