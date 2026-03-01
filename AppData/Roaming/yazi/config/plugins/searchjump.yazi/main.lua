@@ -8,33 +8,150 @@ local KEYS_label = {
 }
 
 local INPUT_KEY = {
-	"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W",
-	"X", "Y", "Z",
+	"A",
+	"B",
+	"C",
+	"D",
+	"E",
+	"F",
+	"G",
+	"H",
+	"I",
+	"J",
+	"K",
+	"L",
+	"M",
+	"N",
+	"O",
+	"P",
+	"Q",
+	"R",
+	"S",
+	"T",
+	"U",
+	"V",
+	"W",
+	"X",
+	"Y",
+	"Z",
 
-	"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
-	"o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2"
-, "3", "4", "5", "6", "7", "8", "9", "-", "_", ".", "<Esc>", "<Space>", "<Enter>", "<Backspace>"
+	"a",
+	"b",
+	"c",
+	"d",
+	"e",
+	"f",
+	"g",
+	"h",
+	"i",
+	"j",
+	"k",
+	"l",
+	"m",
+	"n",
+	"o",
+	"p",
+	"q",
+	"r",
+	"s",
+	"t",
+	"u",
+	"v",
+	"w",
+	"x",
+	"y",
+	"z",
+	"0",
+	"1",
+	"2",
+	"3",
+	"4",
+	"5",
+	"6",
+	"7",
+	"8",
+	"9",
+	"-",
+	"_",
+	".",
+	"<Esc>",
+	"<Space>",
+	"<Enter>",
+	"<Backspace>",
 }
 
 local INPUT_CANDS = {
-	{ on = "A" }, { on = "B" }, { on = "C" }, { on = "D" }, { on = "E" },
-	{ on = "F" }, { on = "G" }, { on = "H" }, { on = "I" }, { on = "J" },
-	{ on = "K" }, { on = "L" }, { on = "M" }, { on = "N" }, { on = "O" },
-	{ on = "P" }, { on = "Q" }, { on = "R" }, { on = "S" }, { on = "T" },
-	{ on = "U" }, { on = "V" }, { on = "W" }, { on = "X" }, { on = "Y" },
+	{ on = "A" },
+	{ on = "B" },
+	{ on = "C" },
+	{ on = "D" },
+	{ on = "E" },
+	{ on = "F" },
+	{ on = "G" },
+	{ on = "H" },
+	{ on = "I" },
+	{ on = "J" },
+	{ on = "K" },
+	{ on = "L" },
+	{ on = "M" },
+	{ on = "N" },
+	{ on = "O" },
+	{ on = "P" },
+	{ on = "Q" },
+	{ on = "R" },
+	{ on = "S" },
+	{ on = "T" },
+	{ on = "U" },
+	{ on = "V" },
+	{ on = "W" },
+	{ on = "X" },
+	{ on = "Y" },
 	{ on = "Z" },
 
-	{ on = "a" }, { on = "b" }, { on = "c" }, { on = "d" }, { on = "e" },
-	{ on = "f" }, { on = "g" }, { on = "h" }, { on = "i" }, { on = "j" },
-	{ on = "k" }, { on = "l" }, { on = "m" }, { on = "n" }, { on = "o" },
-	{ on = "p" }, { on = "q" }, { on = "r" }, { on = "s" }, { on = "t" },
-	{ on = "u" }, { on = "v" }, { on = "w" }, { on = "x" }, { on = "y" },
-	{ on = "z" }, { on = "0" }, { on = "1" }, { on = "2" }, { on = "3" },
-	{ on = "4" }, { on = "5" }, { on = "6" }, { on = "7" }, { on = "8" },
-	{ on = "9" }, { on = "-" }, { on = "_" }, { on = "." }, { on = "<Esc>" },
-	{ on = "<Space>" }, { on = "<Enter>" }, { on = "<Backspace>" }
+	{ on = "a" },
+	{ on = "b" },
+	{ on = "c" },
+	{ on = "d" },
+	{ on = "e" },
+	{ on = "f" },
+	{ on = "g" },
+	{ on = "h" },
+	{ on = "i" },
+	{ on = "j" },
+	{ on = "k" },
+	{ on = "l" },
+	{ on = "m" },
+	{ on = "n" },
+	{ on = "o" },
+	{ on = "p" },
+	{ on = "q" },
+	{ on = "r" },
+	{ on = "s" },
+	{ on = "t" },
+	{ on = "u" },
+	{ on = "v" },
+	{ on = "w" },
+	{ on = "x" },
+	{ on = "y" },
+	{ on = "z" },
+	{ on = "0" },
+	{ on = "1" },
+	{ on = "2" },
+	{ on = "3" },
+	{ on = "4" },
+	{ on = "5" },
+	{ on = "6" },
+	{ on = "7" },
+	{ on = "8" },
+	{ on = "9" },
+	{ on = "-" },
+	{ on = "_" },
+	{ on = "." },
+	{ on = "<Esc>" },
+	{ on = "<Space>" },
+	{ on = "<Enter>" },
+	{ on = "<Backspace>" },
 }
-
 
 local set_re_match = ya.sync(function(state, re_match)
 	state.re_match = re_match
@@ -210,8 +327,10 @@ local set_match_label = ya.sync(function(state, url, name, file)
 	end
 
 	while i <= #startPos do
-		table.insert(span,
-			ui.Span(name:sub(startPos[i], endPos[i])):fg(state.opt_match_str_fg):bg(state.opt_match_str_bg))
+		table.insert(
+			span,
+			ui.Span(name:sub(startPos[i], endPos[i])):fg(state.opt_match_str_fg):bg(state.opt_match_str_bg)
+		)
 		if i <= #key then
 			table.insert(span, ui.Span(key[i]):fg(state.opt_label_fg):bg(state.opt_label_bg))
 		end
@@ -353,9 +472,9 @@ local toggle_ui = ya.sync(function(st)
 	local function status_sj(self)
 		local style = self:style()
 		local match_pattern = (st.match_pattern and st.opt_show_search_in_statusbar) and ":" .. st.match_pattern or ""
-		return ui.Line {
+		return ui.Line({
 			ui.Span("[SJ]" .. match_pattern .. " "):style(style.main),
-		}
+		})
 	end
 	st.status_sj_id = Status:children_add(status_sj, 1001, Status.LEFT)
 
@@ -387,7 +506,7 @@ end)
 
 local set_target_str = ya.sync(function(state, patterns, final_input_str)
 	local url = check_key_is_label(final_input_str)
-	if url then                                                        -- if the last str match is a label key, not a searchchar,toggle jump action
+	if url then -- if the last str match is a label key, not a searchchar,toggle jump action
 		if not state.args_autocd and state.match[url].pane == "current" then -- if target file in current pane, use `arrow` instead of`reveal` tosupport select mode
 			local folder = cx.active.current
 			ya.mgr_emit("arrow", { state.match[url].cursorPos - folder.cursor - 1 + folder.offset })
@@ -444,7 +563,7 @@ local flush_input_key_in_statusbar = ya.sync(function(state, input_str)
 end)
 
 local set_args_default = ya.sync(function(state, args)
-	if (args[1] ~= nil and args[1] == "autocd") then
+	if args[1] ~= nil and args[1] == "autocd" then
 		state.args_autocd = true
 	else
 		state.args_autocd = false
@@ -452,44 +571,44 @@ local set_args_default = ya.sync(function(state, args)
 end)
 
 local set_opts_default = ya.sync(function(state)
-	if (state.mapdata == nil) then
+	if state.mapdata == nil then
 		state.mapdata = {}
 	end
 
-	if (state.opt_unmatch_fg == nil) then
+	if state.opt_unmatch_fg == nil then
 		state.opt_unmatch_fg = "#b2a496"
 	end
-	if (state.opt_match_str_fg == nil) then
+	if state.opt_match_str_fg == nil then
 		state.opt_match_str_fg = "#000000"
 	end
-	if (state.opt_match_str_bg == nil) then
+	if state.opt_match_str_bg == nil then
 		state.opt_match_str_bg = "#73AC3A"
 	end
-	if (state.opt_first_match_str_fg == nil) then
+	if state.opt_first_match_str_fg == nil then
 		state.opt_first_match_str_fg = "#000000"
 	end
-	if (state.opt_first_match_str_bg == nil) then
+	if state.opt_first_match_str_bg == nil then
 		state.opt_first_match_str_bg = "#73AC3A"
 	end
-	if (state.opt_label_fg == nil) then
+	if state.opt_label_fg == nil then
 		state.opt_label_fg = "#EADFC8"
 	end
-	if (state.opt_label_bg == nil) then
+	if state.opt_label_bg == nil then
 		state.opt_label_bg = "#BA603D"
 	end
-	if (state.opt_only_current == nil) then
+	if state.opt_only_current == nil then
 		state.opt_only_current = false
 	end
-	if (state.opt_search_patterns == nil) then
+	if state.opt_search_patterns == nil then
 		state.opt_search_patterns = {}
 	end
-	if (state.opt_show_search_in_statusbar == nil) then
+	if state.opt_show_search_in_statusbar == nil then
 		state.opt_show_search_in_statusbar = false
 	end
-	if (state.opt_auto_exit_when_unmatch == nil) then
+	if state.opt_auto_exit_when_unmatch == nil then
 		state.opt_auto_exit_when_unmatch = true
 	end
-	if (state.opt_enable_capital_label == nil) then
+	if state.opt_enable_capital_label == nil then
 		state.opt_enable_capital_label = false
 	end
 	return state.opt_search_patterns
@@ -499,45 +618,45 @@ return {
 	setup = function(state, opts)
 		-- Save the user configuration to the plugin's state
 
-		if (opts ~= nil and opts.mapdata ~= nil) then
+		if opts ~= nil and opts.mapdata ~= nil then
 			state.mapdata = opts.mapdata
 		end
 
-		if (opts ~= nil and opts.unmatch_fg ~= nil) then
+		if opts ~= nil and opts.unmatch_fg ~= nil then
 			state.opt_unmatch_fg = opts.unmatch_fg
 		end
-		if (opts ~= nil and opts.match_str_fg ~= nil) then
+		if opts ~= nil and opts.match_str_fg ~= nil then
 			state.opt_match_str_fg = opts.match_str_fg
 		end
-		if (opts ~= nil and opts.match_str_bg ~= nil) then
+		if opts ~= nil and opts.match_str_bg ~= nil then
 			state.opt_match_str_bg = opts.match_str_bg
 		end
-		if (opts ~= nil and opts.first_match_str_fg ~= nil) then
+		if opts ~= nil and opts.first_match_str_fg ~= nil then
 			state.opt_first_match_str_fg = opts.first_match_str_fg
 		end
-		if (opts ~= nil and opts.first_match_str_bg ~= nil) then
+		if opts ~= nil and opts.first_match_str_bg ~= nil then
 			state.opt_first_match_str_bg = opts.first_match_str_bg
 		end
-		if (opts ~= nil and opts.label_fg ~= nil) then
+		if opts ~= nil and opts.label_fg ~= nil then
 			state.opt_label_fg = opts.label_fg
 		end
-		if (opts ~= nil and opts.label_bg ~= nil) then
+		if opts ~= nil and opts.label_bg ~= nil then
 			state.opt_label_bg = opts.label_bg
 		end
 
-		if (opts ~= nil and opts.only_current ~= nil) then
+		if opts ~= nil and opts.only_current ~= nil then
 			state.opt_only_current = opts.only_current
 		end
-		if (opts ~= nil and opts.search_patterns ~= nil) then
+		if opts ~= nil and opts.search_patterns ~= nil then
 			state.opt_search_patterns = opts.search_patterns
 		end
-		if (opts ~= nil and opts.show_search_in_statusbar ~= nil) then
+		if opts ~= nil and opts.show_search_in_statusbar ~= nil then
 			state.opt_show_search_in_statusbar = opts.show_search_in_statusbar
 		end
-		if (opts ~= nil and opts.auto_exit_when_unmatch ~= nil) then
+		if opts ~= nil and opts.auto_exit_when_unmatch ~= nil then
 			state.opt_auto_exit_when_unmatch = opts.auto_exit_when_unmatch
 		end
-		if (opts ~= nil and opts.enable_capital_label ~= nil) then
+		if opts ~= nil and opts.enable_capital_label ~= nil then
 			state.opt_enable_capital_label = opts.enable_capital_label
 		end
 	end,
@@ -552,7 +671,7 @@ return {
 		local patterns = {}
 		local final_input_str = ""
 		while true do
-			local cand = ya.which { cands = INPUT_CANDS, silent = true }
+			local cand = ya.which({ cands = INPUT_CANDS, silent = true })
 			if cand == nil then
 				goto continue
 			end
@@ -601,5 +720,5 @@ return {
 
 		clear_state_str()
 		toggle_ui()
-	end
+	end,
 }
