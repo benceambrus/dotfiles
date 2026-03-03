@@ -433,7 +433,7 @@ local record_match_file = ya.sync(function(state, patterns)
 		ya.mgr_emit("peek", { force = true })
 	end
 
-	ya.render()
+	ui.render()
 
 	return exist_match
 end)
@@ -445,7 +445,7 @@ local toggle_ui = ya.sync(function(st)
 		if cx.active.preview.folder then
 			ya.mgr_emit("peek", { force = true })
 		end
-		ya.render()
+		ui.render()
 		return
 	end
 
@@ -527,7 +527,7 @@ local set_target_str = ya.sync(function(state, patterns, final_input_str)
 	local exist_match = record_match_file(patterns)
 
 	-- apply match data to render
-	ya.render()
+	ui.render()
 	if not exist_match and (state.re_match or patterns[1] ~= "") and state.opt_auto_exit_when_unmatch then
 		return true, exist_match
 	else
@@ -540,7 +540,7 @@ local clear_state_str = ya.sync(function(state)
 	state.next_char = nil
 	state.backouting = nil
 	state.match_pattern = nil
-	ya.render()
+	ui.render()
 end)
 
 local backout_last_input = ya.sync(function(state, input_str)
@@ -549,7 +549,7 @@ local backout_last_input = ya.sync(function(state, input_str)
 
 	state.backouting = true
 	state.match_pattern = input_str
-	ya.render()
+	ui.render()
 	return input_str, final_input_str
 end)
 
@@ -559,7 +559,7 @@ local flush_input_key_in_statusbar = ya.sync(function(state, input_str)
 	else
 		state.match_pattern = input_str
 	end
-	ya.render()
+	ui.render()
 end)
 
 local set_args_default = ya.sync(function(state, args)
