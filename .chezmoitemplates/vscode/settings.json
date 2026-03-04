@@ -1,13 +1,8 @@
 {
   // Theme and Appearance
   "window.autoDetectColorScheme": true,
-{{- if eq .chezmoi.hostname "bme-desktop" }}
   "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
   "workbench.preferredLightColorTheme": "Catppuccin Latte",
-{{- else }}
-  "workbench.preferredDarkColorTheme": "Everforest Dark",
-  "workbench.preferredLightColorTheme": "Everforest Light",
-{{- end }}
   "editor.fontFamily": "FiraCode Nerd Font, CaskaydiaCove Nerd Font, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontVariations": true,
@@ -72,7 +67,21 @@
   "workbench.startupEditor": "none",
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 5000,
+  // Language specific settings for the editor.
+  "[markdown]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    }
+  },
 
   // Terminal Settings
   "terminal.integrated.fontWeightBold": "normal"
+
 }
+
