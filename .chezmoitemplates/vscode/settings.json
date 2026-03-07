@@ -1,8 +1,8 @@
 {
   // Theme and Appearance
   "window.autoDetectColorScheme": true,
-  "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
-  "workbench.preferredLightColorTheme": "Catppuccin Latte",
+  "workbench.preferredDarkColorTheme": "{{ .colorscheme_dark }}",
+  "workbench.preferredLightColorTheme": "{{ .colorscheme_light }}",
   "editor.fontFamily": "FiraCode Nerd Font, CaskaydiaCove Nerd Font, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontVariations": true,
@@ -27,7 +27,7 @@
 
   // Custom UI settings
   "custom-ui-style.font.monospace": "FiraCode Nerd Font",
-  "custom-ui-style.font.sansSerif": "FiraCode Nerd Font",
+  // "custom-ui-style.font.sansSerif": "FiraCode Nerd Font",
 
   // Neovim Integration
   "extensions.experimental.affinity": {
