@@ -35,5 +35,12 @@
     }
   ],
   "center_widgets": [],
-  "right_widgets": []
+  "right_widgets": [
+    {
+      "Time": {
+        "enable": true,
+        "format": "TwentyFourHourWithoutSeconds"
+      }
+    }
+  ]
 }
