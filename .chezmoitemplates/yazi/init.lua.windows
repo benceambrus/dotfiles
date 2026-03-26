@@ -30,8 +30,8 @@ require("projects"):setup({
 })
 
 -- Bunny
-local user_dir = os.getenv("USERPROFILE")
-local username = os.getenv("USERNAME")
+local user_dir = os.getenv("HOME")
+local username = os.getenv("USER")
 {{ if eq .chezmoi.hostname "bme-laptop" }}
 local download_dir = "C:/Users/ambrus/Downloads/"
 local cloud_root = "C:/Users/ambrus/Cloud/"
