@@ -46,7 +46,7 @@ bind gm tabopen -c Music www.youtube.com
 bind gy winopen youtube.com/playlist?list=WL
 
 "" Edu - Go to Grades
-bind gj js tri.xpath = ("//span[text()='Grades']/.."); tri.res = document.evaluate(tri.xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(1); tri.res.click();
+bind gj js tri.xpath = ("//span[text()='Grades'] | //span[text()='Értékelések']"); tri.res = document.evaluate(tri.xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(1); tri.res.click();
 
 "" Search engines
 " bindurl www.startpage.com f hint -Jc .w-gl__result-title,button,input
