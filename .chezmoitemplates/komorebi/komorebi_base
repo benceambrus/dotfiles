@@ -21,6 +21,11 @@
       "kind": "Exe",
       "id": "Wow.exe",
       "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "GeoEasy64.exe",
+      "matching_strategy": "Equals"
     }
   ],
   "theme": {{- template "komorebi/theme" . -}},
