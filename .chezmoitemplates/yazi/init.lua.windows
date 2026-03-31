@@ -62,7 +62,7 @@ if ya.target_family() == "windows" then
 	table.insert(bookmarks, { tag = "Work: Courses", path = cloud_root .. "od-bme" .. "/Egyetem/Kurzusok/", key = { "w", "c", "c" } })
 	table.insert(bookmarks, { tag = "Work: Courses/GNSS", path = cloud_root .. "od-bme" .. "/Egyetem/Kurzusok/gnss_application_and_theory/2026", key = { "w", "c", "g" } })
 	table.insert(bookmarks, { tag = "Work: Courses/Urnavi", path = cloud_root .. "od-bme" .. "/Egyetem/Kurzusok/urnavigacio/2026", key = { "w", "c", "u" } })
-	table.insert(bookmarks, { tag = "Work: Courses/Geod2", path = cloud_root .. "od-bme" .. "/Egyetem/Kurzusok/geodezia_2/", key = { "w", "c", "g" } })
+	table.insert(bookmarks, { tag = "Work: Courses/Geod2", path = cloud_root .. "od-bme" .. "/Egyetem/Kurzusok/geodezia_2/", key = { "w", "c", "G" } })
 end
 
 require("whoosh"):setup({

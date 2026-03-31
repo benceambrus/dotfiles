@@ -93,7 +93,7 @@
     "command": "whichkey.show",
     "when": "(neovim.mode == 'normal' && editorFocus) || (!editorFocus && !inputFocus)"
   },
-    // Coding
+  // Coding
   {
     "key": "shift+j",
     "command": "editor.action.moveLinesDownAction",
@@ -244,7 +244,17 @@
       ]
     }
   },
-
+  // Jupyter Notebooks
+  {
+    "key": "ctrl+j b",
+    "command": "jupyter.insertCellBelow",
+    "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+  },
+  {
+    "key": "ctrl+j m",
+    "command": "jupyter.changeCellToMarkdown",
+    "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+  },
   // Unbindings
   {
     "key": "ctrl+k",
@@ -781,8 +791,9 @@
   {
     "key": "ctrl+k ctrl+i",
     "command": "-workbench.action.showHover"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-workbench.action.togglePanel"
   }
 ]
-
-
-
