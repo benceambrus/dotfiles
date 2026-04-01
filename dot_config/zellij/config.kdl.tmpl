@@ -282,8 +282,11 @@ web_client {
  
 // Choose the theme that is specified in the themes section.
 // Default: default
-// 
-// theme "dracula"
+{{- if eq .chezmoi.hostname "bme-desktop" }}
+theme "catppuccin-macchiato"
+{{- else }}
+theme "everforest-light"
+{{- end }}
  
 // Choose the base input mode of zellij.
 // Default: normal
@@ -293,7 +296,11 @@ default_mode "locked"
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
 // 
+{{- if eq .chezmoi.os "windows" }}
 default_shell "pwsh"
+{{- else }}
+default_shell "bash"
+{{- end }}
  
 // Choose the path to override cwd that zellij will use for opening new panes
 // 
