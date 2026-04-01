@@ -120,3 +120,6 @@ if (Get-Command mise -ErrorAction SilentlyContinue)
 {
   (&mise activate pwsh) | Out-String | Invoke-Expression
 }
+
+# Zellij
+$env:ZELLIJ_CONFIG_DIR = "$env:USERPROFILE\.config\zellij"
