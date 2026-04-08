@@ -18,15 +18,9 @@ Documents
 
 # On Windows ignore:
 {{ if eq .chezmoi.os "windows" }}
-## LF config files (not located in .config)
 .config/lf
-
-## Fish
 .config/fish
-
-## tmux
 .config/tmux
-
-# Yazi is in a diff. location
 .config/yazi
+.config/bat
 {{ end }}
