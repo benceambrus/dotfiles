@@ -1,1 +1,5 @@
-{{ template "yazi/init.lua.linux" .}}
+{{- if eq .chezmoi.os "windows" }}
+{{- template "yazi/init.lua.windows" . }}
+{{- else if eq .chezmoi.os "linux" }}
+{{- template "yazi/init.lua.linux" . }}
+{{- end}}

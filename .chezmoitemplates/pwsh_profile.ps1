@@ -95,6 +95,7 @@ function y
   }
   Remove-Item -Path $tmp
 }
+$env:YAZI_CONFIG_HOME = "$env:USERPROFILE\.config\yazi"
 
 # Zoxide
 if (Get-Command -ErrorAction SilentlyContinue zoxide)
@@ -123,3 +124,4 @@ if (Get-Command mise -ErrorAction SilentlyContinue)
 
 # Zellij
 $env:ZELLIJ_CONFIG_DIR = "$env:USERPROFILE\.config\zellij"
+

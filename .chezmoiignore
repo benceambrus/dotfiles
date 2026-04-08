@@ -21,6 +21,5 @@ Documents
 .config/lf
 .config/fish
 .config/tmux
-.config/yazi
 .config/bat
 {{ end }}
