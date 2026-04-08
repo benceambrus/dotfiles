@@ -1,18 +1,11 @@
 # On Linux ignore:
 {{ if eq .chezmoi.os "linux" }}
-## Komorebi files
-komorebi.json
-applications.json
-.config/whkdrc
-.config/komorebi-bar
-
-## Application data.
-AppData
-
-## Windows scripts.
 .chezmoiscripts/windows/**
-
-## Documents
+.config/whkdrc
+.config/komorebi/
+.config/komorebi-bar/
+.config/yasb/
+AppData
 Documents
 {{ end }}
 
