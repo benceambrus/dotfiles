@@ -1,12 +1,12 @@
 [
   // Suggestions (Copilot, IntelliCode, etc.)
   {
-    "key": "tab",
+    "key": "shift+tab",
     "command": "editor.action.inlineSuggest.acceptNextLine",
     "when": "neovim.mode == 'insert' && editorTextFocus && inlineSuggestionVisible"
   },
   {
-    "key": "tab",
+    "key": "shift+tab",
     "command": "acceptSelectedSuggestion",
     "when": "suggestWidgetVisible"
   },
@@ -175,8 +175,13 @@
   },
   {
     "key": "ctrl+e d t",
-    "command": "workbench.action.debug.selectDebugConsole",
-    "when": "neovim.mode == 'normal' && editorTextFocus && inDebugMode"
+    "command": "workbench.debug.action.toggleRepl",
+    "when": "(neovim.mode == 'normal' || neovim.mode == 'visual') && editorTextFocus && inDebugMode"
+  },
+  {
+    "key": "ctrl+e d x",
+    "command": "editor.debug.action.selectionToRepl",
+    "when": "(neovim.mode == 'normal' || neovim.mode == 'visual') && editorTextFocus && inDebugMode"
   },
   // File explorer and splits
   {
