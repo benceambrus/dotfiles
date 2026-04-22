@@ -49,7 +49,7 @@ bind gy winopen youtube.com/playlist?list=WL
 " Go to Grades
 bind gj js tri.xpath = ("//span[text()='Grades'] | //span[text()='Értékelések']"); tri.res = document.evaluate(tri.xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(1); tri.res.click();
 " Go to Settings
-bind gs js tri.xpath = ("//a[text()='Settings'] | //a[text()='Beállítások']"); tri.res = document.evaluate(tri.xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(1); tri.res.click();
+bind gs js tri.xpath = ("//a[text()='Settings'] | //a[text()='Beállítások']"); tri.res = document.evaluate(tri.xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0); tri.res.click();
 
 "" Search engines
 " bindurl www.startpage.com f hint -Jc .w-gl__result-title,button,input
