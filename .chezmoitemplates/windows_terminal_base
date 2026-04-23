@@ -205,8 +205,8 @@
             "font": 
             {
                 "face": "JetBrainsMono Nerd Font ",
-                "size": 12,
-                "weight": "light"
+                "size": 11,
+                "weight": "medium"
             },
             "opacity": 85,
             "useAcrylic": true
