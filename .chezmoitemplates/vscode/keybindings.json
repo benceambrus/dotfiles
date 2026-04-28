@@ -142,6 +142,11 @@
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "neovim.mode == 'normal' || neovim.mode == 'visual'"
   },
+  {
+    "key": "ctrl+e shift+k",
+    "command": "editor.action.showHover",
+    "when": "neovim.mode == 'normal' || neovim.mode == 'visual'"
+  },
   // Debugging
   {
     "key": "ctrl+e d s",
