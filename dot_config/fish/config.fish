@@ -5,6 +5,10 @@ set -x PATH ~/.local/bin $PATH
 if command -q nvim
     set -x EDITOR nvim
 end
+if command -q bat
+    set -x SYSTEMD_PAGERSECURE true
+    set -x SYSTEMD_PAGER "bat -l syslog -p"
+end
 
 # Starship prompt
 # starship init fish | source
