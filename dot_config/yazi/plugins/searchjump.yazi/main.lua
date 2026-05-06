@@ -8,149 +8,30 @@ local KEYS_label = {
 }
 
 local INPUT_KEY = {
-	"A",
-	"B",
-	"C",
-	"D",
-	"E",
-	"F",
-	"G",
-	"H",
-	"I",
-	"J",
-	"K",
-	"L",
-	"M",
-	"N",
-	"O",
-	"P",
-	"Q",
-	"R",
-	"S",
-	"T",
-	"U",
-	"V",
-	"W",
-	"X",
-	"Y",
-	"Z",
+	"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W",
+	"X", "Y", "Z",
 
-	"a",
-	"b",
-	"c",
-	"d",
-	"e",
-	"f",
-	"g",
-	"h",
-	"i",
-	"j",
-	"k",
-	"l",
-	"m",
-	"n",
-	"o",
-	"p",
-	"q",
-	"r",
-	"s",
-	"t",
-	"u",
-	"v",
-	"w",
-	"x",
-	"y",
-	"z",
-	"0",
-	"1",
-	"2",
-	"3",
-	"4",
-	"5",
-	"6",
-	"7",
-	"8",
-	"9",
-	"-",
-	"_",
-	".",
-	"<Esc>",
-	"<Space>",
-	"<Enter>",
-	"<Backspace>",
+	"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
+	"o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "-", "_", ".", "<Esc>", "<Space>", "<Enter>", "<Backspace>",
 }
 
 local INPUT_CANDS = {
-	{ on = "A" },
-	{ on = "B" },
-	{ on = "C" },
-	{ on = "D" },
-	{ on = "E" },
-	{ on = "F" },
-	{ on = "G" },
-	{ on = "H" },
-	{ on = "I" },
-	{ on = "J" },
-	{ on = "K" },
-	{ on = "L" },
-	{ on = "M" },
-	{ on = "N" },
-	{ on = "O" },
-	{ on = "P" },
-	{ on = "Q" },
-	{ on = "R" },
-	{ on = "S" },
-	{ on = "T" },
-	{ on = "U" },
-	{ on = "V" },
-	{ on = "W" },
-	{ on = "X" },
-	{ on = "Y" },
+	{ on = "A" }, { on = "B" }, { on = "C" }, { on = "D" }, { on = "E" },
+	{ on = "F" }, { on = "G" }, { on = "H" }, { on = "I" }, { on = "J" },
+	{ on = "K" }, { on = "L" }, { on = "M" }, { on = "N" }, { on = "O" },
+	{ on = "P" }, { on = "Q" }, { on = "R" }, { on = "S" }, { on = "T" },
+	{ on = "U" }, { on = "V" }, { on = "W" }, { on = "X" }, { on = "Y" },
 	{ on = "Z" },
 
-	{ on = "a" },
-	{ on = "b" },
-	{ on = "c" },
-	{ on = "d" },
-	{ on = "e" },
-	{ on = "f" },
-	{ on = "g" },
-	{ on = "h" },
-	{ on = "i" },
-	{ on = "j" },
-	{ on = "k" },
-	{ on = "l" },
-	{ on = "m" },
-	{ on = "n" },
-	{ on = "o" },
-	{ on = "p" },
-	{ on = "q" },
-	{ on = "r" },
-	{ on = "s" },
-	{ on = "t" },
-	{ on = "u" },
-	{ on = "v" },
-	{ on = "w" },
-	{ on = "x" },
-	{ on = "y" },
-	{ on = "z" },
-	{ on = "0" },
-	{ on = "1" },
-	{ on = "2" },
-	{ on = "3" },
-	{ on = "4" },
-	{ on = "5" },
-	{ on = "6" },
-	{ on = "7" },
-	{ on = "8" },
-	{ on = "9" },
-	{ on = "-" },
-	{ on = "_" },
-	{ on = "." },
-	{ on = "<Esc>" },
-	{ on = "<Space>" },
-	{ on = "<Enter>" },
-	{ on = "<Backspace>" },
+	{ on = "a" }, { on = "b" }, { on = "c" }, { on = "d" }, { on = "e" },
+	{ on = "f" }, { on = "g" }, { on = "h" }, { on = "i" }, { on = "j" },
+	{ on = "k" }, { on = "l" }, { on = "m" }, { on = "n" }, { on = "o" },
+	{ on = "p" }, { on = "q" }, { on = "r" }, { on = "s" }, { on = "t" },
+	{ on = "u" }, { on = "v" }, { on = "w" }, { on = "x" }, { on = "y" },
+	{ on = "z" }, { on = "0" }, { on = "1" }, { on = "2" }, { on = "3" },
+	{ on = "4" }, { on = "5" }, { on = "6" }, { on = "7" }, { on = "8" },
+	{ on = "9" }, { on = "-" }, { on = "_" }, { on = "." }, { on = "<Esc>" },
+	{ on = "<Space>" }, { on = "<Enter>" }, { on = "<Backspace>" },
 }
 
 local set_re_match = ya.sync(function(state, re_match)
@@ -226,9 +107,6 @@ local function get_match_position(state, name, find_str)
 		for utf8_char in string.gmatch(name, "[%z\1-\127\194-\244][\128-\191]*") do
 			table.insert(wide_char_name, utf8_char)
 		end
-		-- wide_char_name is the array of the multi-width character
-		-- after combining the elements of the array
-		-- so the real_index should be added 3 (Chinese)
 		while j <= #wide_char_name do
 			index_wide_char = wide_char_name[j]
 			extend_char_list = state.mapdata[index_wide_char]
@@ -241,14 +119,12 @@ local function get_match_position(state, name, find_str)
 				is_match_char = find_str:sub(i, i) == index_wide_char
 			end
 
-			-- match the first char
 			if real_start_pos == 0 and is_match_char then
 				real_start_pos = real_index
 				wide_char_match_begin = j
 			end
 
 			if real_start_pos ~= 0 and is_match_char then
-				-- match the end char
 				if i == #find_str then
 					real_end_pos = real_index + (char_wide - 1)
 					table.insert(startPos, real_start_pos)
@@ -261,8 +137,6 @@ local function get_match_position(state, name, find_str)
 				else
 					i = i + 1
 				end
-				-- match failed, reset match begin index to the next char
-				-- of the first match char
 				real_index = real_index + char_wide
 			elseif real_start_pos ~= 0 and not is_match_char then
 				i = 1
@@ -274,10 +148,9 @@ local function get_match_position(state, name, find_str)
 				real_index = real_index + char_wide
 			end
 
-			-- update real_index
 			j = j + 1
 		end
-	else -- re match mode
+	else
 		endp = 0
 		while true do
 			startp, endp = string.find(name, find_str, endp + 1)
@@ -308,7 +181,6 @@ local get_first_match_label = ya.sync(function(state)
 	return nil
 end)
 
--- apply search result to show
 local set_match_label = ya.sync(function(state, url, name, file)
 	local span = {}
 	local key = {}
@@ -327,10 +199,8 @@ local set_match_label = ya.sync(function(state, url, name, file)
 	end
 
 	while i <= #startPos do
-		table.insert(
-			span,
-			ui.Span(name:sub(startPos[i], endPos[i])):fg(state.opt_match_str_fg):bg(state.opt_match_str_bg)
-		)
+		table.insert(span,
+			ui.Span(name:sub(startPos[i], endPos[i])):fg(state.opt_match_str_fg):bg(state.opt_match_str_bg))
 		if i <= #key then
 			table.insert(span, ui.Span(key[i]):fg(state.opt_label_fg):bg(state.opt_label_bg))
 		end
@@ -352,7 +222,6 @@ local set_match_label = ya.sync(function(state, url, name, file)
 	return span
 end)
 
--- update the match data after input a str
 local update_match_table = ya.sync(function(state, pane, folder, convert_pattern)
 	if not folder then
 		return
@@ -365,7 +234,6 @@ local update_match_table = ya.sync(function(state, pane, folder, convert_pattern
 		local url = tostring(file.url)
 		local startPos, endPos = get_match_position(state, name, convert_pattern)
 		if startPos then
-			-- record match file data
 			state.match[url] = {
 				key = {},
 				startPos = startPos,
@@ -390,18 +258,14 @@ local record_match_file = ya.sync(function(state, patterns)
 	end
 
 	for _, pattern in ipairs(patterns) do
-		-- record match file from current window
 		update_match_table("current", cx.active.current, pattern)
 
 		if not state.opt_only_current then
-			-- record match file from parent window
 			update_match_table("parent", cx.active.parent, pattern)
-			-- record match file from preview window
 			update_match_table("preview", cx.active.preview.folder, pattern)
 		end
 	end
 
-	-- get valid key list (KEYS_label but exclude state.next_char table)
 	local valid_label = {}
 	for _, value in ipairs(KEYS_label) do
 		if not state.opt_enable_capital_label and string.byte(value) > 64 and string.byte(value) < 91 then
@@ -415,22 +279,20 @@ local record_match_file = ya.sync(function(state, patterns)
 		::nextlabel::
 	end
 
-	-- assign valid key to each match file
 	local i = 1
 	local j
 	for url, _ in pairs(state.match) do
 		exist_match = true
 		j = 1
-		while j <= #state.match[url].startPos do -- some file may match multi position
+		while j <= #state.match[url].startPos do
 			table.insert(state.match[url].key, valid_label[i])
 			i = i + 1
 			j = j + 1
 		end
 	end
 
-	-- flush page
 	if cx.active.preview.folder then
-		ya.mgr_emit("peek", { force = true })
+		ya.emit("peek", { force = true })
 	end
 
 	ui.render()
@@ -443,7 +305,7 @@ local toggle_ui = ya.sync(function(st)
 		Status:children_remove(st.status_sj_id)
 		Entity.highlights, st.highlights, st.status_sj_id = st.highlights, nil, nil
 		if cx.active.preview.folder then
-			ya.mgr_emit("peek", { force = true })
+			ya.emit("peek", { force = true })
 		end
 		ui.render()
 		return
@@ -472,14 +334,14 @@ local toggle_ui = ya.sync(function(st)
 	local function status_sj(self)
 		local style = self:style()
 		local match_pattern = (st.match_pattern and st.opt_show_search_in_statusbar) and ":" .. st.match_pattern or ""
-		return ui.Line({
+		return ui.Line {
 			ui.Span("[SJ]" .. match_pattern .. " "):style(style.main),
-		})
+		}
 	end
 	st.status_sj_id = Status:children_add(status_sj, 1001, Status.LEFT)
 
 	if cx.active.preview.folder then
-		ya.mgr_emit("peek", { force = true })
+		ya.emit("peek", { force = true })
 	end
 end)
 
@@ -506,27 +368,23 @@ end)
 
 local set_target_str = ya.sync(function(state, patterns, final_input_str)
 	local url = check_key_is_label(final_input_str)
-	if url then -- if the last str match is a label key, not a searchchar,toggle jump action
-		if not state.args_autocd and state.match[url].pane == "current" then -- if target file in current pane, use `arrow` instead of`reveal` tosupport select mode
+	if url then
+		if not state.args_autocd and state.match[url].pane == "current" then
 			local folder = cx.active.current
-			ya.mgr_emit("arrow", { state.match[url].cursorPos - folder.cursor - 1 + folder.offset })
+			ya.emit("arrow", { state.match[url].cursorPos - folder.cursor - 1 + folder.offset })
 		elseif state.args_autocd and state.match[url].isdir then
-			ya.mgr_emit("cd", { url })
+			ya.emit("cd", { url })
 		else
-			ya.mgr_emit("reveal", { url })
+			ya.emit("reveal", { url })
 		end
-		-- two args is (want_exit,is_match)
 		return true, true
 	end
 
-	-- clears the previously calculated data when input change
 	state.match = nil
 	state.next_char = nil
 
-	-- calculate match data
 	local exist_match = record_match_file(patterns)
 
-	-- apply match data to render
 	ui.render()
 	if not exist_match and (state.re_match or patterns[1] ~= "") and state.opt_auto_exit_when_unmatch then
 		return true, exist_match
@@ -616,8 +474,6 @@ end)
 
 return {
 	setup = function(state, opts)
-		-- Save the user configuration to the plugin's state
-
 		if opts ~= nil and opts.mapdata ~= nil then
 			state.mapdata = opts.mapdata
 		end
@@ -671,7 +527,7 @@ return {
 		local patterns = {}
 		local final_input_str = ""
 		while true do
-			local cand = ya.which({ cands = INPUT_CANDS, silent = true })
+			local cand = ya.which { cands = INPUT_CANDS, silent = true }
 			if cand == nil then
 				goto continue
 			end
@@ -707,7 +563,6 @@ return {
 				break
 			end
 
-			-- If the string after the entered character does not match anything, -- then the string input is cancelled and keep the previous input matches status
 			if not is_match and get_re_match_state() then
 				break
 			elseif not is_match and input_str ~= "" then
