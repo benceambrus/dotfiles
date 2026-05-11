@@ -87,6 +87,51 @@
     "key": "ctrl+oem_1", // ctrl+é
     "command": "workbench.action.increaseViewSize"
   },
+  // Combine page jumps with zz (center view)
+  {
+    "key": "ctrl+d",
+    "command": "runCommands",
+    "when": "editorTextFocus && neovim.mode != 'insert'",
+    "args": {
+      "commands": [
+        "vscode-neovim.ctrl-d",
+        { "command": "vscode-neovim.send", "args": "zz" }
+      ]
+    }
+  },
+  {
+    "key": "ctrl+u",
+    "command": "runCommands",
+    "when": "editorTextFocus && neovim.mode != 'insert'",
+    "args": {
+      "commands": [
+        "vscode-neovim.ctrl-u",
+        { "command": "vscode-neovim.send", "args": "zz" }
+      ]
+    }
+  },
+  {
+    "key": "ctrl+b",
+    "command": "runCommands",
+    "when": "editorTextFocus && neovim.mode != 'insert'",
+    "args": {
+      "commands": [
+        "vscode-neovim.ctrl-b",
+        { "command": "vscode-neovim.send", "args": "zz" }
+      ]
+    }
+  },
+  {
+    "key": "ctrl+f",
+    "command": "runCommands",
+    "when": "editorTextFocus && neovim.mode != 'insert'",
+    "args": {
+      "commands": [
+        "vscode-neovim.ctrl-f",
+        { "command": "vscode-neovim.send", "args": "zz" }
+      ]
+    }
+  },
   // Which key
   {
     "key": "space",
@@ -805,5 +850,21 @@
   {
     "key": "ctrl+j",
     "command": "-workbench.action.togglePanel"
-  }
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-vscode-neovim.ctrl-d"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "-vscode-neovim.ctrl-u"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-vscode-neovim.ctrl-b"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-vscode-neovim.ctrl-f"
+  },
 ]
