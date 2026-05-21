@@ -37,7 +37,11 @@ if ya.target_family() == "windows" then
 	local username = os.getenv("USERNAME")
 
 	local download_dir = "D:/Downloads/"
+{{- if eq .chezmoi.hostname "bme-laptop" }}
+  local cloud_root = os.getenv("USERPROFILE") .. "/Cloud"
+{{- else }}
 	local cloud_root = "D:/Cloud/"
+{{- end }}
 
 	-- Drives
 	table.insert(bookmarks, { tag = "Drive: C:", path = "C:/", key = { "d", "c" } })
