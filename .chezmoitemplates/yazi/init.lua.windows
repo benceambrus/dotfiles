@@ -36,15 +36,12 @@ if ya.target_family() == "windows" then
 	local user_dir = os.getenv("USERPROFILE")
 	local username = os.getenv("USERNAME")
 
-	local download_dir = "D:/Downloads/"
 {{- if eq .chezmoi.hostname "bme-laptop" }}
-<<<<<<< Updated upstream
-  local cloud_root = os.getenv("USERPROFILE") .. "/Cloud"
-=======
-	local cloud_root = os.getenv("USERPROFILE") .. "/Cloud/"
->>>>>>> Stashed changes
+	local cloud_root = user_dir .. "/Cloud/"
+	local download_dir = user_dir .. "/Downloads/"
 {{- else }}
 	local cloud_root = "D:/Cloud/"
+	local download_dir = "D:/Downloads/"
 {{- end }}
 
 	-- Drives
