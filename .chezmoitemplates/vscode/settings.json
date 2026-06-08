@@ -83,6 +83,10 @@
   // Terminal Settings
   "terminal.integrated.fontWeightBold": "normal",
 
+  // Security
+  "security.workspace.trust.startupPrompt": "never",
+  "security.workspace.trust.enabled": false,
+
   // Extensions
   // AHK++
   "AHK++.v1.file": {
