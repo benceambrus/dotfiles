@@ -1,7 +1,7 @@
 {{ if (or (eq .chezmoi.hostname "home-desktop") (eq .chezmoi.hostname "bme-laptop") (eq .chezmoi.hostname "home-laptop")) }}
   {{- template "vscode/settings.json" dict
-      "colorscheme_light" "Everforest Light"
-      "colorscheme_dark"  "Everforest Dark"
+      "colorscheme_light" "Everforest Pro Light Cozy"
+      "colorscheme_dark"  "Everforest Pro Dark"
   -}}
 {{ else if eq .chezmoi.hostname "bme-desktop" }}
   {{- template "vscode/settings.json" dict

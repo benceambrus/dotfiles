@@ -87,6 +87,18 @@
     "key": "ctrl+oem_1", // ctrl+é
     "command": "workbench.action.increaseViewSize"
   },
+  {
+    "key": "ctrl+w m",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "ctrl+w oem_plus",
+    "command": "editor.action.fontZoomIn"
+  },
+  {
+    "key": "ctrl+w oem_minus",
+    "command": "editor.action.fontZoomOut"
+  },
   // Combine page jumps with zz (center view)
   {
     "key": "ctrl+d",
