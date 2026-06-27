@@ -1,7 +1,1 @@
-{{ if eq .chezmoi.hostname "bme-laptop" }}
-{{ template "totalcmd/laptop/bme-laptop/usercmd.ini" . }}
-{{ else if eq .chezmoi.hostname "home-laptop" }}
-{{ template "totalcmd/laptop/home-laptop/usercmd.ini" . }}
-{{ else if (or (eq .chezmoi.hostname "bme-desktop") (eq .chezmoi.hostname "home-desktop")) }}
-{{ template "totalcmd/desktop/usercmd.ini" . }}
-{{ end }}
+{{ template "totalcmd/usercmd.ini" . }}
