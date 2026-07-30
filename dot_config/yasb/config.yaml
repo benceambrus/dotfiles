@@ -1,5 +1,6 @@
-watch_stylesheet: true
+watch_stylesheet: true # Reload when changed
 watch_config: true
+update_check: false # Check for updates automatically
 
 # This komorebi setting will be used for tray context menu.
 # If you don't use komorebi, you can remove this section.
