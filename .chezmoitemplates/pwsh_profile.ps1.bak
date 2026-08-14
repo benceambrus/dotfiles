@@ -71,28 +71,14 @@ Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler $OnViModeChang
 # Function lfcd { lf -print-last-dir $args | Set-Location }
 # Set-Alias -Name l -Value lfcd
 
-# PSFzf options - lazy loaded (deferred until first use)
-$PSFzfInit = {
-    Import-Module PSFzf
-    Set-PsFzfOption -PSReadLineChordProvider 'Ctrl+t' -PSReadLineChordReverseHistory 'Ctrl+r'
-    Set-PsFzfOption -EnableAliasFuzzyEdit
-    Set-PsFzfOption -EnableAliasFuzzyHistory
-    Set-PsFzfOption -EnableAliasFuzzyKillProcess
-}
+# PSFzf options
+## Argument search and History
+Set-PsFzfOption -PSReadLineChordProvider 'Ctrl+t' -PSReadLineChordReverseHistory 'Ctrl+r'
 
-Set-PSReadLineKeyHandler -Key 'Ctrl+t' -ScriptBlock {
-    if (-not (Get-Module PSFzf)) { & $PSFzfInit }
-    Invoke-FzfTabCompletion
-}
-
-Set-PSReadLineKeyHandler -Key 'Ctrl+r' -ScriptBlock {
-    if (-not (Get-Module PSFzf)) { & $PSFzfInit }
-    Invoke-FzfPsReadlineHandlerHistory
-}
-
-function fe { if (-not (Get-Module PSFzf)) { & $PSFzfInit }; Invoke-FuzzyEdit @args }
-function fh { if (-not (Get-Module PSFzf)) { & $PSFzfInit }; Invoke-FuzzyHistory @args }
-function fkill { if (-not (Get-Module PSFzf)) { & $PSFzfInit }; Invoke-FuzzyKillProcess @args }
+## Aliases
+Set-PsFzfOption -EnableAliasFuzzyEdit # fe
+Set-PsFzfOption -EnableAliasFuzzyHistory # fh
+Set-PsFzfOption -EnableAliasFuzzyKillProcess # fkill
 # Set-PsFzfOption -EnableAliasFuzzySetLocation # fd
 # $commandOverride = [ScriptBlock]{ param($Location) Write-Host $Location }
 # Set-PsFzfOption -AltCCommand $commandOverride
