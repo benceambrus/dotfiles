@@ -51,12 +51,12 @@
                                                                     _
 )
 
-(deflayer sym
-  _    _        _      _      _       _         _    _    _    _    _    _    _    _  _ 
-  _    _        _      _      _       _         _    _    _    _    _    _    _    _  _ 
-  _    C-A-v    C-A-w  S-6   S-2     S-4        RA-5 RA-f RA-g [    ]    \  _  _
-  RA-1 RA-'     RA-c   RA-3  S-3     S-7        RA-j S-8  S-9  RA-, RA-; RA--  _    @base
-  _    S-5      C-A-x  RA-q  S-1     RA-7       RA-u _    RA-b RA-n RA-lsgt   RA-.    _   _
+(deflayer
+  _    _        _      _      _       _         _    _    _    _    _    _    _  _  _ 
+  _    _        _      _      _       _         _    _    _    _    _    _    _  _  _ 
+  _    C-A-v    C-A-w  S-6   S-2     S-4        RA-5 RA-f RA-g [    ]       \    _  _
+  RA-1 RA-'     RA-c   RA-3  S-3     S-7        RA-j S-8  S-9  RA-, RA-;    RA-/ _  @base
+  _    S-5      C-A-x  RA-q  S-1     RA-7       RA-u _    RA-b RA-n RA-lsgt RA-. _  _
   _    _        _                    ret            _    _    _    _    _    _
                                                                    _
 )
