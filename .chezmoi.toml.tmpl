@@ -6,8 +6,10 @@ autoPush = true
 SRC_DIR = "~/.local/share/chezmoi"
 
 [diff]
-command = "nvim"
-args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
+command = "code"
+args = ["--wait", "--diff"]
+# command = "nvim"
+# args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
 
 [merge]
 command = "nvim"
