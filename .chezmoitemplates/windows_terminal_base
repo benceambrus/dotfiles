@@ -197,9 +197,10 @@
             "adjustIndistinguishableColors": "indexed",
             "antialiasingMode": "cleartype",
             "bellStyle": "window",
-            "colorScheme": {
-                "dark": "{{ .colorscheme_dark }}",
-                "light": "{{ .colorscheme_light }}"
+            "colorScheme": 
+            {
+                "dark": "Gruvbox Dark",
+                "light": "Gruvbox Light"
             },
             "cursorShape": "bar",
             "font": 
@@ -209,6 +210,7 @@
                 "weight": "medium"
             },
             "opacity": 85,
+            "startingDirectory": ".",
             "useAcrylic": true
         },
         "list": 
@@ -221,7 +223,7 @@
                 "hidden": false,
                 "name": "Windows PowerShell",
                 "padding": "2",
-                "startingDirectory": null,
+                "startingDirectory": ".",
                 "useAcrylic": true
             },
             {
@@ -327,9 +329,9 @@
         },
         {
             "background": "#EAEDC8",
-            "black": "#a0afb8",
+            "black": "#A0AFB8",
             "blue": "#3A94C5",
-            "brightBlack": "#a0afb8",
+            "brightBlack": "#A0AFB8",
             "brightBlue": "#3A94C5",
             "brightCyan": "#35A77C",
             "brightGreen": "#93B259",
@@ -344,7 +346,7 @@
             "name": "Everforest Light Medium",
             "purple": "#DF69BA",
             "red": "#F85552",
-            "selectionBackground": "#bac1b9",
+            "selectionBackground": "#BAC1B9",
             "white": "#BDC3AF",
             "yellow": "#DFA000"
         },

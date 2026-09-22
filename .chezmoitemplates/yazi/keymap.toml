@@ -25,8 +25,8 @@ prepend_keymap = [
   # { on = "s",         run = "plugin easyjump",             desc = "Run searchjump and cd into dir"},
   { on = "s",         run = "plugin searchjump -- autocd", desc = "Run searchjump and cd into dir"},
   # Operations
-  { on = "e",         run = "shell 'nvim \"%0\"' --block",                desc = "Open seleected file with Neovim" },
-  { on = "i",         run = "shell 'bat --paging=always \"%0\"' --block", desc = "Inspect selected file with bat" },
+  { on = "e",         run = "shell 'nvim \"%s1\"' --block",                desc = "Open seleected file with Neovim" },
+  { on = "i",         run = "shell 'bat --paging=always \"%s1\"' --block", desc = "Inspect selected file with bat" },
   # Tabs
 	{ on = "á", run = "tab_switch 1 --relative",  desc = "Switch to the next tab" },
 	{ on = "ó", run = "tab_switch -1 --relative", desc = "Switch to the previous tab" },
