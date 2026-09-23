@@ -25,9 +25,15 @@ $env:PATH = "C:\Users\Ambri\AppData\Local\Microsoft\WinGet\Links;$env:PATH"
 # Chezmoi Git Alias
 Function ChezmoiGit
 {
+  param (
+    [Parameter(Mandatory)]
+    [string]$CommitMsg
+  )
+
   $currDir = $pwd
-  cd ~\.local\share\chezmoi; git add .
-  git commit -m "Automatic commit from chezmoi-git."
+  chezmoi cd
+  git add .
+  git commit -m $CommitMsg
   git push origin main
   cd $currDir
 }
@@ -73,26 +79,42 @@ Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler $OnViModeChang
 
 # PSFzf options - lazy loaded (deferred until first use)
 $PSFzfInit = {
-    Import-Module PSFzf
-    Set-PsFzfOption -PSReadLineChordProvider 'Ctrl+t' -PSReadLineChordReverseHistory 'Ctrl+r'
-    Set-PsFzfOption -EnableAliasFuzzyEdit
-    Set-PsFzfOption -EnableAliasFuzzyHistory
-    Set-PsFzfOption -EnableAliasFuzzyKillProcess
+  Import-Module PSFzf
+  Set-PsFzfOption -PSReadLineChordProvider 'Ctrl+t' -PSReadLineChordReverseHistory 'Ctrl+r'
+  Set-PsFzfOption -EnableAliasFuzzyEdit
+  Set-PsFzfOption -EnableAliasFuzzyHistory
+  Set-PsFzfOption -EnableAliasFuzzyKillProcess
 }
 
 Set-PSReadLineKeyHandler -Key 'Ctrl+t' -ScriptBlock {
-    if (-not (Get-Module PSFzf)) { & $PSFzfInit }
-    Invoke-FzfTabCompletion
+  if (-not (Get-Module PSFzf))
+  { & $PSFzfInit 
+  }
+  Invoke-FzfTabCompletion
 }
 
 Set-PSReadLineKeyHandler -Key 'Ctrl+r' -ScriptBlock {
-    if (-not (Get-Module PSFzf)) { & $PSFzfInit }
-    Invoke-FzfPsReadlineHandlerHistory
+  if (-not (Get-Module PSFzf))
+  { & $PSFzfInit 
+  }
+  Invoke-FzfPsReadlineHandlerHistory
 }
 
-function fe { if (-not (Get-Module PSFzf)) { & $PSFzfInit }; Invoke-FuzzyEdit @args }
-function fh { if (-not (Get-Module PSFzf)) { & $PSFzfInit }; Invoke-FuzzyHistory @args }
-function fkill { if (-not (Get-Module PSFzf)) { & $PSFzfInit }; Invoke-FuzzyKillProcess @args }
+function fe
+{ if (-not (Get-Module PSFzf))
+  { & $PSFzfInit 
+  }; Invoke-FuzzyEdit @args 
+}
+function fh
+{ if (-not (Get-Module PSFzf))
+  { & $PSFzfInit 
+  }; Invoke-FuzzyHistory @args 
+}
+function fkill
+{ if (-not (Get-Module PSFzf))
+  { & $PSFzfInit 
+  }; Invoke-FuzzyKillProcess @args 
+}
 # Set-PsFzfOption -EnableAliasFuzzySetLocation # fd
 # $commandOverride = [ScriptBlock]{ param($Location) Write-Host $Location }
 # Set-PsFzfOption -AltCCommand $commandOverride
