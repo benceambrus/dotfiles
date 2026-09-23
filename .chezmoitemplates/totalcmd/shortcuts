@@ -1,0 +1,15 @@
+S+1=cm_SrcOpenDrives
+F4=em_open_in_neovide
+C+F4=em_open_in_code
+S+F4=em_open_in_nvim
+C+Q=cm_MatchSrc
+S+C=cm_CopyFullNamesToClip
+C+S=cm_GoToPreviousDir
+C+D=cm_GoToNextDir
+F2=cm_RenameOnly
+F3=cm_ContextMenu
+CS+F4=cm_EditExistingFile
+C+E=cm_UnpackFiles
+C+R=cm_PackFiles
+S+D=cm_EditPath
+C+Y=cm_SearchFor
