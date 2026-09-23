@@ -1,4 +1,4 @@
-{{ if eq .chezmoi.os "windows" }} 
+{{ if eq .chezmoi.os "windows" }}
 # interpreter for shell commands
 set shell powershell
 set shellopts '-noprofile'

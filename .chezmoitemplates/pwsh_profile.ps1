@@ -31,7 +31,7 @@ Function ChezmoiGit
   )
 
   $currDir = $pwd
-  chezmoi cd
+  cd ~\.local\share\chezmoi
   git add .
   git commit -m $CommitMsg
   git push origin main
