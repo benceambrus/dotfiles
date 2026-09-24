@@ -1,4 +1,11 @@
 {
+  // Copilot settings
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "github.copilot.inlineSuggest.enabled": false,
+  "github.copilot.enable": {
+    "*": false
+  },
+
   // Theme and Appearance
   "window.autoDetectColorScheme": true,
   "workbench.preferredDarkColorTheme": "{{ .colorscheme_dark }}",
