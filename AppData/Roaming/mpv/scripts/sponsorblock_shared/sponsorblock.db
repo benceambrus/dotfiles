@@ -1,0 +1,74 @@
+<style>
+    body {
+        font-family: sans-serif
+    }
+    table th,
+    table td {
+        padding: 7px;
+    }
+    table th {
+        text-align: left;
+    }
+    table tbody tr:nth-child(odd) {
+        background: #efefef;
+    }
+</style>
+            <h1>SponsorBlock database dumps</h1><p>The API and database follow <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow">CC BY-NC-SA 4.0</a> unless you have explicit permission.</p>
+<p><a href="https://gist.github.com/ajayyy/4b27dfc66e33941a45aeaadccb51de71">Attribution Template</a></p>
+<p>If you need to use the database or API in a way that violates this license, contact me with your reason and I may grant you access under a different license.</p></a></p>
+            <h3>How this works</h3>
+
+            Send a request to <code>https://sponsor.ajay.app/database.json</code>, or visit this page to get a list of urls and the update status database dump to run.
+            Then, you can download the csv files below, or use the links returned from the JSON request. 
+            A dump will also be triggered by making a request to one of these urls.
+
+            <h3>Links</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Table</th>
+                        <th>CSV</th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+        <tr>
+            <td>sponsorTimes</td>
+            <td><a href="/database/sponsorTimes.csv">sponsorTimes.csv</a></td>
+        </tr>
+        
+        <tr>
+            <td>userNames</td>
+            <td><a href="/database/userNames.csv">userNames.csv</a></td>
+        </tr>
+        
+        <tr>
+            <td>categoryVotes</td>
+            <td><a href="/database/categoryVotes.csv">categoryVotes.csv</a></td>
+        </tr>
+        
+        <tr>
+            <td>lockCategories</td>
+            <td><a href="/database/lockCategories.csv">lockCategories.csv</a></td>
+        </tr>
+        
+        <tr>
+            <td>warnings</td>
+            <td><a href="/database/warnings.csv">warnings.csv</a></td>
+        </tr>
+        
+        <tr>
+            <td>vipUsers</td>
+            <td><a href="/database/vipUsers.csv">vipUsers.csv</a></td>
+        </tr>
+        
+        <tr>
+            <td>unlistedVideos</td>
+            <td><a href="/database/unlistedVideos.csv">unlistedVideos.csv</a></td>
+        </tr>
+        
+        
+        </tbody>
+            </table>
+            <hr/>
+             Last updated: Sat, 02 Oct 2021 19:21:12 GMT
