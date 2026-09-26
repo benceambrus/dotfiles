@@ -13,3 +13,4 @@ C+E=cm_UnpackFiles
 C+R=cm_PackFiles
 S+D=cm_EditPath
 C+Y=cm_SearchFor
+C+X=em_wezterm_here
