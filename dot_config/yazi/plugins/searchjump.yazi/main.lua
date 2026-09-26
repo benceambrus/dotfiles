@@ -68,13 +68,13 @@ local check_is_match_char = function(target_char, extend_char_list)
 end
 
 local function utf8_char_byte_length(char)
-	local code = utf8.codepoint(char)
+	local byte = string.byte(char) or 0
 
-	if code <= 0x007F then
+	if byte < 0x80 then
 		return 1
-	elseif code <= 0x07FF then
+	elseif byte < 0xE0 then
 		return 2
-	elseif code <= 0xFFFF then
+	elseif byte < 0xF0 then
 		return 3
 	else
 		return 4
