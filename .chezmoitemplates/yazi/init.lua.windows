@@ -43,6 +43,8 @@ if ya.target_family() == "windows" then
 	local cloud_root = "D:/Cloud/"
 	local download_dir = "D:/Downloads/"
 {{- end }}
+local onedrive_personal = cloud_root .. "/personal/OneDrive"
+local onedrive_work = cloud_root .. "/work/OneDrive - Budapesti Műszaki és Gazdaságtudományi Egyetem"
 
 	-- Drives
 	table.insert(bookmarks, { tag = "Drive: C:", path = "C:/", key = { "d", "c" } })
@@ -56,19 +58,24 @@ if ya.target_family() == "windows" then
 	table.insert(bookmarks, { tag = "Downloads", path = download_dir, key = { "h", "w" } })
 
 	-- Cloud
-	table.insert(bookmarks, { tag = "Cloud: OD-P", path = cloud_root .. "/OneDrive", key = { "c", "p" } })
-	table.insert(bookmarks, { tag = "Cloud: OD-BME", path = cloud_root .. "od-bme", key = { "c", "b" } })
+	table.insert(bookmarks, { tag = "Cloud: OD-P", path = cloud_root .. "/personal/OneDrive", key = { "c", "p" } })
+	table.insert(bookmarks, { tag = "Cloud: OD-BME", path = cloud_root .. "/work/OneDrive - Budapesti Műszaki és Gazdaságtudományi Egyetem", key = { "c", "b" } })
 
 	-- Work directories
+  local courses_root = onedrive_work .. "/Egyetem/Kurzusok"
 	table.insert(
 		bookmarks,
-		{ tag = "Work: Courses", path = cloud_root .. "od-bme" .. "/Egyetem/Kurzusok/", key = { "w", "c", "c" } }
+		{ 
+      tag = "Work: Courses",
+      path = courses_root, 
+      key = { "w", "c", "c" } 
+    }
 	)
 	table.insert(
 		bookmarks,
 		{
 			tag = "Work: Courses/GNSS",
-			path = cloud_root .. "od-bme" .. "/Egyetem/Kurzusok/gnss_application_and_theory/2026",
+			path = courses_root .. "/gnss_application_and_theory/2026",
 			key = { "w", "c", "g" },
 		}
 	)
@@ -76,15 +83,15 @@ if ya.target_family() == "windows" then
 		bookmarks,
 		{
 			tag = "Work: Courses/Urnavi",
-			path = cloud_root .. "od-bme" .. "/Egyetem/Kurzusok/urnavigacio/2026",
+			path = courses_root .. "/urnavigacio/2026",
 			key = { "w", "c", "u" },
 		}
 	)
 	table.insert(
 		bookmarks,
 		{
-			tag = "Work: Courses/Geod2",
-			path = cloud_root .. "od-bme" .. "/Egyetem/Kurzusok/geodezia_2/",
+			tag = "Work: Courses/Geod1",
+			path = courses_root .. "/geodezia_1/",
 			key = { "w", "c", "G" },
 		}
 	)
