@@ -286,11 +286,7 @@ web_client {
  
 // Choose the theme that is specified in the themes section.
 // Default: default
-{{- if eq .chezmoi.hostname "bme-desktop" }}
-theme "catppuccin-macchiato"
-{{- else }}
 theme "everforest-light"
-{{- end }}
  
 // Choose the base input mode of zellij.
 // Default: normal

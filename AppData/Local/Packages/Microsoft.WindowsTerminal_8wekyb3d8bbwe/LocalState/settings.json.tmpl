@@ -1,16 +1,11 @@
-{{ if eq .chezmoi.hostname "home-desktop" }}
+{{ if (or (eq .chezmoi.hostname "home-desktop") (eq .chezmoi.hostname "bme-desktop")) }}
     {{- template "windows_terminal_base" dict 
-        "colorscheme_light" "Gruvbox Light"
-        "colorscheme_dark"  "Gruvbox Dark"
+        "colorscheme_light" "Everforest Light Medium"
+        "colorscheme_dark"  "Everforest Dark Medium"
     -}}
 {{ else if (or (eq .chezmoi.hostname "home-laptop") (eq .chezmoi.hostname "bme-laptop")) }}
     {{- template "windows_terminal_base" dict 
         "colorscheme_light" "Everforest Light Medium"
         "colorscheme_dark"  "Everforest Dark Medium"
-    -}}
-{{ else if eq .chezmoi.hostname "bme-desktop" }}
-    {{- template "windows_terminal_base" dict 
-        "colorscheme_light" "Catppuccin Macchiato"
-        "colorscheme_dark"  "Catppuccin Macchiato"
     -}}
 {{ end }}

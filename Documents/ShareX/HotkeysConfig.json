@@ -2,7 +2,7 @@
   "Hotkeys": [
     {
       "HotkeyInfo": {
-        "Hotkey": "Oemtilde, Control",
+        "Hotkey": "D9, Control",
         "Win": false
       },
       "TaskSettings": {
@@ -46,7 +46,7 @@
     },
     {
       "HotkeyInfo": {
-        "Hotkey": "Oemtilde, Shift, Control",
+        "Hotkey": "D9, Shift, Control",
         "Win": false
       },
       "TaskSettings": {
@@ -87,7 +87,51 @@
         "WatchFolderEnabled": false,
         "WatchFolderList": []
       }
+    },
+    {
+      "HotkeyInfo": {
+        "Hotkey": "D8, Control",
+        "Win": false
+      },
+      "TaskSettings": {
+        "Description": "",
+        "Job": "LastRegion",
+        "UseDefaultAfterCaptureJob": true,
+        "AfterCaptureJob": "CopyImageToClipboard, SaveImageToFile",
+        "UseDefaultAfterUploadJob": true,
+        "AfterUploadJob": "CopyURLToClipboard",
+        "UseDefaultDestinations": true,
+        "ImageDestination": "Imgur",
+        "ImageFileDestination": "Dropbox",
+        "TextDestination": "Pastebin",
+        "TextFileDestination": "Dropbox",
+        "FileDestination": "Dropbox",
+        "URLShortenerDestination": "BITLY",
+        "URLSharingServiceDestination": "Email",
+        "OverrideFTP": false,
+        "FTPIndex": 0,
+        "OverrideCustomUploader": false,
+        "CustomUploaderIndex": 0,
+        "OverrideScreenshotsFolder": false,
+        "ScreenshotsFolder": "",
+        "UseDefaultGeneralSettings": true,
+        "GeneralSettings": null,
+        "UseDefaultImageSettings": true,
+        "ImageSettings": null,
+        "UseDefaultCaptureSettings": true,
+        "CaptureSettings": null,
+        "UseDefaultUploadSettings": true,
+        "UploadSettings": null,
+        "UseDefaultActions": true,
+        "ExternalPrograms": null,
+        "UseDefaultToolsSettings": true,
+        "ToolsSettings": null,
+        "UseDefaultAdvancedSettings": true,
+        "AdvancedSettings": null,
+        "WatchFolderEnabled": false,
+        "WatchFolderList": []
+      }
     }
   ],
-  "ApplicationVersion": "18.0.1"
+  "ApplicationVersion": "21.0.0"
 }

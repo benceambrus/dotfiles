@@ -9,7 +9,7 @@
     "stack_border": "Base0C",
     "monocle_border": "Base0B"
   }
-{{ else if eq .chezmoi.hostname "home-desktop" }}
+{{ else if (or (eq .chezmoi.hostname "home-desktop") (eq .chezmoi.hostname "bme-desktop")) }}
   {
     "palette": "Base16",
     "name": "Everforest",
@@ -20,15 +20,15 @@
     "stack_border": "Base0D",
     "monocle_border": "Base0B"
   }
-{{ else if eq .chezmoi.hostname "bme-desktop" }}
-  {
-    "palette": "Catppuccin",
-    "name": "Mocha",
-    "unfocused_border": "Yellow",
-    "bar_accent": "Mauve",
-    "floating_border": "Mauve",
-    "single_border": "Red",
-    "stack_border": "Green",
-    "monocle_border": "Blue"
-  }
-{{ end }}
+# {{ else if eq .chezmoi.hostname "bme-desktop" }}
+#   {
+#     "palette": "Catppuccin",
+#     "name": "Mocha",
+#     "unfocused_border": "Yellow",
+#     "bar_accent": "Mauve",
+#     "floating_border": "Mauve",
+#     "single_border": "Red",
+#     "stack_border": "Green",
+#     "monocle_border": "Blue"
+#   }
+# {{ end }}
