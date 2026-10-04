@@ -1,4 +1,4 @@
-{{- if (or (eq .chezmoi.hostname "home-laptop") (eq .chezmoi.hostname "bme-laptop")) -}}
+{{- if (or (eq .chezmoi.hostname "home-laptop") (eq .chezmoi.hostname "bme-laptop"))  -}}
   {
     "palette": "Base16",
     "name": "EverforestDarkHard",
@@ -9,7 +9,18 @@
     "stack_border": "Base0C",
     "monocle_border": "Base0B"
   }
-{{ else if (or (eq .chezmoi.hostname "home-desktop") (eq .chezmoi.hostname "bme-desktop")) }}
+{{ else if eq .chezmoi.hostname "home-desktop" }}
+  {
+    "palette": "Base16",
+    "name": "EverforestDarkHard",
+    "unfocused_border": "Base0A",
+    "bar_accent": "Base0A",
+    "floating_border": "Base0E",
+    "single_border": "Base08",
+    "stack_border": "Base0C",
+    "monocle_border": "Base0B"
+  }
+{{ else if eq .chezmoi.hostname "bme-desktop" }}
   {
     "palette": "Base16",
     "name": "Everforest",

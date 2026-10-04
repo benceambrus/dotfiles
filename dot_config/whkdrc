@@ -112,13 +112,8 @@ alt + shift + r         : komorebic cycle-move-to-workspace next
 alt + shift + e         : komorebic cycle-move-to-workspace previous
 
 # Switch monitors and move workspaces
-{{ if eq .chezmoi.hostname "home-desktop" }}
-alt + m                   : komorebic focus-monitor 1
-alt + oem_comma           : komorebic focus-monitor 0
-{{ else }}
 alt + m                   : komorebic focus-monitor 0
 alt + oem_comma           : komorebic focus-monitor 1
-{{ end }}
 alt + oem_period          : komorebic focus-monitor 2
 alt + shift + m           : komorebic move-to-monitor 0
 alt + shift + oem_comma   : komorebic move-to-monitor 1
