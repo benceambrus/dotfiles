@@ -3,5 +3,5 @@
 {{- else if eq .chezmoi.hostname "home-desktop" -}}
   "0": "26903", "1": "158113", "2": "610NTMX02939"
 {{- else if eq .chezmoi.hostname "bme-desktop" -}}
-  "0": "PHLC35B-4&7e5290e&0&UID206355", "1": "PHLC35B-5&217f22ba&0&UID4353", "2": "GSM4E9E-5&217f22ba&0&UID4352"
+  "0": "UHB2548021103", "1": "UHB2548020805", "2": "304359"
 {{- end -}}
