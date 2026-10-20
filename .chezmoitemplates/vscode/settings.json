@@ -5,7 +5,6 @@
   "github.copilot.enable": {
     "*": false
   },
-
   // Theme and Appearance
   "window.autoDetectColorScheme": true,
   "workbench.preferredDarkColorTheme": "{{ .colorscheme_dark }}",
@@ -31,11 +30,9 @@
     "sideBar.border": "default",
     "panel.border": "default",
   },
-
   // Custom UI settings
   "custom-ui-style.font.monospace": "FiraCode Nerd Font",
   // "custom-ui-style.font.sansSerif": "FiraCode Nerd Font",
-
   // Neovim Integration
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
@@ -54,20 +51,16 @@
     "v",
     "w"
   ],
-
   // Python Environment
-
   // Formatter Settings
   "editor.formatOnSave": false,
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff"
-    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "charliermarsh.ruff""editor.insertSpaces": true,
     "editor.tabSize": 4
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
   // Editor Settings
   "editor.acceptSuggestionOnEnter": "off",
   "files.insertFinalNewline": true,
@@ -86,19 +79,17 @@
       "other": "on"
     }
   },
-
   // Terminal Settings
   "terminal.integrated.fontWeightBold": "normal",
-
   // Security
   "security.workspace.trust.startupPrompt": "never",
   "security.workspace.trust.enabled": false,
-
   // Extensions
   // AHK++
   "AHK++.v1.file": {
     "helpPath": "C:/Program Files/AutoHotkey/v1.1.36.02/AutoHotkey.chm",
     "interpreterPath": "C:/Program Files/AutoHotkey/v1.1.36.02/AutoHotkeyU64.exe"
-  }
+  },
+  // Mise
+  "mise.configureExtensionsAutomatically": true
 }
-
