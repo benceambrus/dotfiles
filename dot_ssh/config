@@ -1,0 +1,24 @@
+Host github
+    User git
+    HostName github.com
+    IdentityFile ~/.ssh/keys/github
+
+Host bme-radar
+    HostName 152.66.5.197
+    User ambrus
+    IdentityFile ~/.ssh/keys/bme-radar
+
+Host home-rpi
+    HostName 192.168.0.2
+    User pi
+    IdentityFile ~/.ssh/keys/home-rpi
+
+Host bme-desktop
+    HostName 152.66.5.74
+    User ambrus
+
+Host bme-shadow
+    HostName 152.66.5.194
+    User ambrus
+    IdentityFile ~/.ssh/keys/bme-shadow
+
