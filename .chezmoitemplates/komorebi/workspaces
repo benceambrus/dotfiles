@@ -120,23 +120,23 @@
       "workspaces": [
         {
           "name": "1",
-          "layout": "BSP",
+          "layout": "Rows",
         },
         {
           "name": "2",
-          "layout": "BSP",
+          "layout": "Rows",
         },
         {
           "name": "3",
-          "layout": "BSP",
+          "layout": "Rows",
         },
         {
           "name": "4",
-          "layout": "BSP",
+          "layout": "Rows",
         },
         {
           "name": "5",
-          "layout": "BSP"
+          "layout": "Rows"
         }
       ]
     },
