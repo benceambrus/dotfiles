@@ -74,3 +74,6 @@ unbind . " originally: repeat last action
 " Blacklisting
 blacklist add http://localhost:8888
 
+" Automatic container awareness on new tabs
+set tabopencontaineraware true
+
