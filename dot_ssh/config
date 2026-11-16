@@ -22,3 +22,9 @@ Host bme-shadow
     User ambrus
     IdentityFile ~/.ssh/keys/bme-shadow
 
+Host bme-nas
+    HostName nas.geod.bme.hu
+    Port 3233
+    User ambrus
+    IdentityFile ~/.ssh/keys/bme-nas
+
