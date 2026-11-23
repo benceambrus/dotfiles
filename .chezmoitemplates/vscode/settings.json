@@ -55,7 +55,8 @@
   // Formatter Settings
   "editor.formatOnSave": false,
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff""editor.insertSpaces": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.insertSpaces": true,
     "editor.tabSize": 4
   },
   "[jsonc]": {
