@@ -25,5 +25,5 @@ end
 ## eza
 if using eza
     alias ls eza
-    alias ll "eza -lh"
+    alias ll "eza -lh --group"
 end
